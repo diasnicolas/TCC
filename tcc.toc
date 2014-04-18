@@ -1,0 +1,25 @@
+\select@language {brazilian}
+\contentsline {chapter}{Lista de Abreviaturas e Siglas}{9}
+\contentsline {chapter}{Lista de Figuras}{11}
+\contentsline {chapter}{Lista de Tabelas}{13}
+\contentsline {chapter}{Resumo}{15}
+\contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{17}
+\contentsline {chapter}{\numberline {2}Aspect Oriented Programming}{19}
+\contentsline {section}{\numberline {2.1}O que \IeC {\'e}?}{19}
+\contentsline {section}{\numberline {2.2}Hist\IeC {\'o}ria}{19}
+\contentsline {chapter}{\numberline {3}Byte Code Engineering}{21}
+\contentsline {chapter}{\numberline {4}Framework que ser\IeC {\'a} usado}{23}
+\contentsline {chapter}{\numberline {5}Meta-Programa\IeC {\c c}\IeC {\~a}o}{25}
+\contentsline {section}{\numberline {5.1}Anota\IeC {\c c}\IeC {\~o}es}{25}
+\contentsline {section}{\numberline {5.2}Reflex\IeC {\~a}o}{25}
+\contentsline {chapter}{\numberline {6}Solu\IeC {\c c}\IeC {\~o}es Existentes}{27}
+\contentsline {section}{\numberline {6.1}PostSharp}{27}
+\contentsline {section}{\numberline {6.2}AspectJ}{27}
+\contentsline {chapter}{\numberline {7}O Framework}{29}
+\contentsline {section}{\numberline {7.1}An\IeC {\'a}lise e projeto}{29}
+\contentsline {section}{\numberline {7.2}Implementa\IeC {\c c}\IeC {\~a}o}{29}
+\contentsline {chapter}{\numberline {8}Estudo de caso - Instrumenta\IeC {\c c}\IeC {\~a}o}{31}
+\contentsline {chapter}{\numberline {9}Conclus\IeC {\~a}o}{33}
+\contentsline {chapter}{Refer{\^e}ncias}{35}
+\contentsline {chapter}{Gloss\IeC {\'a}rio}{37}
+\setbox \@tempboxa \hbox {{{\sffamily \textbf {\MakeUppercase {Ap{\^e}ndice} }}}}\ii@chapnumindent \wd \@tempboxa \setbox \@tempboxa \box \voidb@x \advance \ii@chapnumindent 1.8em\relax 

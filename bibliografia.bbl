@@ -1,0 +1,55 @@
+@book{groves2013aop,
+  title={AOP in. NET},
+  author={Groves, Matthew D},
+  year={2013},
+  publisher={Manning Publ.}
+}
+
+@book{horstmann1999core,
+  title={Core Java 2, Advanced Features, Vol. 2},
+  author={Horstmann, Cay S and Cornell, Gary},
+  year={1999},
+  publisher={Prentice Hall}
+}
+
+@book{kalinovsky2004covert,
+  title={Covert Java: Techniques for Decompiling, Patching, and Reverse Engineering},
+  author={Kalinovsky, Alex},
+  year={2004},
+  publisher={Pearson Higher Education}
+}
+
+@book{stark2001java,
+  title={Java and the Java virtual machine},
+  author={St{\"a}rk, Robert F and Schmid, Joachim and B{\"o}rger, Egon},
+  year={2001},
+  publisher={Springer Heidelberg}
+}
+
+@book{laddad2003aspectj,
+title={{AspectJ in action: practical aspect-oriented programming}},
+author={Laddad, R.},
+year={2003},
+publisher={Manning}
+}
+
+@book{jacobson2004aspect,
+  title={Aspect-oriented software development with use cases (addison-wesley object technology series)},
+  author={Jacobson, Ivar and Ng, Pan-Wei},
+  year={2004},
+  publisher={Addison-Wesley Professional}
+}
+
+@book{pressman2010engineering,
+  title={Software engineering: a practitioner’s approac},
+  author={Pressman, R.S.},
+  year={2010},
+  publisher={McGraw Hill}
+}
+
+@article{pothieraflexible,
+  title={Flexible Metaprogramming and AOP in Java},
+  author={Pothiera, {\'E}ric Tantera Rodolfo Toledoa Guillaume and Noy{\'e}b, Jacques},
+  publisher={Citeseer}
+}
+

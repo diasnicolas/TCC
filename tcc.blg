@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: tcc.aux
+The style file: abnt.bst
+Database file #1: bibliografia.bib
+Warning--": practical aspect-oriented programming}" isn't a brace-balanced string for entry laddad2003aspectj
+while executing--line 1342 of file abnt.bst
+Warning--": a practitioner’s approac}" isn't a brace-balanced string for entry pressman2010engineering
+while executing--line 1342 of file abnt.bst
+You've used 3 entries,
+            2364 wiz_defined-function locations,
+            590 strings with 4412 characters,
+and the built_in function-call counts, 1877 in all, are:
+= -- 175
+> -- 3
+< -- 30
++ -- 95
+- -- 3
+* -- 105
+:= -- 154
+add.period$ -- 12
+call.type$ -- 3
+change.case$ -- 21
+chr.to.int$ -- 0
+cite$ -- 3
+duplicate$ -- 235
+empty$ -- 142
+format.name$ -- 21
+if$ -- 400
+int.to.chr$ -- 0
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 9
+num.names$ -- 15
+pop$ -- 52
+preamble$ -- 1
+purify$ -- 3
+quote$ -- 0
+skip$ -- 101
+stack$ -- 0
+substring$ -- 83
+swap$ -- 149
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 39
+warning$ -- 0
+while$ -- 18
+width$ -- 0
+write$ -- 5
+(There were 2 warnings)

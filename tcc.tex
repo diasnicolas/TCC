@@ -1,0 +1,132 @@
+\documentclass[tc,openright]{iiufrgs}
+\usepackage[T1]{fontenc}        % pacote para conj. de caracteres correto
+\usepackage[utf8]{inputenc}   % pacote para acentua\c c\~ ao
+\usepackage{graphicx}           % pacote para importar figuras
+\usepackage{times}              % pacote para usar fonte Adobe Times
+\usepackage{multirow}
+\usepackage{subfigure}
+\usepackage{listings}
+\usepackage{scalefnt}
+\usepackage[brazilian]{babel}
+\usepackage{tabularx}
+%\usepackage{hyperref}
+%\usepackage{float}
+
+\bibliographystyle{abnt}
+%\bibliographystyle{apalike}
+
+\hyphenation{en-si-na-men-tos a-gra-de-ci-men-to de-se-nha-dos}
+
+\title{Framework AOP usando técnicas de Byte Code Engineering}
+
+\author{Bento}{Nicolas}
+
+\advisor[Prof.]{Torres}{Márcio}
+
+\date{fevereiro}{2014}
+
+\location{Rio Grande}{RS}
+
+\renewcommand{\nominata}{
+        UNIVERSIDADE FEDERAL DO RIO GRANDE\\
+        Reitor: Prof. Cleuza Maria Sobral Dias\\
+        Pró-Reitor de Graduaçăo: Prof. Denise Varella Martinez\\
+        Coordenador do curso: Prof. Tiago Lopes Telecken\\
+}
+
+\keyword{AOP, Byte Code Engineering, Meta-programação, Framework, Soc}
+
+\begin{document}
+
+\maketitle
+
+\begin{folhadeaprovacao}
+Monografia sob o título \textit{"Framework AOP usando técnicas de Byte Code Engineering"}, defendida por Nicolas Dias Bento e aprovada em ?? de ?? de ???, em Rio Grande, estado do Rio Grande do Sul, pela banca examinadora constituída pelos professores:
+ \assinatura{Prof. Márcio Torres\\ Orientador}
+ \assinatura{Prof. NOME\\ IFRS - Campus Rio Grande }
+ \assinatura{Prof. NOME\\ IFRS - Campus Rio Grande } 
+\end{folhadeaprovacao}
+
+\clearpage
+
+\begin{flushright}
+\mbox{}\vfill
+{\sffamily\itshape
+"A mente que se abre a uma nova ideia jamais volta ao seu tamanho original"\\}
+--- \textsc{Albert Einstein}
+\end{flushright}
+
+\chapter*{Agradecimentos}
+
+Agradecimentos ...
+
+\tableofcontents
+
+\begin{listofabbrv}{SPMD}
+	\item[AOP] Programação Orientada a Aspectos (\textit{Aspect Oriented Programming})
+	\item[Soc] Separação de interesses (\textit{Separation of concerns})
+	\item[OOP] Programação Orientada a Objetos (\textit{Object Oriented Programming})
+	\item[PARC] Centro de Pesquisa Palo Alto (\textit{Palo Alto Research Center})
+\end{listofabbrv}
+
+\listoffigures
+
+\listoftables
+
+\begin{abstract}
+
+Resumo ...
+
+\end{abstract}
+
+\chapter{Introdução}
+
+\chapter{Aspect Oriented Programming}
+\section{O que é?}
+
+\section{História}
+Após um grande período de estudos, pesquisadores chegaram a conclusão que para desenvolver um software de qualidade era fundamental separar os interesses do sistema, ou seja, deveria então ser aplicado o princípio de \textit{Separation of Concerns} (SoC)\footnote{Para saber mais sobre SoC consulte o Glossário.}. Em 1972, David Parnas escreveu um artigo, que tinha como  proposta aplicar SoC através de um processo de modularização, onde cada módulo deveria esconder as suas decisões de outros módulos.Passado alguns anos, pesquisadores continuaram a estudar diversas formas de separação de interesses. OOP foi a melhor, se tratando de separação de interesses centrais, mas quando se tratava de interesses transversais, acabava deixando a desejar. Diversas metodologias— \textit{generative programming, meta-programming, reflective programming, compositional filtering, adaptive programming, subject-oriented programming, aspect oriented programming,} e  \textit{intentional programming}— surgiram como possíveis abordagens para modularização de interesses transversais. AOP acabou se tornando a mais popular entre elas. \cite{laddad2003aspectj}
+
+Em 1997 Gregor Kiczales e sua equipe descreveram de forma sólida o conceito de Programação Orientada a Aspectos, durante um trabalho de pesquisa realizado pelo PARC, uma subsidiária da \textit{Xerox Corporation}. O documento descreve uma solução complementar a OOP, ou seja, seriam utilizados "aspectos", que iriam encapsular as preocupações transversais, de forma a garantir a reutilização por outros módulos de um sistema.Sugeriu também diversas implementações de AOP, servindo como base para a criação do AspectJ\footnote{No final dos anos 90, a Xerox Corporation, transferiu o projeto AspectJ para a comunidade Open Source em eclipse.org.}, uma linguagem AOP muito difundida nos dias de hoje.\cite{groves2013aop}
+
+
+\chapter{Byte Code Engineering}
+
+\chapter{Framework que será usado}
+
+\chapter{Meta-Programação}
+
+\section{Anotações}
+
+\section{Reflexão}
+
+\chapter{Soluções Existentes}
+
+\section{PostSharp}
+
+\section{AspectJ}
+
+\chapter{O Framework}
+
+\section{Análise e projeto}
+
+\section{Implementação}
+
+\chapter{Estudo de caso - Instrumentação}
+
+\chapter{Conclusão}
+
+Conclusões ...
+
+\bibliography{bibliografia}
+
+\chapter*{Glossário}
+
+\begin{description}
+	\item[SoC] è um princípio de projeto, criado com a finalidade de subdividir o problema em conjuntos de interesses tornando a resolução do problema mais fácil.Cada interesse fornece uma funcionalidade distinta, podendo ser validado independentemente das regras negócio.\cite{pressman2010engineering}
+\end{description}
+
+\appendix
+
+\end{document}
+

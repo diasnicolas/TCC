@@ -1,0 +1,2 @@
+apt-get install texlive texlive-lang-portuguese texlive-latex-extra texlive-science
+
