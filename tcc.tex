@@ -17,7 +17,7 @@
 
 \hyphenation{en-si-na-men-tos a-gra-de-ci-men-to de-se-nha-dos}
 
-\title{Framework AOP usando técnicas de Byte Code Engineering}
+\title{Framework AOP utilizando técnicas de Byte Code Engineering}
 
 \author{Bento}{Nicolas}
 
@@ -41,7 +41,7 @@
 \maketitle
 
 \begin{folhadeaprovacao}
-Monografia sob o título \textit{"Framework AOP usando técnicas de Byte Code Engineering"}, defendida por Nicolas Dias Bento e aprovada em ?? de ?? de ???, em Rio Grande, estado do Rio Grande do Sul, pela banca examinadora constituída pelos professores:
+Monografia sob o título \textit{"Framework AOP utilizando técnicas de Byte Code Engineering"}, defendida por Nicolas Dias Bento e aprovada em ?? de ?? de ???, em Rio Grande, estado do Rio Grande do Sul, pela banca examinadora constituída pelos professores:
  \assinatura{Prof. Márcio Torres\\ Orientador}
  \assinatura{Prof. NOME\\ IFRS - Campus Rio Grande }
  \assinatura{Prof. NOME\\ IFRS - Campus Rio Grande } 
@@ -52,7 +52,7 @@ Monografia sob o título \textit{"Framework AOP usando técnicas de Byte Code En
 \begin{flushright}
 \mbox{}\vfill
 {\sffamily\itshape
-"A mente que se abre a uma nova ideia jamais volta ao seu tamanho original"\\}
+"A mente que se abre a uma nova ideia jamais volta ao seu tamanho original."\\}
 --- \textsc{Albert Einstein}
 \end{flushright}
 
@@ -83,6 +83,7 @@ Resumo ...
 
 \chapter{Aspect Oriented Programming}
 \section{O que é?}
+AOP é um paradigma de programação que foi contruído tomando como base outros paradigmas(OOP e \textit{procedural programming}), cujo o principal objetivo seria a modularização de interesses transversais, utilizando um dos paradigmas base na implementação dos interesses centrais. A forma como AOP e o paradigma base se integram se dá com a utilização de aspectos que determinam a forma como os diferentes módulos se relacionam entre si na formação do sistema final. \cite{laddad2003aspectj}
 
 \section{História}
 Após um grande período de estudos, pesquisadores chegaram a conclusão que para desenvolver um software de qualidade era fundamental separar os interesses do sistema, ou seja, deveria então ser aplicado o princípio de \textit{Separation of Concerns} (SoC)\footnote{Para saber mais sobre SoC consulte o Glossário.}. Em 1972, David Parnas escreveu um artigo, que tinha como  proposta aplicar SoC através de um processo de modularização, onde cada módulo deveria esconder as suas decisões de outros módulos.Passado alguns anos, pesquisadores continuaram a estudar diversas formas de separação de interesses. OOP foi a melhor, se tratando de separação de interesses centrais, mas quando se tratava de interesses transversais, acabava deixando a desejar. Diversas metodologias— \textit{generative programming, meta-programming, reflective programming, compositional filtering, adaptive programming, subject-oriented programming, aspect oriented programming,} e  \textit{intentional programming}— surgiram como possíveis abordagens para modularização de interesses transversais. AOP acabou se tornando a mais popular entre elas. \cite{laddad2003aspectj}
