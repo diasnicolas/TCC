@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  17 MAY 2014 21:49
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  18 MAY 2014 17:27
 entering extended mode
  %&-line parsing enabled.
 **tcc.tex
@@ -523,12 +523,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--13
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--14
- []  
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--17
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
  []  
  []
 
@@ -543,17 +538,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--23
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--24
- []  
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--25
- []  
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 26--26
+ []  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+ []  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+ []  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
  []  
  []
 
@@ -631,9 +631,9 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 26
  []
 
-[26
+[26] [27
 
-] [27]
+]
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 28
  []
@@ -677,13 +677,13 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 ] AED: lastpage setting LastPage [39] (./tcc.aux) ) 
 Here is how much of TeX's memory you used:
- 4003 strings out of 495041
- 50472 string characters out of 1181897
- 113257 words of memory out of 3000000
- 7101 multiletter control sequences out of 15000+50000
+ 4016 strings out of 495041
+ 50850 string characters out of 1181897
+ 114519 words of memory out of 3000000
+ 7114 multiletter control sequences out of 15000+50000
  49656 words of font info for 52 fonts, out of 3000000 for 9000
  33 hyphenation exceptions out of 8191
- 39i,8n,32p,1199b,220s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,8n,32p,1199b,226s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fo
 nts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive/fonts/type1/public/amsfonts
 /cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvb8a.pfb></
@@ -691,7 +691,7 @@ usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texmf-
 texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/
 urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on tcc.pdf (39 pages, 108002 bytes).
+Output written on tcc.pdf (39 pages, 111049 bytes).
 PDF statistics:
  154 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

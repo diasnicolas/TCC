@@ -8,12 +8,15 @@
 \contentsline {section}{\numberline {2.1}O que \IeC {\'e}?}{19}
 \contentsline {section}{\numberline {2.2}Hist\IeC {\'o}ria}{19}
 \contentsline {section}{\numberline {2.3}Principais conceitos}{20}
-\contentsline {section}{\numberline {2.4}Benef\IeC {\'\i }cios de AOP}{20}
+\contentsline {section}{\numberline {2.4}Benef\IeC {\'\i }cios}{20}
 \contentsline {chapter}{\numberline {3}Byte Code Engineering}{23}
-\contentsline {chapter}{\numberline {4}Framework que ser\IeC {\'a} usado}{25}
-\contentsline {chapter}{\numberline {5}Meta-Programa\IeC {\c c}\IeC {\~a}o}{27}
-\contentsline {section}{\numberline {5.1}Anota\IeC {\c c}\IeC {\~o}es}{27}
-\contentsline {section}{\numberline {5.2}Reflex\IeC {\~a}o}{27}
+\contentsline {chapter}{\numberline {4}Metaprograma\IeC {\c c}\IeC {\~a}o}{25}
+\contentsline {section}{\numberline {4.1}O que \IeC {\'e}?}{25}
+\contentsline {section}{\numberline {4.2}Benef\IeC {\'\i }cios}{25}
+\contentsline {section}{\numberline {4.3}Principais conceitos}{25}
+\contentsline {section}{\numberline {4.4}Anota\IeC {\c c}\IeC {\~o}es}{26}
+\contentsline {section}{\numberline {4.5}Reflex\IeC {\~a}o}{26}
+\contentsline {chapter}{\numberline {5}Framework que ser\IeC {\'a} usado}{27}
 \contentsline {chapter}{\numberline {6}Solu\IeC {\c c}\IeC {\~o}es Existentes}{29}
 \contentsline {section}{\numberline {6.1}PostSharp}{29}
 \contentsline {section}{\numberline {6.2}AspectJ}{29}
