@@ -1,5 +1,9 @@
 \begin{thebibliography}{\hspace{\parindent}}
 
+\bibitem[BECK; ANDRES(2004)BECK; ANDRES]{beck2004extreme} BECK, K.; ANDRES,
+  C\@. \textbf{Extreme programming explained}: embrace change. [S.l.]:
+  Addison-Wesley Professional, 2004.
+
 \bibitem[GROVES(2013)GROVES]{groves2013aop} GROVES, M.~D\@. \textbf{AOP in.
   NET}. [S.l.]: Manning Publ., 2013.
 
