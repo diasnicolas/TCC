@@ -53,3 +53,9 @@ publisher={Manning}
   publisher={Citeseer}
 }
 
+@misc{coward2006jsr,
+  title={JSR 175: A Metadata Facility for the JavaTM Programming Language},
+  author={Coward, Danny},
+  year={2006}
+}
+

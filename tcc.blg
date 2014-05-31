@@ -2,59 +2,59 @@ This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: tcc.aux
 The style file: abnt.bst
 Database file #1: bibliografia.bib
-I was expecting a `,' or a `}'---line 20 of file bibliografia.bib
+I was expecting a `,' or a `}'---line 28 of file bibliografia.bib
  :   
  :   edition   = {8th edition}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 28 of file bibliografia.bib
+I was expecting a `,' or a `}'---line 36 of file bibliografia.bib
  :   
  :   edition   = {7th edition}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--": practical aspect-oriented programming}" isn't a brace-balanced string for entry laddad2003aspectj
 while executing--line 1342 of file abnt.bst
-Warning--": a practitioner’s approac}" isn't a brace-balanced string for entry pressman2010engineering
+Warning--": a practitioner’s approach}" isn't a brace-balanced string for entry pressman2010engineering
 while executing--line 1342 of file abnt.bst
-You've used 8 entries,
+You've used 11 entries,
             2364 wiz_defined-function locations,
-            618 strings with 5110 characters,
-and the built_in function-call counts, 7851 in all, are:
-= -- 841
-> -- 31
-< -- 127
-+ -- 474
-- -- 22
-* -- 378
-:= -- 662
-add.period$ -- 32
-call.type$ -- 8
-change.case$ -- 82
+            632 strings with 5397 characters,
+and the built_in function-call counts, 10485 in all, are:
+= -- 1104
+> -- 37
+< -- 172
++ -- 634
+- -- 25
+* -- 524
+:= -- 879
+add.period$ -- 46
+call.type$ -- 11
+change.case$ -- 118
 chr.to.int$ -- 34
-cite$ -- 8
-duplicate$ -- 1040
-empty$ -- 398
-format.name$ -- 96
-if$ -- 1689
+cite$ -- 11
+duplicate$ -- 1399
+empty$ -- 557
+format.name$ -- 138
+if$ -- 2232
 int.to.chr$ -- 0
 int.to.str$ -- 0
 missing$ -- 0
-newline$ -- 19
-num.names$ -- 40
-pop$ -- 159
+newline$ -- 25
+num.names$ -- 55
+pop$ -- 211
 preamble$ -- 1
-purify$ -- 8
+purify$ -- 11
 quote$ -- 0
-skip$ -- 465
+skip$ -- 605
 stack$ -- 0
-substring$ -- 423
-swap$ -- 663
+substring$ -- 541
+swap$ -- 904
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 88
+type$ -- 127
 warning$ -- 0
-while$ -- 53
+while$ -- 71
 width$ -- 0
-write$ -- 10
+write$ -- 13
 (There were 2 error messages)

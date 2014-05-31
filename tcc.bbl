@@ -1,5 +1,9 @@
 \begin{thebibliography}{\hspace{\parindent}}
 
+\bibitem[ARNOLD; GOSLING; HOLMES(2000)ARNOLD; GOSLING; HOLMES]{arnold2000java}
+  ARNOLD, K.; GOSLING, J.; HOLMES, D\@. \textbf{The Java programming language}.
+  [S.l.]: Addison-wesley Reading, 2000. v.2.
+
 \bibitem[ASSOCIATION et~al.(1999)ASSOCIATION et~al.]{american1999task}
   ASSOCIATION, A.~L. et~al\@. \textbf{Task Force on Metadata Summary Report}.
   [S.l.]: June, 1999.
@@ -14,11 +18,18 @@
   \textbf{Information Technology and Control}, [S.l.], v.37, n.2, p.124--132,
   2008.
 
+\bibitem[FLANAGAN(2005)FLANAGAN]{flanagan2005java} FLANAGAN, D\@. \textbf{Java
+  in a Nutshell}. [S.l.]: O'Reilly Media, 2005.
+
 \bibitem[GROVES(2013)GROVES]{groves2013aop} GROVES, M.~D\@. \textbf{AOP in.
   NET}. [S.l.]: Manning Publ., 2013.
 
 \bibitem[HAZZARD; BOCK(2013)HAZZARD; BOCK]{hazzard2013metaprogramming} HAZZARD,
   K.; BOCK, J\@. \textbf{Metaprogramming in. NET}. [S.l.]: Manning Pub., 2013.
+
+\bibitem[HORSTMANN; CORNELL(2004)HORSTMANN; CORNELL]{horstmann2004core}
+  HORSTMANN, C.~S.; CORNELL, G\@. \textbf{Core Java 2, Advanced Features, Vol.
+  2}. [S.l.]: Prentice Hall, 2004.
 
 \bibitem[LADDAD(2003)LADDAD]{laddad2003aspectj} LADDAD, R\@. \textbf{{AspectJ
   in action}: practical aspect-oriented programming}. [S.l.]: Manning, 2003.
@@ -29,7 +40,7 @@
   1996. \textbf{Proceedings{\ldots}} [S.l.:~s.n.], 1996. v.96, p.1--20.
 
 \bibitem[PRESSMAN(2010)PRESSMAN]{pressman2010engineering} PRESSMAN, R\@.
-  \textbf{{Software engineering}: a practitioner’s approac}. [S.l.]: McGraw
+  \textbf{{Software engineering}: a practitioner’s approach}. [S.l.]: McGraw
   Hill, 2010.
 
 \end{thebibliography}

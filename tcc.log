@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  18 MAY 2014 17:27
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  30 MAY 2014 13:08
 entering extended mode
  %&-line parsing enabled.
 **tcc.tex
@@ -523,21 +523,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--13
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--19
- []  
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--20
- []  
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--23
- []  
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 26--26
  []  
  []
@@ -548,12 +533,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--27
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--28
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
+ []  
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
  []  
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--29
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+ []  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+ []  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
  []  
  []
 
@@ -561,9 +561,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--29
 \tf@toc=\write3
 \openout3 = `tcc.toc'.
 
- [7] [8
+ [8] [9
 
-] [9] [10
+] [10
 
 ] (./tcc.lof)
 \tf@lof=\write4
@@ -579,8 +579,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--29
 
 ] [15] [16
 
-]
-[17]
+] [17]
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 18
  []
@@ -593,20 +592,19 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 94.
  [19]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 105.
+Overfull \hbox (2.63625pt too wide) in paragraph at lines 108--109
+\T1/ptm/m/n/12 cu-tado quando de-ter-mi-nado \T1/ptm/m/it/12 point-cut \T1/ptm/
+m/n/12 é ati-vado, po-dendo ser exe-cu-tado an-tes(\T1/ptm/m/it/12 before\T1/pt
+m/m/n/12 ),
+ []
 
- (/usr/share/texmf-texlive/tex/latex/psnfss/omsptm.fd
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 136.
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 105.
-
-Overfull \hbox (18.93233pt too wide) in paragraph at lines 108--109
-\T1/ptm/m/n/12 exe-cu-tado quando de-ter-mi-nado \T1/ptm/m/it/12 point-cut \T1/
-ptm/m/n/12 é ati-vado, po-dendo ser exe-cu-tado an-tes(\T1/ptm/m/it/12 before\T
-1/ptm/m/n/12 ),
- []
-
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 136.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 20
@@ -626,14 +624,36 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [24
 
-] [25]
+]
+Overfull \hbox (15.0919pt too wide) in paragraph at lines 164--165
+\T1/ptm/m/n/12 modo a criar uma ins-tân-cia do com-po-nente es-pe-cí-fico. (DA-
+MA’E-VIƒIUS; ’TUIKYS,
+ []
+
+[25]
+Overfull \hbox (6.72836pt too wide) in paragraph at lines 176--177
+\T1/ptm/m/n/12 tam-bém em ou-tras ano-ta-ções, com o in-tuito de for-ne-cer in-
+for-ma-ções adi-ci-o-nais.(ARNOLD;
+ []
+
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 26
  []
 
-[26] [27
+[26] <figuras/criandoAnnotation.jpg, id=90, 672.5125pt x 150.5625pt>
+File: figuras/criandoAnnotation.jpg Graphic file (type jpg)
 
-]
+<use figuras/criandoAnnotation.jpg>
+Overfull \hbox (43.96419pt too wide) in paragraph at lines 207--208
+ [][] 
+ []
+
+<figuras/usandoAnnotation.jpg, id=91, 351.3125pt x 112.42pt>
+File: figuras/usandoAnnotation.jpg Graphic file (type jpg)
+
+<use figuras/usandoAnnotation.jpg> [27 <./figuras/criandoAnnotation.jpg> <./fig
+uras/usandoAnnotation.jpg>]
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 28
  []
@@ -661,29 +681,36 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [34
 
-] (./tcc.bbl [35]
+] [35]
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 36
  []
 
 [36
 
-]) [37]
+] (./tcc.bbl [37]
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 38
  []
 
 [38
 
-] AED: lastpage setting LastPage [39] (./tcc.aux) ) 
+]) [39]
+Underfull \hbox (badness 10000) has occurred while \output is active
+\T1/ptm/m/n/10.95 40
+ []
+
+[40
+
+] AED: lastpage setting LastPage [41] (./tcc.aux) ) 
 Here is how much of TeX's memory you used:
- 4016 strings out of 495041
- 50850 string characters out of 1181897
- 114519 words of memory out of 3000000
- 7114 multiletter control sequences out of 15000+50000
+ 4039 strings out of 495041
+ 51423 string characters out of 1181897
+ 114698 words of memory out of 3000000
+ 7133 multiletter control sequences out of 15000+50000
  49656 words of font info for 52 fonts, out of 3000000 for 9000
  33 hyphenation exceptions out of 8191
- 39i,8n,32p,1199b,226s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,8n,32p,1199b,225s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fo
 nts/enc/dvips/base/8r.enc}</usr/share/texmf-texlive/fonts/type1/public/amsfonts
 /cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvb8a.pfb></
@@ -691,9 +718,9 @@ usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/share/texmf-
 texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/fonts/type1/
 urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on tcc.pdf (39 pages, 111049 bytes).
+Output written on tcc.pdf (41 pages, 151292 bytes).
 PDF statistics:
- 154 PDF objects out of 1000 (max. 8388607)
+ 162 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

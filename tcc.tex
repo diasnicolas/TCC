@@ -63,13 +63,13 @@ Agradecimentos ...
 \tableofcontents
 
 \begin{listofabbrv}{SPMD}
-	\item[AOP] Programação Orientada a Aspectos (\textit{Aspect Oriented Programming})
-	\item[SoC] Separação de interesses (\textit{Separation of concerns})
-	\item[OOP] Programação Orientada a Objetos (\textit{Object Oriented Programming})
-	\item[PARC] Centro de Pesquisa Palo Alto (\textit{Palo Alto Research Center})
-	\item[SQL]  Linguagem de Consulta Estruturada (\textit{Structured Query Language})
-	\item[YAGNI] Você não vai precisar dele (\textit{You aren’t gonna need it})
-	\item[XP] Programação Extrema (\textit{Extreme Programming})
+	\item[AOP] \textit{Aspect Oriented Programming} (Programação Orientada a Aspectos)
+	\item[SoC] \textit{Separation of concerns} (Separação de Interesses)
+	\item[OOP] \textit{Object Oriented Programming} (Programação Orientada a Objetos)
+	\item[PARC] \textit{Palo Alto Research Center} (Centro de Pesquisa Palo Alto) 
+	\item[SQL] \textit{Structured Query Language} (Linguagem de Consulta Estruturada)
+	\item[YAGNI] \textit{You aren’t gonna need it} (Você não vai precisar dele)
+	\item[XP] \textit{Extreme Programming} (Programação Extrema)
 \end{listofabbrv}
 
 \listoffigures
@@ -88,7 +88,7 @@ Resumo ...
 
 Neste capítulo será abordado de forma geral o paradigma de programação orientada a aspectos, trazendo de forma objetiva as informações necessárias para a superficial compreensão desta abordagem.
 \section{O que é?}
-AOP é um paradigma de programação que foi contruído tomando como base outros paradigmas(OOP e \textit{procedural programming}), cujo o principal objetivo seria a modularização de interesses transversais, utilizando um dos paradigmas base na implementação dos interesses centrais. A forma como AOP e o paradigma base se integram se dá com a utilização de aspectos que determinam a forma como os diferentes módulos se relacionam entre si na formação do sistema final. \cite{laddad2003aspectj}
+AOP é um paradigma de programação que foi construído tomando como base outros paradigmas(OOP e \textit{procedural programming}), cujo o principal objetivo seria a modularização de interesses transversais, utilizando um dos paradigmas base na implementação dos interesses centrais. A forma como AOP e o paradigma base se integram se dá com a utilização de aspectos que determinam a forma como os diferentes módulos se relacionam entre si na formação do sistema final. \cite{laddad2003aspectj}
 
 \section{História}
 Após um grande período de estudos, pesquisadores chegaram a conclusão que para desenvolver um software de qualidade era fundamental separar os interesses do sistema, ou seja, deveria então ser aplicado o princípio de \textit{Separation of Concerns} (SoC)\footnote{Para saber mais sobre SoC consulte o Glossário.}. Em 1972, David Parnas escreveu um artigo, que tinha como  proposta aplicar SoC através de um processo de modularização, onde cada módulo deveria esconder as suas decisões de outros módulos.Passado alguns anos, pesquisadores continuaram a estudar diversas formas de separação de interesses. OOP foi a melhor, se tratando de separação de interesses centrais, mas quando se tratava de interesses transversais, acabava deixando a desejar. Diversas metodologias— \textit{generative programming, meta-programming, reflective programming, compositional filtering, adaptive programming, subject-oriented programming, aspect oriented programming,} e  \textit{intentional programming}— surgiram como possíveis abordagens para modularização de interesses transversais. AOP acabou se tornando a mais popular entre elas. \cite{laddad2003aspectj}
@@ -101,19 +101,20 @@ Para entender melhor o funcionamento de AOP, é preciso compreender seus princip
 
 Os 4 principais conceitos de AOP são:
 
-\begin{itemize}
-\item Aspecto (\textit{aspect}) - pode ser definido como um interesse transversal, ou seja, interesse onde sua implementação é espalhada por diversos módulos ou componentes de um sistema.
-\item Ponto de junção (\textit{joinpoint}) - podem ser definidos basicamente como pontos bem definidos na execução de um programa.
-\item Ponto de corte (\textit{pointcut}) - em AOP um \textit{pointcut} pode ser representado como um agrupamento de pontos de junção.
-\item Conselho (\textit{advice}) - é a implementação de determinado interesse transversal, sendo executado quando determinado \textit{pointcut} é ativado, podendo ser executado antes(\textit{before}), durante (\textit{around}) ou depois (\textit{after}) da execução de um ponto de junção.
-\end{itemize}
+\begin{description}
+\item [Aspecto] (\textit{aspect}) - pode ser definido como um interesse transversal, ou seja, interesse onde sua implementação é espalhada por diversos módulos ou componentes de um sistema.
+\item [Ponto de junção] (\textit{joinpoint}) - podem ser definidos basicamente como pontos bem definidos na execução de um programa.
+\item [Ponto de corte] (\textit{pointcut}) - em AOP um \textit{pointcut} pode ser representado como um agrupamento de pontos de junção.
+\item [Conselho] (\textit{advice}) - é a implementação de determinado interesse transversal, sendo executado quando determinado \textit{pointcut} é ativado, podendo ser executado antes(\textit{before}), durante (\textit{around}) ou depois (\textit{after}) da execução de um ponto de junção.
+\item [Combinador] (\textit{weaving})
+\end{description}
 
 Podemos também comparar os conceitos de AOP com os principais conceitos de OOP:
 
 \begin{table}[ht]
 	\centering
 	\caption{Comparação entre conceitos de AOP e OOP}
-	\begin{tabular}[h]{c l}
+	\begin{tabular}[h]{c c l}
 		\hline 
 		\textbf{AOP} & \textbf{OOP} \\
 		\hline
@@ -122,21 +123,21 @@ Podemos também comparar os conceitos de AOP com os principais conceitos de OOP:
 		\textit{Joinpoint}&Atributo \\
 		\hline
 	\end{tabular}
-	\label{tab:classificacaoEtq}
+	\label{tab:comparacaoAOPOOP}
 \end{table}
 
 \textit{Pointcut} não se encaixa em nenhum conceito de orientação a objetos, mas podemos comparar um \textit{pointcut} com um gatilho(\textit{trigger}) da linguagem SQL (\textit{Structured Query Language}).
 
 \section{Benefícios}
 
-Em programação podemos dizer que cada paradigma tem seus prós e contras, sendo assim dificilmente encontraremos uma metodologia que resolva todos os nossos problemas da melhor maneira.Com AOP não é diferente, mas devemos considerar sua larga escala de benefícios:
+De forma geral podemos dizer que todo paradigma possui seus prós e contras, sendo assim dificilmente encontraremos uma metodologia que resolva todos os nossos problemas da melhor maneira.Com AOP não é diferente, mas devemos considerar sua larga escala de benefícios:
 
 \begin{itemize}
 \item Separação de interesses e Alta modularização - com AOP podemos separar o projeto em módulos responsáveis por implementar apenas os interesses centrais do sistema, possuindo assim um acoplamento mínimo que extingui o codigo duplicado, fazendo com que o sistema fique muito mais fácil de entender e manter, colocando os interesses transversais (aspectos) em módulos completamente diferentes.\cite{laddad2003aspectj} 
 \item Fácil evolução - utilizando AOP o sistema fica muito mais flexível quando se trata da adição de novas funcionalidades, fazendo com que a resposta às exigências se tornem mais rápidas.
 \item Foco na prioridade - o arquiteto do projeto pode se concentar nos requisitos básicos atuais do sistema, os novos requisitos que abordam interesses transverssais poderão ser tratados fácilmente com a criação de novos aspectos. AOP trabalha em harmonia com metodos agéis, por exemplo apóia a prática YAGNI(\textit{"You aren’t gonna need it"}) \footnote{Em português significa "Você não vai precisar dele". Para saber mais sobre YAGNI consulte o Glossário.}, do \textit{Extreme Programming}(XP)\footnote{É um dos metodos agéis mais utilizados na atualidade.}.\cite{laddad2003aspectj} 
 \item Maior reutilização de código - a chave para a reutização de código definitiva é uma implementação flexível, com AOP é possível pois cada aspecto é implementado como um módulo distinto, se tornando adaptavél a implementações equivalentes convencionais.\cite{laddad2003aspectj} 
-\item Aumento na produtividade - o ciclo do projeto se torna mais rápido, a grande reutilização usada em AOP, faz com que tempo de desenvolvimento seja reduzido, diminuindo também o tempo de implantação e o tempo de resposta às novas exigências de mercado. \cite{laddad2003aspectj} 
+\item Aumento na produtividade - o ciclo do projeto se torna mais rápido, a grande reutilização usada em AOP, faz com que o tempo de desenvolvimento seja reduzido, diminuindo também o tempo de implantação e o tempo de resposta às novas exigências de mercado. \cite{laddad2003aspectj} 
 \item Redução de custos e aumento da qualidade - com a implementação dos interesses transversais em módulos distintos, o custo de implementação cai bastante, fazendo com que o desenvolvedor concentre-se mais nos interesses centrais, criando um produto de qualidade e com o custo reduzido.
 \end{itemize}
 
@@ -148,28 +149,88 @@ Em programação podemos dizer que cada paradigma tem seus prós e contras, send
 
 Metaprogramação por sua vez, pode ser definida como sendo um programa de computador que escreve e/ou manipula programas em tempo de execução ou compilação, fazendo com que o programa se adapte a diferentes circunstâncias, podendo controlar, monitorar ou invocar a si mesmo, visando alcançar as funcionalidades desejadas. \cite{hazzard2013metaprogramming}
 \section{Benefícios}
-O uso de metaprogramação no desenvolvimento de software pode trazer uma serie de benefícios tanto para a empresa, quanto para o desenvolvedor, entre alguns dos princípais benefícios estão:
+O uso de metaprogramação no desenvolvimento de software pode trazer uma série de benefícios tanto para a empresa, quanto para o desenvolvedor, entre alguns dos princípais benefícios estão:
 
 \begin{itemize}
-\item Simplicidade - com metaprogramação temos a possibilidade de adaptar um único bloco de código a diversas situações, sem que haja geração de código, fazendo com que suas classes se tornem simples e ao mesmo tempo pequenas, em comparação a outros programas que não usam esta abordagem.
-\item Adaptação em tempo real - podemos fazer uma análise minuciosa do programa em tempo de execução, fazendo com que alterações no modelo de dados da aplicação sejam percebidas em tempo real, descartando qualquer possibilidade de adição de codigo.
+\item Simplicidade - com metaprogramação temos a possibilidade de adaptar um único bloco de código a diversas situações, sem que haja geração de código, fazendo com que suas classes se tornem simples e ao mesmo tempo pequenas em comparação a outros programas que não usam esta abordagem.
+\item Adaptação em tempo real - podemos fazer uma análise minuciosa do programa em tempo de execução, fazendo com que alterações no modelo de dados da aplicação sejam percebidas em tempo real, ou seja, tornando o sistema altamente configurável sem a necessidade de compilação do projeto.
 \end{itemize}
 
 \section{Principais conceitos}
-Para entender melhor a metaprogramação, é necessária compreender seus princípios (conceitos) básicos:
+Para entender melhor a metaprogramação, é necessário compreender seus princípios (conceitos) básicos:
 
+\begin{description}
+\item [Metalinguagem]  linguagem usada para escrever um metaprograma.
+\item [Metaprograma ] representa um conjunto de componentes semelhantes que contém funcionalidades diferentes, que podem ser instanciados através de parametrização de modo a criar uma instância do componente específico. \cite{damavsevivcius2008taxonomy}
+\item [Metadados] são dados estruturados ou codificados que descrevem as características das entidades , portando informações que visam auxiliar na identificação,  descoberta, avaliação e gestão das entidades descritas.\cite{american1999task}
+\item [Reflexão] é a capacidade de um programa em observar e modificar, possivelmente, a sua estrutura e comportamento, fazendo com que a própria linguagem de programação faça o papel de metalinguagem.\cite{malenfant1996tutorial}
+\end{description}
+
+\section{Anotações em Java}
+Metadados estão disponíveis na linguagem Java apartir da versão 5,  representados através de anotações (\textit{annotations}), sendo apresentada como uma das principais novidades no lançamento desta versão.
+\subsection{Definição}
+
+Uma anotação associa uma informação arbitrária ou um metadado com um elemento de um programa Java. Cada anotação tem um nome e zero ou mais membros. Cada membro tem um nome e um valor, e são
+estes pares \textit{nome = valor} que carregam as informações da anotação. \cite{flanagan2005java}
+
+Anotações são um tipo especial de interface, designado pelo caractere \textit{@} que é precedido da palavra-chave \textit{interface}.Anotações são aplicados aos elementos do programa, ou também em outras anotações, com o intuito de fornecer informações adicionais.\cite{arnold2000java}
+
+\subsection{Conceitos}
+
+As anotações em Java possuem alguns conceitos importantes que devem ser compreendidos: 
+
+\begin{description}
+\item [Tipo de anotação] (\textit{annotation type}) - O nome de uma anotação, bem como os nomes, tipos e valores padrão de seus membros são definidos pelo tipo de anotação. Um tipo de anotação é essencialmente uma interface Java com algumas restrições sobre seus membros.\cite{flanagan2005java}
+\item [Membro de anotação] (\textit{annotation member}) - Os membros de uma anotação são declarados em um tipo de anotação como métodos sem argumentos. O nome do método e o tipo de retorno define o nome e o
+tipo do membro. \cite{flanagan2005java}
+\item [Anotação marcadora] (\textit{marker annotation}) -É um tipo de anotação que não define membros, ou seja, uma anotação desse tipo traz informações simplesmente pela sua presença ou ausência.\cite{flanagan2005java}
+\item [Meta-anotação] (\textit{meta-annotation}) - são anotações utilizadas para descrever o comportamento de um tipo de anotação.\cite{horstmann2004core}
+\item [Alvo] (\textit{target}) - elemento do programa que será anotado.
+\item [Retenção] (\textit{retention}) - é a especificação do tempo em que a informação contida na anotação é mantida. A especificação deste tempo é feita através de uma meta-anotação. \cite{flanagan2005java}
+\end{description}
+
+\subsection{Utilidades}
+Utilizando anotações em java podemos adicionar diversas funcionalidades e recursos ao software, sem que haja depêndencias com as classes.
+
+ Dentre as principais utilidades em usar anotações estão:
 \begin{itemize}
-\item Metalinguagem - linguagem usada para escrever um metaprograma.
-\item Metaprograma - representa um conjunto de componentes semelhantes que contém funcionalidades diferentes, que podem ser instanciados através de parametrização de modo a criar uma instância do componente específico. \cite{damavsevivcius2008taxonomy}
-\item Metadados - são dados estruturados ou codificados que descrevem as características das entidades , portando informações que visam auxiliar na identificação,  descoberta, avaliação e gestão das entidades descritas.\cite{american1999task}
-\item Reflexão - é a capacidade de um programa em observar e modificar, possivelmente, a sua estrutura e comportamento, fazendo com que a própria linguagem de programação faça o papel de metalinguagem.\cite{malenfant1996tutorial}
+\item Fornecer informações ao compilador - por exemplo, podemos utilizar este recurso para detectar erros especifícos em determinada parte do programa em tempo de compilação, também podemos informar ao compilador que ignore determinados tipos de avisos, etc.
+\item Processamento em tempo de compilação - normalmente utilizamos este recurso através de ferramentas capazes de processar anotações, com o intuito de gerar código, arquivos, etc. 
+\item Processamento em tempo de execução - podemos utilizar para marcar elementos, com o objetivo de ler sua estrutura (tipo, modificadores de acesso,etc) através de reflexão em tempo de execução, fazendo o programa se adaptar com determinadas situações.
 \end{itemize}
+\subsection{Exemplo}
 
-\section{Anotações}
+Na figura \ref{fig:criandoAnotacao} é mostrado como criar uma anotação básica, que terá como alvo uma classe, e estará visível em tempo de execução, e também irá possuir um membro cujo tipo é uma \textit{String}.
 
-\section{Reflexão}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.7]{figuras/criandoAnnotation.jpg}
+	\caption{Criando uma anotação.}
+	\label{fig:criandoAnotacao}
+\end{figure}
 
-\chapter{Framework que será usado}
+Na figura \ref{fig:usandoAnotacao} é mostrado como utilizar a anotação criada na figura  \ref{fig:criandoAnotacao}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.7]{figuras/usandoAnnotation.jpg}
+	\caption{Utilizando uma anotação.}
+	\label{fig:usandoAnotacao}
+\end{figure}
+
+Para ler as informações de uma anotação visível em tempo de execução é necessário consultar a API de reflexão do \textit{java.lang.reflect}.
+
+\section{Reflexão em Java}
+
+\subsection{Quando utilizar?}
+
+\subsection {Sobre a API}
+
+\subsection{Lendo anotações}
+
+
+
+\chapter{Ferramentas utilizadas}
 
 \chapter{Soluções Existentes}
 
@@ -195,7 +256,7 @@ Conclusões ...
 
 \begin{description}
 	\item[SoC] è um princípio de projeto, criado com a finalidade de subdividir o problema em conjuntos de interesses tornando a resolução do problema mais fácil.Cada interesse fornece uma funcionalidade distinta, podendo ser validado independentemente das regras negócio.\cite{pressman2010engineering}
-	\item [YAGNI] é um princípio de projeto, bastante usado em equipes XP , cuja principal finalidade é implementar apenas o necessário, ou seja, a melhor maneira de implementar o código rapidamente é implementar menos.
+	\item [YAGNI] é um princípio de projeto, bastante usado em equipes XP , cuja principal finalidade é implementar apenas o necessário.
 	\item[Extreme Programming] XP é um estilo de desenvolvimento de software com foco em excelentes técnicas de programação, comunicação clara e trabalho em equipe, que permite grande produtividade no desenvolvimento. \cite{beck2004extreme}
 \end{description}
 
