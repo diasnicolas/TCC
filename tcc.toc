@@ -8,7 +8,7 @@
 \contentsline {section}{\numberline {2.1}O que \IeC {\'e}?}{19}
 \contentsline {section}{\numberline {2.2}Hist\IeC {\'o}ria}{19}
 \contentsline {section}{\numberline {2.3}Principais conceitos}{20}
-\contentsline {section}{\numberline {2.4}Benef\IeC {\'\i }cios}{20}
+\contentsline {section}{\numberline {2.4}Benef\IeC {\'\i }cios}{21}
 \contentsline {chapter}{\numberline {3}Byte Code Engineering}{23}
 \contentsline {chapter}{\numberline {4}Metaprograma\IeC {\c c}\IeC {\~a}o}{25}
 \contentsline {section}{\numberline {4.1}O que \IeC {\'e}?}{25}
@@ -17,12 +17,12 @@
 \contentsline {section}{\numberline {4.4}Anota\IeC {\c c}\IeC {\~o}es em Java}{26}
 \contentsline {subsection}{\numberline {4.4.1}Defini\IeC {\c c}\IeC {\~a}o}{26}
 \contentsline {subsection}{\numberline {4.4.2}Conceitos}{26}
-\contentsline {subsection}{\numberline {4.4.3}Utilidades}{26}
+\contentsline {subsection}{\numberline {4.4.3}Utilidades}{27}
 \contentsline {subsection}{\numberline {4.4.4}Exemplo}{27}
-\contentsline {section}{\numberline {4.5}Reflex\IeC {\~a}o em Java}{27}
-\contentsline {subsection}{\numberline {4.5.1}Quando utilizar?}{27}
-\contentsline {subsection}{\numberline {4.5.2}Sobre a API}{27}
-\contentsline {subsection}{\numberline {4.5.3}Lendo anota\IeC {\c c}\IeC {\~o}es}{27}
+\contentsline {section}{\numberline {4.5}Reflex\IeC {\~a}o em Java}{28}
+\contentsline {subsection}{\numberline {4.5.1}Quando utilizar?}{28}
+\contentsline {subsection}{\numberline {4.5.2}Funcionamento}{28}
+\contentsline {subsection}{\numberline {4.5.3}Lendo anota\IeC {\c c}\IeC {\~o}es}{28}
 \contentsline {chapter}{\numberline {5}Ferramentas utilizadas}{29}
 \contentsline {chapter}{\numberline {6}Solu\IeC {\c c}\IeC {\~o}es Existentes}{31}
 \contentsline {section}{\numberline {6.1}PostSharp}{31}

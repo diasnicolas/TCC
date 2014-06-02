@@ -85,29 +85,36 @@ Resumo ...
 \chapter{Introdução}
 
 \chapter{Aspect Oriented Programming}
-
-Neste capítulo será abordado de forma geral o paradigma de programação orientada a aspectos, trazendo de forma objetiva as informações necessárias para a superficial compreensão desta abordagem.
+Neste capítulo será abordado de forma geral o paradigma de programação orientada a aspectos. Será falado um pouco da história deste paradigma, passando de forma objetiva pelos principais conceitos e benefícios, trazendo as informações necessárias para a compreensão superficial deste paradigma.
 \section{O que é?}
 AOP é um paradigma de programação que foi construído tomando como base outros paradigmas(OOP e \textit{procedural programming}), cujo o principal objetivo seria a modularização de interesses transversais, utilizando um dos paradigmas base na implementação dos interesses centrais. A forma como AOP e o paradigma base se integram se dá com a utilização de aspectos que determinam a forma como os diferentes módulos se relacionam entre si na formação do sistema final. \cite{laddad2003aspectj}
-
 \section{História}
 Após um grande período de estudos, pesquisadores chegaram a conclusão que para desenvolver um software de qualidade era fundamental separar os interesses do sistema, ou seja, deveria então ser aplicado o princípio de \textit{Separation of Concerns} (SoC)\footnote{Para saber mais sobre SoC consulte o Glossário.}. Em 1972, David Parnas escreveu um artigo, que tinha como  proposta aplicar SoC através de um processo de modularização, onde cada módulo deveria esconder as suas decisões de outros módulos.Passado alguns anos, pesquisadores continuaram a estudar diversas formas de separação de interesses. OOP foi a melhor, se tratando de separação de interesses centrais, mas quando se tratava de interesses transversais, acabava deixando a desejar. Diversas metodologias— \textit{generative programming, meta-programming, reflective programming, compositional filtering, adaptive programming, subject-oriented programming, aspect oriented programming,} e  \textit{intentional programming}— surgiram como possíveis abordagens para modularização de interesses transversais. AOP acabou se tornando a mais popular entre elas. \cite{laddad2003aspectj}
 
 Em 1997 Gregor Kiczales e sua equipe descreveram de forma sólida o conceito de Programação Orientada a Aspectos, durante um trabalho de pesquisa realizado pelo PARC, uma subsidiária da \textit{Xerox Corporation}. O documento descreve uma solução complementar a OOP, ou seja, seriam utilizados "aspectos", que iriam encapsular as preocupações transversais, de forma a garantir a reutilização por outros módulos de um sistema.Sugeriu também diversas implementações de AOP, servindo como base para a criação do AspectJ\footnote{No final dos anos 90, a Xerox Corporation, transferiu o projeto AspectJ para a comunidade Open Source em eclipse.org.}, uma linguagem AOP muito difundida nos dias de hoje.\cite{groves2013aop}
 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.6]{figuras/funcionamentoAOP.png}
+	\caption{Funcionamento de AOP.}
+	\label{fig:funcionamentoAOP}
+\end{figure}
+
 \section{Principais conceitos}
 
 Para entender melhor o funcionamento de AOP, é preciso compreender seus principais conceitos. 
 
-Os 4 principais conceitos de AOP são:
+Os 5 principais conceitos de AOP são:
 
 \begin{description}
 \item [Aspecto] (\textit{aspect}) - pode ser definido como um interesse transversal, ou seja, interesse onde sua implementação é espalhada por diversos módulos ou componentes de um sistema.
 \item [Ponto de junção] (\textit{joinpoint}) - podem ser definidos basicamente como pontos bem definidos na execução de um programa.
 \item [Ponto de corte] (\textit{pointcut}) - em AOP um \textit{pointcut} pode ser representado como um agrupamento de pontos de junção.
-\item [Conselho] (\textit{advice}) - é a implementação de determinado interesse transversal, sendo executado quando determinado \textit{pointcut} é ativado, podendo ser executado antes(\textit{before}), durante (\textit{around}) ou depois (\textit{after}) da execução de um ponto de junção.
-\item [Combinador] (\textit{weaving})
+\item [Conselho] (\textit{advice}) - é a implementação de determinado interesse transversal, sendo executado quando determinado \textit{pointcut} é ativado, podendo ser executado antes(\textit{before}), em torno (\textit{around}) ou depois (\textit{after}) da execução de um ponto de junção.
+\item [Introdução] (\textit{introduction}) - é quando um aspecto introduz algumas mudanças em classes, interfaces , métodos. Por exemplo, pode-se acrescentar uma variável ou método a uma classe existente. \cite{laddad2003aspectj}
+
 \end{description}
+
 
 Podemos também comparar os conceitos de AOP com os principais conceitos de OOP:
 
@@ -144,6 +151,7 @@ De forma geral podemos dizer que todo paradigma possui seus prós e contras, sen
 \chapter{Byte Code Engineering}
 
 \chapter{Metaprogramação}
+Neste capitulo serão introduzidos  os princípais conceitos de metaprogramação, falando também dos principais benefícios em aplicar esta metodologia em seus programas. Também é apresentado neste capítulo informações relevantes sobre o uso de anotações e reflexão na linguagem Java.
 
 \section{O que é?}
 
@@ -204,7 +212,7 @@ Na figura \ref{fig:criandoAnotacao} é mostrado como criar uma anotação básic
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.7]{figuras/criandoAnnotation.jpg}
+	\includegraphics[scale=0.6]{figuras/criandoAnnotation.jpg}
 	\caption{Criando uma anotação.}
 	\label{fig:criandoAnotacao}
 \end{figure}
@@ -213,7 +221,7 @@ Na figura \ref{fig:usandoAnotacao} é mostrado como utilizar a anotação criada
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.7]{figuras/usandoAnnotation.jpg}
+	\includegraphics[scale=0.6]{figuras/usandoAnnotation.jpg}
 	\caption{Utilizando uma anotação.}
 	\label{fig:usandoAnotacao}
 \end{figure}
@@ -221,13 +229,28 @@ Na figura \ref{fig:usandoAnotacao} é mostrado como utilizar a anotação criada
 Para ler as informações de uma anotação visível em tempo de execução é necessário consultar a API de reflexão do \textit{java.lang.reflect}.
 
 \section{Reflexão em Java}
+Na linguagem Java podemos utilizar reflexão por meio do pacote \textit{java.lang.reflect}, juntamente com o pacote \textit{java.lang} que contém as classes \textit{Class} e \textit{Package}, e \textit{java.lang.annotation} que faz referência à classe \textit{Annotation}. Este conjunto de pacotes oferecem uma gama de classes responsáveis pela leitura e modificação da estrutura de um programa em tempo de execução.
 
 \subsection{Quando utilizar?}
 
-\subsection {Sobre a API}
+Normalmente utilizamos reflexão para tomar alguma decisão com base na estrutura do programa, ou apenas mostrar informações sobre ela, ou seja, podemos utilizar o(s) pacote(s) de reflexão do Java para descobrir diversos tipos de informações relacionadas com a estrutura de classes, métodos, atributos e etc. Também podemos utilizar reflexão para instanciar objetos de um tipo determinado, invocar método(s) de uma classe específica, ler anotações, entre outros.
+
+\subsection{Funcionamento}
+
+A reflexão em um programa Java tem inicio apartir de um objeto do tipo \textit{Class}. Com um objeto do tipo \textit{Class} conseguimos obter sua lista completa de membros(métodos, atributos) e informações sobre eles, podendo descobrir também todos os tipos desta classe(interfaces que implementa, classes que estende), e descobrir informações sobre a própria classe, como os modificadores aplicados a ela (\textit{public}, \textit{protected}, \textit{private}, etc). \cite{arnold2000java}
 
 \subsection{Lendo anotações}
 
+Os pacotes utilizados para reflexão possuem uma API \footnote{Visite: "http://docs.oracle.com/javase/7/docs/api/"  para saber mais sobre a api.} de fácil entendimento, e que oferecem suporte à leitura de anotações.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.6]{figuras/lendoAnnotation.jpg}
+	\caption{Lendo informações de uma anotação.}
+	\label{fig:lendoAnotacao}
+\end{figure}
+
+Na figura \ref{fig:lendoAnotacao} mostramos como ler anotações presentes em classes, e também como ler informações presentes nos membros de uma anotação.
 
 
 \chapter{Ferramentas utilizadas}
