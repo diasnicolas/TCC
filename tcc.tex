@@ -91,7 +91,7 @@ AOP é um paradigma de programação que foi construído tomando como base outro
 \section{História}
 Após um grande período de estudos, pesquisadores chegaram a conclusão que para desenvolver um software de qualidade era fundamental separar os interesses do sistema, ou seja, deveria então ser aplicado o princípio de \textit{Separation of Concerns} (SoC)\footnote{Para saber mais sobre SoC consulte o Glossário.}. Em 1972, David Parnas escreveu um artigo, que tinha como  proposta aplicar SoC através de um processo de modularização, onde cada módulo deveria esconder as suas decisões de outros módulos.Passado alguns anos, pesquisadores continuaram a estudar diversas formas de separação de interesses. OOP foi a melhor, se tratando de separação de interesses centrais, mas quando se tratava de interesses transversais, acabava deixando a desejar. Diversas metodologias— \textit{generative programming, meta-programming, reflective programming, compositional filtering, adaptive programming, subject-oriented programming, aspect oriented programming,} e  \textit{intentional programming}— surgiram como possíveis abordagens para modularização de interesses transversais. AOP acabou se tornando a mais popular entre elas. \cite{laddad2003aspectj}
 
-Em 1997 Gregor Kiczales e sua equipe descreveram de forma sólida o conceito de Programação Orientada a Aspectos, durante um trabalho de pesquisa realizado pelo PARC, uma subsidiária da \textit{Xerox Corporation}. O documento descreve uma solução complementar a OOP, ou seja, seriam utilizados "aspectos", que iriam encapsular as preocupações transversais, de forma a garantir a reutilização por outros módulos de um sistema.Sugeriu também diversas implementações de AOP, servindo como base para a criação do AspectJ\footnote{No final dos anos 90, a Xerox Corporation, transferiu o projeto AspectJ para a comunidade Open Source em eclipse.org.}, uma linguagem AOP muito difundida nos dias de hoje.\cite{groves2013aop}
+Em 1997 Gregor Kiczales e sua equipe descreveram de forma sólida o conceito de Programação Orientada a Aspectos, durante um trabalho de pesquisa realizado pelo PARC, uma subsidiária da \textit{Xerox Corporation}. O documento descreve uma solução complementar a OOP, ou seja, seriam utilizados "aspectos" para encapsular as preocupações transversais, de forma a garantir a reutilização por outros módulos de um sistema.Sugeriu também diversas implementações de AOP, servindo como base para a criação do AspectJ\footnote{No final dos anos 90, a Xerox Corporation, transferiu o projeto AspectJ para a comunidade Open Source em eclipse.org.}, uma linguagem AOP muito difundida nos dias de hoje.\cite{groves2013aop}
 
 \begin{figure}[ht]
 	\centering
@@ -108,7 +108,7 @@ Os 5 principais conceitos de AOP são:
 
 \begin{description}
 \item [Aspecto] (\textit{aspect}) - pode ser definido como um interesse transversal, ou seja, interesse onde sua implementação é espalhada por diversos módulos ou componentes de um sistema.
-\item [Ponto de junção] (\textit{joinpoint}) - podem ser definidos basicamente como pontos bem definidos na execução de um programa.
+\item [Ponto de junção] (\textit{joinpoint}) - pode ser definido basicamente como pontos bem definidos na execução de um programa.
 \item [Ponto de corte] (\textit{pointcut}) - em AOP um \textit{pointcut} pode ser representado como um agrupamento de pontos de junção.
 \item [Conselho] (\textit{advice}) - é a implementação de determinado interesse transversal, sendo executado quando determinado \textit{pointcut} é ativado, podendo ser executado antes(\textit{before}), em torno (\textit{around}) ou depois (\textit{after}) da execução de um ponto de junção.
 \item [Introdução] (\textit{introduction}) - é quando um aspecto introduz algumas mudanças em classes, interfaces , métodos. Por exemplo, pode-se acrescentar uma variável ou método a uma classe existente. \cite{laddad2003aspectj}
@@ -116,7 +116,7 @@ Os 5 principais conceitos de AOP são:
 \end{description}
 
 
-Podemos também comparar os conceitos de AOP com os principais conceitos de OOP:
+Pode-se comparar também os conceitos de AOP com os principais conceitos de OOP:
 
 \begin{table}[ht]
 	\centering
@@ -137,12 +137,12 @@ Podemos também comparar os conceitos de AOP com os principais conceitos de OOP:
 
 \section{Benefícios}
 
-De forma geral podemos dizer que todo paradigma possui seus prós e contras, sendo assim dificilmente encontraremos uma metodologia que resolva todos os nossos problemas da melhor maneira.Com AOP não é diferente, mas devemos considerar sua larga escala de benefícios:
+De forma geral pode-se dizer que todo paradigma possui seus prós e contras, sendo assim difícilmente será encontrada uma metodologia que resolva todos os problemas da melhor maneira. Com AOP não é diferente, mas deve-se considerar sua larga escala de benefícios:
 
 \begin{itemize}
-\item Separação de interesses e Alta modularização - com AOP podemos separar o projeto em módulos responsáveis por implementar apenas os interesses centrais do sistema, possuindo assim um acoplamento mínimo que extingui o codigo duplicado, fazendo com que o sistema fique muito mais fácil de entender e manter, colocando os interesses transversais (aspectos) em módulos completamente diferentes.\cite{laddad2003aspectj} 
+\item Separação de interesses e Alta modularização - com AOP pode-se separar o projeto em módulos responsáveis por implementar apenas os interesses centrais do sistema, possuindo assim um acoplamento mínimo que extingui o codigo duplicado, fazendo com que o sistema fique muito mais fácil de entender e manter, colocando os interesses transversais (aspectos) em módulos completamente diferentes.\cite{laddad2003aspectj} 
 \item Fácil evolução - utilizando AOP o sistema fica muito mais flexível quando se trata da adição de novas funcionalidades, fazendo com que a resposta às exigências se tornem mais rápidas.
-\item Foco na prioridade - o arquiteto do projeto pode se concentar nos requisitos básicos atuais do sistema, os novos requisitos que abordam interesses transverssais poderão ser tratados fácilmente com a criação de novos aspectos. AOP trabalha em harmonia com metodos agéis, por exemplo apóia a prática YAGNI(\textit{"You aren’t gonna need it"}) \footnote{Em português significa "Você não vai precisar dele". Para saber mais sobre YAGNI consulte o Glossário.}, do \textit{Extreme Programming}(XP)\footnote{É um dos metodos agéis mais utilizados na atualidade.}.\cite{laddad2003aspectj} 
+\item Foco na prioridade - o arquiteto do projeto pode se concentar nos requisitos básicos atuais do sistema, os novos requisitos que abordam interesses transverssais podem ser tratados fácilmente com a criação de novos aspectos. AOP trabalha em harmonia com metodos agéis, por exemplo apóia a prática YAGNI(\textit{"You aren’t gonna need it"}) \footnote{Em português significa "Você não vai precisar dele". Para saber mais sobre YAGNI consulte o Glossário.}, do \textit{Extreme Programming}(XP)\footnote{É um dos metodos agéis mais utilizados na atualidade.}.\cite{laddad2003aspectj} 
 \item Maior reutilização de código - a chave para a reutização de código definitiva é uma implementação flexível, com AOP é possível pois cada aspecto é implementado como um módulo distinto, se tornando adaptavél a implementações equivalentes convencionais.\cite{laddad2003aspectj} 
 \item Aumento na produtividade - o ciclo do projeto se torna mais rápido, a grande reutilização usada em AOP, faz com que o tempo de desenvolvimento seja reduzido, diminuindo também o tempo de implantação e o tempo de resposta às novas exigências de mercado. \cite{laddad2003aspectj} 
 \item Redução de custos e aumento da qualidade - com a implementação dos interesses transversais em módulos distintos, o custo de implementação cai bastante, fazendo com que o desenvolvedor concentre-se mais nos interesses centrais, criando um produto de qualidade e com o custo reduzido.
