@@ -12,6 +12,10 @@
   C\@. \textbf{Extreme programming explained}: embrace change. [S.l.]:
   Addison-Wesley Professional, 2004.
 
+\bibitem[CHIBA(2013)CHIBA]{javassist} CHIBA, S\@. \textbf{Javassist}.
+  Disponível em: <http://www.csg.ci.i.u-tokyo.ac.jp/~chiba/javassist/>. Acesso
+  em: 16 junho. 2014.
+
 \bibitem[DAMA{\v{S}}EVI{\v{C}}IUS; {\v{S}}TUIKYS(2008)DAMA{\v{S}}EVI{\v{C}}IUS;
   {\v{S}}TUIKYS]{damavsevivcius2008taxonomy} DAMA{\v{S}}EVI{\v{C}}IUS, R.;
   {\v{S}}TUIKYS, V\@. Taxonomy of the fundamental concepts of metaprogramming.
@@ -31,6 +35,10 @@
   HORSTMANN, C.~S.; CORNELL, G\@. \textbf{Core Java 2, Advanced Features, Vol.
   2}. [S.l.]: Prentice Hall, 2004.
 
+\bibitem[KALINOVSKY(2004)KALINOVSKY]{kalinovsky2004covert} KALINOVSKY, A\@.
+  \textbf{Covert Java}: techniques for decompiling, patching, and reverse
+  engineering. [S.l.]: Pearson Higher Education, 2004.
+
 \bibitem[LADDAD(2003)LADDAD]{laddad2003aspectj} LADDAD, R\@. \textbf{{AspectJ
   in action}: practical aspect-oriented programming}. [S.l.]: Manning, 2003.
 
@@ -42,5 +50,10 @@
 \bibitem[PRESSMAN(2010)PRESSMAN]{pressman2010engineering} PRESSMAN, R\@.
   \textbf{{Software engineering}: a practitioner’s approach}. [S.l.]: McGraw
   Hill, 2010.
+
+\bibitem[ST{\"A}RK; SCHMID; B{\"O}RGER(2001)ST{\"A}RK; SCHMID;
+  B{\"O}RGER]{stark2001java} ST{\"A}RK, R.~F.; SCHMID, J.; B{\"O}RGER, E\@.
+  \textbf{Java and the Java virtual machine}. [S.l.]: Springer Heidelberg,
+  2001.
 
 \end{thebibliography}

@@ -1,0 +1,20 @@
+﻿http://www.springframework.net/doc/reference/html/aop-quickstart.html
+http://www.javacodegeeks.com/2011/09/practical-introduction-into-code.html
+
+FUNCIONALIDADES
+================
+
+EXECUÇÃO DO ADVICE
+
+* o advice vai ser executado , com base nos pontos de junção inclusos no pointcut a ser executado
+ 
+  // executa em todos metodos que terminam com a ("*a"),
+ //  começam com a("a*"), possuem a("*a*")
+ @execute(advice=Nomeadvice, expressionMethodsName="*a") 
+
+* 
+
+vamos simplesmente aplicar todos os tipos de conselhos que foram descritos anteriormente 
+a um único objeto aconselhou ... neste primeiro exemplo vamos usar o pointcut padrão, o que 
+significa que cada joinpoint possível será informado,
+ e você será capaz de ver que as várias instâncias de aconselhamento são aplicadas em ordem.

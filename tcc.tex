@@ -70,6 +70,9 @@ Agradecimentos ...
 	\item[SQL] \textit{Structured Query Language} (Linguagem de Consulta Estruturada)
 	\item[YAGNI] \textit{You aren’t gonna need it} (Você não vai precisar dele)
 	\item[XP] \textit{Extreme Programming} (Programação Extrema)
+	\item[Javassist] \textit{Java Programming Assistant} (Assistente de Programação Java)
+	\item[BCEL] \textit{Byte Code Engineering Library}
+	\item[API] \textit{Application Programming Interface} (Interface de Programação de Aplicativos)
 \end{listofabbrv}
 
 \listoffigures
@@ -112,6 +115,7 @@ Os 5 principais conceitos de AOP são:
 \item [Ponto de corte] (\textit{pointcut}) - em AOP um \textit{pointcut} pode ser representado como um agrupamento de pontos de junção.
 \item [Conselho] (\textit{advice}) - é a implementação de determinado interesse transversal, sendo executado quando determinado \textit{pointcut} é ativado, podendo ser executado antes(\textit{before}), em torno (\textit{around}) ou depois (\textit{after}) da execução de um ponto de junção.
 \item [Introdução] (\textit{introduction}) - é quando um aspecto introduz algumas mudanças em classes, interfaces , métodos. Por exemplo, pode-se acrescentar uma variável ou método a uma classe existente. \cite{laddad2003aspectj}
+\item [Combinador] (\textit{weaver}) - é a ferramenta responsável pela combinação dos interesses centrais com os interesses transversais do sistema, ou seja,  é o momento de integração destes interesses mediante uma técnica específica.
 
 \end{description}
 
@@ -148,7 +152,37 @@ De forma geral pode-se dizer que todo paradigma possui seus prós e contras, sen
 \item Redução de custos e aumento da qualidade - com a implementação dos interesses transversais em módulos distintos, o custo de implementação cai bastante, fazendo com que o desenvolvedor concentre-se mais nos interesses centrais, criando um produto de qualidade e com o custo reduzido.
 \end{itemize}
 
-\chapter{Byte Code Engineering}
+\chapter{Bytecode Engineering}
+
+\section{Fundamentos de bytecode}
+
+Basicamente pode-se dizer que bytecode é a linguagem intermediária entre o código fonte e o código de máquina, que faz com que os programas Java possam ser executados em múltiplas plataformas. O documento responsável pela definição de bytecode é a Especificação da Máquina Virtual Java (\textit{Java Virtual Machine Specification})\footnote{Pode ser acessada em : http://docs.oracle.com/javase/specs/jls/se8/jls8.pdf} que descreve também os conceitos da linguagem, formato dos arquivos de classes, os requisitos da \textit{Java Virtual Machine} (JVM), entre outros \cite{kalinovsky2004covert}.
+
+A JVM que executa sobre o sistema operacional, é responsável pelo ambiente de execução dos programas Java, sendo também a responsável pela conversão de instruções de bytecode Java em instruções nativas de máquina \cite{stark2001java}.
+
+\section{O que é?}
+Bytecode Engineering é uma técnica normalmente utilizada para criação, manipulação e modificação de classes Java compiladas à nível de bytecode. Muitas tecnologias  utilizam esta técnica para otimizar, ou melhorar classes já existentes.
+\section {Vantagens}
+
+Dentre as principais vantagens em utilizar bytecode engineering estão:
+
+\begin{itemize}
+\item Consegue-se manipular o bytecode sem a necessidade de recompilação, ou obtenção do código fonte original.
+\item O bytecode pode ser gerado ou instrumentado por \textit{class loader} em tempo real, enquanto as classes são carregadas em uma JVM \cite{kalinovsky2004covert}.
+\item É muito mais fácil e rápido automatizar a geração de bytecode por ser um processo mais baixo nível e também por não haver a necessidade de execução do compilador, ao contrário da geração de código fonte que possui alguns passos a mais no seu processo, e também necessita da execução do compilador \cite{kalinovsky2004covert}.
+\item Instrumentar métodos, tendo como objetivo a inserção de lógica adicional, que não necessita estar nos arquvos de código fonte. Por exemplo, pode-se deixar no arquivo fonte apenas os interesses centrais do sistema, e incluir os interesses transversais utilizando bytecode engineering. 
+\end{itemize}
+
+\section{Ferramentas de manipulação}
+
+Pode-se dizer que a manipulação de bytecode é uma tarefa complexa, pois bytecode é uma linguagem de baixo nível, e o aprendizado desta linguagem para programadores de alto nível, tende a ser muito lenta, fazendo com que seja invável o seu aprendizado dentro do escopo de um projeto.
+
+Pensando neste problema, foram criadas algumas bibliotecas que tornam o processo de manipulação de bytecode mais alto nível, facilitando o seu aprendizado. As bibliotecas mais utilizadas que aplicam a técnica de \textit{bytecode engineering} são: \textit{Javassist}, \textit{Byte Code Engineering Library (BCEL)} e \textit{ASM}.
+\subsection {Javassist}
+
+Javassist (Assistente de Programação Java) é uma biblioteca de classes utilizada na manipulação de bytecodes em Java, permitindo que classes sejam criadas em tempo de execução e manipuladas no tempo de carregamento da JVM. A principal diferença do Javassist para outros manipuladores de bytecode, é que javassist possui  API (\textit{Application Programming Interface}) no nível de código fonte e no nível de bytecode \cite{javassist}.
+\subsection {BCEL}
+\subsection {ASM}
 
 \chapter{Metaprogramação}
 Neste capitulo serão introduzidos  os princípais conceitos de metaprogramação, falando também dos principais benefícios em aplicar esta metodologia em seus programas. Também é apresentado neste capítulo informações relevantes sobre o uso de anotações e reflexão na linguagem Java.
@@ -160,8 +194,8 @@ Metaprogramação por sua vez, pode ser definida como sendo um programa de compu
 O uso de metaprogramação no desenvolvimento de software pode trazer uma série de benefícios tanto para a empresa, quanto para o desenvolvedor, entre alguns dos princípais benefícios estão:
 
 \begin{itemize}
-\item Simplicidade - com metaprogramação temos a possibilidade de adaptar um único bloco de código a diversas situações, sem que haja geração de código, fazendo com que suas classes se tornem simples e ao mesmo tempo pequenas em comparação a outros programas que não usam esta abordagem.
-\item Adaptação em tempo real - podemos fazer uma análise minuciosa do programa em tempo de execução, fazendo com que alterações no modelo de dados da aplicação sejam percebidas em tempo real, ou seja, tornando o sistema altamente configurável sem a necessidade de compilação do projeto.
+\item Simplicidade - com metaprogramação tem-se a possibilidade de adaptar um único bloco de código a diversas situações, sem a necessidade de geração de código, fazendo com as classes se tornem simples e ao mesmo tempo pequenas em comparação a outros programas que não usam esta abordagem.
+\item Adaptação em tempo real - pode-se fazer uma análise minuciosa do programa em tempo de execução, fazendo com que alterações no modelo de dados da aplicação sejam percebidas em tempo real, ou seja, pode-se tornar o sistema altamente configurável sem a necessidade de compilação do projeto.
 \end{itemize}
 
 \section{Principais conceitos}
@@ -198,13 +232,15 @@ tipo do membro. \cite{flanagan2005java}
 \end{description}
 
 \subsection{Utilidades}
-Utilizando anotações em java podemos adicionar diversas funcionalidades e recursos ao software, sem que haja depêndencias com as classes.
+
+Utilizando anotações em java pode-se adicionar diversas funcionalidades e recursos ao software, sem que haja depêndencias com as classes.
 
  Dentre as principais utilidades em usar anotações estão:
+
 \begin{itemize}
-\item Fornecer informações ao compilador - por exemplo, podemos utilizar este recurso para detectar erros especifícos em determinada parte do programa em tempo de compilação, também podemos informar ao compilador que ignore determinados tipos de avisos, etc.
-\item Processamento em tempo de compilação - normalmente utilizamos este recurso através de ferramentas capazes de processar anotações, com o intuito de gerar código, arquivos, etc. 
-\item Processamento em tempo de execução - podemos utilizar para marcar elementos, com o objetivo de ler sua estrutura (tipo, modificadores de acesso,etc) através de reflexão em tempo de execução, fazendo o programa se adaptar com determinadas situações.
+\item Fornecer informações ao compilador - por exemplo, pode-se utilizar este recurso para detectar erros especifícos em determinada parte do programa em tempo de compilação, também pode-se informar ao compilador que ignore determinados tipos de avisos, etc.
+\item Processamento em tempo de compilação - normalmente utiliza-se este recurso através de ferramentas capazes de processar anotações, com o intuito de gerar código, arquivos, etc. 
+\item Processamento em tempo de execução - pode-se utilizar para marcar elementos, com o objetivo de ler sua estrutura (tipo, modificadores de acesso,etc) através de reflexão em tempo de execução, fazendo com que o programa se adapte com determinadas situações.
 \end{itemize}
 \subsection{Exemplo}
 
@@ -229,15 +265,15 @@ Na figura \ref{fig:usandoAnotacao} é mostrado como utilizar a anotação criada
 Para ler as informações de uma anotação visível em tempo de execução é necessário consultar a API de reflexão do \textit{java.lang.reflect}.
 
 \section{Reflexão em Java}
-Na linguagem Java podemos utilizar reflexão por meio do pacote \textit{java.lang.reflect}, juntamente com o pacote \textit{java.lang} que contém as classes \textit{Class} e \textit{Package}, e \textit{java.lang.annotation} que faz referência à classe \textit{Annotation}. Este conjunto de pacotes oferecem uma variedade de classes responsáveis pela leitura e modificação da estrutura de um programa em tempo de execução.
+Na linguagem Java pode-se utilizar reflexão por meio do pacote \textit{java.lang.reflect}, juntamente com o pacote \textit{java.lang} que contém as classes \textit{Class} e \textit{Package}, e \textit{java.lang.annotation} que faz referência à classe \textit{Annotation}. Este conjunto de pacotes oferecem uma variedade de classes responsáveis pela leitura e modificação da estrutura de um programa em tempo de execução.
 
 \subsection{Quando utilizar?}
 
-Normalmente utilizamos reflexão para tomar alguma decisão com base na estrutura do programa, ou apenas mostrar informações sobre ela, ou seja, podemos utilizar o(s) pacote(s) de reflexão do Java para descobrir diversos tipos de informações relacionadas com a estrutura de classes, métodos, atributos e etc. Também podemos utilizar reflexão para instanciar objetos de um tipo determinado, invocar método(s) de uma classe específica, ler anotações, entre outros.
+Normalmente utiliza-se reflexão para tomar alguma decisão com base na estrutura do programa, ou apenas mostrar informações sobre ela, ou seja,  utiliza-se o(s) pacote(s) de reflexão do Java para descobrir diversos tipos de informações relacionadas com a estrutura de classes, métodos, atributos e etc. Também pode-se utilizar reflexão para instânciar objetos de um tipo determinado, invocar método(s) de uma classe específica, ler anotações, entre outros.
 
 \subsection{Funcionamento}
 
-A reflexão em um programa Java tem inicio apartir de um objeto do tipo \textit{Class}. Com um objeto do tipo \textit{Class} conseguimos obter sua lista completa de membros(métodos, atributos) e informações sobre eles, podendo descobrir também todos os tipos desta classe(interfaces que implementa, classes que estende), e descobrir informações sobre a própria classe, como os modificadores aplicados a ela (\textit{public}, \textit{protected}, \textit{private}, etc). \cite{arnold2000java}
+A reflexão em um programa Java tem inicio apartir de um objeto do tipo \textit{Class}. Com um objeto do tipo \textit{Class} pode-se ober sua lista completa de membros(métodos, atributos) e informações sobre eles, podendo descobrir também todos os tipos desta classe(interfaces que implementa, classes que estende), e descobrir informações sobre a própria classe, como os modificadores aplicados a ela (\textit{public}, \textit{protected}, \textit{private}, etc). \cite{arnold2000java}
 
 \subsection{Lendo anotações}
 
@@ -250,7 +286,7 @@ Os pacotes utilizados para reflexão possuem uma API \footnote{Visite: "http://d
 	\label{fig:lendoAnotacao}
 \end{figure}
 
-Na figura \ref{fig:lendoAnotacao} mostramos como ler anotações presentes em classes, e também como ler informações presentes nos membros de uma anotação.
+Na figura \ref{fig:lendoAnotacao} é mostrado como ler anotações presentes em classes, e também como ler informações presentes nos membros de uma anotação.
 
 
 \chapter{Ferramentas utilizadas}
@@ -281,6 +317,8 @@ Conclusões ...
 	\item[SoC] è um princípio de projeto, criado com a finalidade de subdividir o problema em conjuntos de interesses tornando a resolução do problema mais fácil.Cada interesse fornece uma funcionalidade distinta, podendo ser validado independentemente das regras negócio.\cite{pressman2010engineering}
 	\item [YAGNI] é um princípio de projeto, bastante usado em equipes XP , cuja principal finalidade é implementar apenas o necessário.
 	\item[Extreme Programming] XP é um estilo de desenvolvimento de software com foco em excelentes técnicas de programação, comunicação clara e trabalho em equipe, que permite grande produtividade no desenvolvimento. \cite{beck2004extreme}
+\item [Decorator] é um padrão de projeto estrutural, cujo principal objetivo é adicionar funcionalidades a um objeto dinamicamente.
+\item [Proxy] é um padrão de projeto estrutural, cujo principal objetivo é controlar as chamadas a um objeto através de outro objeto de mesma interface.
 \end{description}
 
 \appendix

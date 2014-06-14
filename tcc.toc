@@ -9,7 +9,14 @@
 \contentsline {section}{\numberline {2.2}Hist\IeC {\'o}ria}{19}
 \contentsline {section}{\numberline {2.3}Principais conceitos}{20}
 \contentsline {section}{\numberline {2.4}Benef\IeC {\'\i }cios}{21}
-\contentsline {chapter}{\numberline {3}Byte Code Engineering}{23}
+\contentsline {chapter}{\numberline {3}Bytecode Engineering}{23}
+\contentsline {section}{\numberline {3.1}Fundamentos de bytecode}{23}
+\contentsline {section}{\numberline {3.2}O que \IeC {\'e}?}{23}
+\contentsline {section}{\numberline {3.3}Vantagens}{23}
+\contentsline {section}{\numberline {3.4}Ferramentas de manipula\IeC {\c c}\IeC {\~a}o}{24}
+\contentsline {subsection}{\numberline {3.4.1}Javassist}{24}
+\contentsline {subsection}{\numberline {3.4.2}BCEL}{24}
+\contentsline {subsection}{\numberline {3.4.3}ASM}{24}
 \contentsline {chapter}{\numberline {4}Metaprograma\IeC {\c c}\IeC {\~a}o}{25}
 \contentsline {section}{\numberline {4.1}O que \IeC {\'e}?}{25}
 \contentsline {section}{\numberline {4.2}Benef\IeC {\'\i }cios}{25}
