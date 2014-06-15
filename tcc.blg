@@ -16,45 +16,45 @@ Warning--": practical aspect-oriented programming}" isn't a brace-balanced strin
 while executing--line 1342 of file abnt.bst
 Warning--": a practitioner’s approach}" isn't a brace-balanced string for entry pressman2010engineering
 while executing--line 1342 of file abnt.bst
-You've used 14 entries,
+You've used 17 entries,
             2364 wiz_defined-function locations,
-            645 strings with 5787 characters,
-and the built_in function-call counts, 12518 in all, are:
-= -- 1289
-> -- 42
-< -- 212
-+ -- 752
-- -- 28
-* -- 648
-:= -- 1054
-add.period$ -- 57
-call.type$ -- 14
-change.case$ -- 149
+            658 strings with 6190 characters,
+and the built_in function-call counts, 15049 in all, are:
+= -- 1576
+> -- 46
+< -- 247
++ -- 918
+- -- 31
+* -- 753
+:= -- 1277
+add.period$ -- 67
+call.type$ -- 17
+change.case$ -- 175
 chr.to.int$ -- 34
-cite$ -- 14
-duplicate$ -- 1664
-empty$ -- 691
-format.name$ -- 173
-if$ -- 2639
+cite$ -- 17
+duplicate$ -- 2018
+empty$ -- 803
+format.name$ -- 201
+if$ -- 3183
 int.to.chr$ -- 0
 int.to.str$ -- 0
 missing$ -- 0
-newline$ -- 31
-num.names$ -- 70
-pop$ -- 259
+newline$ -- 37
+num.names$ -- 85
+pop$ -- 301
 preamble$ -- 1
-purify$ -- 14
+purify$ -- 17
 quote$ -- 0
-skip$ -- 707
+skip$ -- 864
 stack$ -- 0
-substring$ -- 627
-swap$ -- 1086
+substring$ -- 769
+swap$ -- 1305
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 158
+type$ -- 181
 warning$ -- 0
-while$ -- 89
+while$ -- 107
 width$ -- 0
-write$ -- 16
+write$ -- 19
 (There were 2 error messages)

@@ -8,6 +8,10 @@
   ASSOCIATION, A.~L. et~al\@. \textbf{Task Force on Metadata Summary Report}.
   [S.l.]: June, 1999.
 
+\bibitem[BCEL(2014)BCEL]{bcel} BCEL, A.~C\@. \textbf{Apache Commons BCEL™}.
+  Disponível em: <http://commons.apache.org/proper/commons-bcel/>. Acesso em:
+  20 junho. 2014.
+
 \bibitem[BECK; ANDRES(2004)BECK; ANDRES]{beck2004extreme} BECK, K.; ANDRES,
   C\@. \textbf{Extreme programming explained}: embrace change. [S.l.]:
   Addison-Wesley Professional, 2004.
@@ -34,6 +38,15 @@
 \bibitem[HORSTMANN; CORNELL(2004)HORSTMANN; CORNELL]{horstmann2004core}
   HORSTMANN, C.~S.; CORNELL, G\@. \textbf{Core Java 2, Advanced Features, Vol.
   2}. [S.l.]: Prentice Hall, 2004.
+
+\bibitem[JACOBSON; NG(2004)JACOBSON; NG]{jacobson2004aspect} JACOBSON, I.; NG,
+  P.-W\@. \textbf{Aspect-oriented software development with use cases}. [S.l.]:
+  Addison-Wesley Professional, 2004.
+
+\bibitem[JAVA-SOURCE(2012)JAVA-SOURCE]{asmjavasource} JAVA-SOURCE. \textbf{Open
+  Source ByteCode Libraries in Java}. Disponível em:
+  <http://java-source.net/open-source/bytecode-libraries>. Acesso em: 20 junho.
+  2014.
 
 \bibitem[KALINOVSKY(2004)KALINOVSKY]{kalinovsky2004covert} KALINOVSKY, A\@.
   \textbf{Covert Java}: techniques for decompiling, patching, and reverse
