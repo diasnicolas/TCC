@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  15 JUN 2014 18:27
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  22 JUN 2014 18:54
 entering extended mode
  %&-line parsing enabled.
 **tcc.tex
@@ -579,19 +579,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--49
 
 ] [15] [16
 
-] [17]
+]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 94.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 94.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 104.
+
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 104.
+ [17]
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 18
  []
 
-[18
+[18] [19
 
-]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 98.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 98.
- [19] <figuras/funcionamentoAOP.png, id=67, 652.4375pt x 451.6875pt>
+] <figuras/funcionamentoAOP.png, id=68, 652.4375pt x 451.6875pt>
 File: figuras/funcionamentoAOP.png Graphic file (type png)
 
 <use figuras/funcionamentoAOP.png>
@@ -599,16 +607,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 20
  []
 
-[20 <./figuras/funcionamentoAOP.png>]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 152.
-
-
-(/usr/share/texmf-texlive/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 152.
- [21]
+[20 <./figuras/funcionamentoAOP.png>] [21]
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 22
  []
@@ -621,7 +620,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [24]
-Overfull \hbox (10.89195pt too wide) in paragraph at lines 219--220
+Overfull \hbox (10.89195pt too wide) in paragraph at lines 239--240
 \T1/ptm/m/n/12 modo a criar uma ins-tân-cia do com-po-nente es-pe-cí-fico (DA-M
 A’E-VIƒIUS; ’TUIKYS,
  []
@@ -641,7 +640,7 @@ File: figuras/criandoAnnotation.jpg Graphic file (type jpg)
 File: figuras/usandoAnnotation.jpg Graphic file (type jpg)
 
 <use figuras/usandoAnnotation.jpg>
-Overfull \hbox (19.97694pt too wide) in paragraph at lines 283--284
+Overfull \hbox (19.97694pt too wide) in paragraph at lines 303--304
 \T1/ptm/m/n/12 ta-mente com o pa-cote \T1/ptm/m/it/12 java.lang \T1/ptm/m/n/12 
 que con-tém as clas-ses \T1/ptm/m/it/12 Class \T1/ptm/m/n/12 e \T1/ptm/m/it/12 
 Pac-kage\T1/ptm/m/n/12 , e \T1/ptm/m/it/12 java.lang.annotation
@@ -735,7 +734,7 @@ live/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/
 urw/helvetic/uhvro8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a
 .pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/tex
 mf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on tcc.pdf (43 pages, 215457 bytes).
+Output written on tcc.pdf (43 pages, 217326 bytes).
 PDF statistics:
  173 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -86,7 +86,27 @@ Resumo ...
 \end{abstract}
 
 \chapter{Introdução}
+
+Atualmente o setor de desenvolvimento de software é um dos setores que mais cresce em todo o mundo, devido a esse grande crescimento a preocupação das empresas em desenvolver software de qualidade têm aumentado constantemente. A grande maioria das empresas atuantes no mercado, fazem uso do paradigma de Programação Orientada a Objetos (\textit{Object Oriented Programming} - OOP) no desenvolvimento de seus softwares, com intuito de ter um produto manutenível e que se adapte a mudanças, mas com uma qualidade permanente.
+
+Um dos principais motivos que vez com que OOP se tornasse um dos paradigmas mais utilizados foi a sua capacidade de encapsulamento, tornando o projeto de software mais claro, aumentando a reusabilidade de módulos, implementação simplificada e redução nos custos de manutenção. Porém existem interesses que não se aplicam à apenas um módulo, por exemplo o tratamento de exceções deveria estar encapsulado em um módulo distinto, mas na prática ele esta espalhado por diversas partes da aplicação (diversos módulos). Estes interesses são chamados de interesses transverssais (\textit{crosscuting concerns}).
+
+Para encapsular os interesses transversais em um módulo único surgiu o paradigma de Programação Orientada a Aspectos (\textit{Aspect Oriented Programming} - AOP)\footnote{Em AOP interesses transversais recebem o nome de "aspectos".} que é uma extensão de OOP. Quando AOP é utilizado juntamente com OOP, pode-se garantir que independentemente do tipo de interesse (interesse central ou interesse transverssal) tem-se um sistema altamente modularizado sem espalhamento ou entrelaçamento de código.
+
+
+
 \section{Objetivo}
+Este trabalho tem como objetivo geral desenvolver um \textit{framework} que aplique os conceitos de Programação Orientada à Aspectos.
+
+Os objetivos específicos deste trabalho são: 
+
+\begin{itemize}
+\item Entender os principais conceitos de AOP.
+\item Aplicar os conceitos de AOP no desenvolvimento de um \textit{framework}.
+\item Utilizar técnicas de \textit{Bytecode Engineering}.
+\item Desenvolver um estudo de caso para demostrar as funcionalidades do \textit{framework} desenvolvido.
+\end{itemize}
+
 \section{Motivação}
 \section{Resumo dos capítulos}
  
@@ -119,7 +139,7 @@ Os 5 principais conceitos de AOP são:
 \item [Ponto de corte] (\textit{pointcut}) - em AOP um \textit{pointcut} pode ser representado como um agrupamento de pontos de junção.
 \item [Conselho] (\textit{advice}) - é a implementação de determinado interesse transversal, sendo executado quando determinado \textit{pointcut} é ativado, podendo ser executado antes (\textit{before}), em torno (\textit{around}) ou depois (\textit{after}) da execução de um ponto de junção.
 \item [Introdução] (\textit{introduction}) - é quando um aspecto introduz algumas mudanças em classes, interfaces , métodos. Por exemplo, pode-se acrescentar uma variável ou método a uma classe existente  \cite{laddad2003aspectj}.
-\item [Combinador] (\textit{weaver}) - é a ferramenta responsável pela combinação dos interesses centrais com os interesses transversais do sistema, ou seja,  é o momento de integração destes interesses mediante uma técnica específica.
+\item [Combinador] (\textit{weaver}) - é a ferramenta responsável pela combinação dos interesses centrais com os interesses transversais do sistema, ou seja,  é o momento de integração destes interesses na formação do sistema final.
 
 \end{description}
 
