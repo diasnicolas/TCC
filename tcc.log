@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  22 JUN 2014 18:54
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  26 JUN 2014 08:21
 entering extended mode
  %&-line parsing enabled.
 **tcc.tex
@@ -620,7 +620,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [24]
-Overfull \hbox (10.89195pt too wide) in paragraph at lines 239--240
+Overfull \hbox (10.89195pt too wide) in paragraph at lines 256--257
 \T1/ptm/m/n/12 modo a criar uma ins-tân-cia do com-po-nente es-pe-cí-fico (DA-M
 A’E-VIƒIUS; ’TUIKYS,
  []
@@ -640,7 +640,7 @@ File: figuras/criandoAnnotation.jpg Graphic file (type jpg)
 File: figuras/usandoAnnotation.jpg Graphic file (type jpg)
 
 <use figuras/usandoAnnotation.jpg>
-Overfull \hbox (19.97694pt too wide) in paragraph at lines 303--304
+Overfull \hbox (19.97694pt too wide) in paragraph at lines 320--321
 \T1/ptm/m/n/12 ta-mente com o pa-cote \T1/ptm/m/it/12 java.lang \T1/ptm/m/n/12 
 que con-tém as clas-ses \T1/ptm/m/it/12 Class \T1/ptm/m/n/12 e \T1/ptm/m/it/12 
 Pac-kage\T1/ptm/m/n/12 , e \T1/ptm/m/it/12 java.lang.annotation
@@ -734,7 +734,7 @@ live/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/
 urw/helvetic/uhvro8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a
 .pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/tex
 mf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on tcc.pdf (43 pages, 217326 bytes).
+Output written on tcc.pdf (43 pages, 219327 bytes).
 PDF statistics:
  173 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

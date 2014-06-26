@@ -96,19 +96,36 @@ Para encapsular os interesses transversais em um módulo único surgiu o paradig
 
 
 \section{Objetivo}
-Este trabalho tem como objetivo geral desenvolver um \textit{framework} que aplique os conceitos de Programação Orientada à Aspectos.
+Este trabalho tem como objetivo geral desenvolver um \textit{framework}\footnote{Uma abstração que classes comuns entre vários projetos, provendo uma funcionalidade genérica.} que aplique os conceitos básicos de Programação Orientada à Aspectos.
 
 Os objetivos específicos deste trabalho são: 
 
 \begin{itemize}
 \item Entender os principais conceitos de AOP.
-\item Aplicar os conceitos de AOP no desenvolvimento de um \textit{framework}.
+\item Aplicar os conceitos fundamentais de AOP no desenvolvimento de um \textit{framework}.
 \item Utilizar técnicas de \textit{Bytecode Engineering}.
 \item Desenvolver um estudo de caso para demostrar as funcionalidades do \textit{framework} desenvolvido.
 \end{itemize}
 
 \section{Motivação}
+
+Existe uma variedade de ferramentas que implementam AOP, porém estas ferramentas na maioria das vezes se tornam complexas na resolução de um simples problema. Esta complexidade durante o uso da ferramenta, acarreta em um tempo maior de aprendizagem, e consequentemente desencoraja o seu uso pelos usuários. Por este motivo, este trabalho propõe o desenvolvimento de um \textit{framework} que resolva a maioria dos problemas encontrados no desenvolvimento orientado à aspectos, porém a complexidade do \textit{framework} desenvolvido será reduzida consideravelmente, pois será implementado apenas os conceitos necessários.
+
 \section{Resumo dos capítulos}
+
+Este trabalho está dividido em 9 capítulos, abaixo uma pequena descrição de cada um deles:
+
+\begin{description}
+\item [Capítulo 1] este capítulo traz uma visão geral do problema, também descreve os objetivos e a motivação encontrada para a realização deste trabalho.
+\item [Capítulo 2] este capítulo aborda os prinipais conceitos de Programação Orientada a Aspectos, e os principais benefícios no uso deste paradigma.
+\item [Capítulo 3] este capítulo descreve os conceitos básicos de \textit{bytecode} e \textit{Bytecode Engineering}, introduz também as principais ferramentas utilizadas na aplicação da técnica de \textit{Bytecode Engineering}.
+\item [Capítulo 4] este capítulo descreve os principais conceitos de metaprogramação, reflexão e metadados. Aborda de forma prática o uso de anotações (metadados) na linguagem Java.
+\item [Capítulo 5] este capítulo fala de forma superfícial sobre as tecnologias e ferramentas utilizadas na realização deste trabalho.
+\item [Capítulo 6] este capítulo descreve de forma clara e objetiva as soluções já existentes, comentando as vantagens e desvantagens de cada solução.
+\item [Capítulo 7] este capítulo descreve todas as características, desde a parte de análise até a implementação.
+\item [Capítulo 8] este capítulo será desenvolvido um estudo de caso para comprovar as funcionalidadesdo framework.
+\item [Capítulo 9] este capítulo descreve os pontos fortes e fracos do trabalho, trabalhos futuros e outras conclusões sobre o projeto. 
+\end{description}
  
 \chapter{Aspect Oriented Programming}
 Neste capítulo será abordado de forma geral o paradigma de programação orientada a aspectos. Será falado um pouco da história deste paradigma, passando de forma objetiva pelos principais conceitos e benefícios, trazendo as informações necessárias para a compreensão superficial deste paradigma.
@@ -209,7 +226,7 @@ Pensando neste problema, foram criadas algumas bibliotecas que tornam o processo
 
 \subsection {Javassist}
 
-Javassist (Assistente de Programação Java) é uma biblioteca de classes utilizada na manipulação de bytecodes em Java, permitindo que classes sejam criadas em tempo de execução e manipuladas no tempo de carregamento da JVM. A principal diferença do Javassist para outros manipuladores de bytecode, é que javassist possui  API (\textit{Application Programming Interface}) no nível de código fonte e no nível de bytecode \cite{javassist}.
+Javassist (Assistente de Programação Java) é uma biblioteca de classes utilizada na manipulação de bytecodes em Java, permitindo que classes sejam criadas em tempo de execução e manipuladas no tempo de carregamento da JVM. A principal diferença do Javassist para outros manipuladores de bytecode, é que javassist possui  API no nível de código fonte e no nível de bytecode \cite{javassist}.
 \subsection {BCEL}
  BCEL tem como objetivo oferecer aos usuários (desenvolvedores) uma maneira conveniente de analizar, criar, manipular arquivos de classe Java (binário). No BCEL as classes são representadas por objetos que contêm todas as suas informações (métodos, campos e instruções de bytecode) \cite{bcel}.
 \subsection {ASM}
