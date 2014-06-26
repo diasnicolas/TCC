@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  26 JUN 2014 08:21
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  26 JUN 2014 12:28
 entering extended mode
  %&-line parsing enabled.
 **tcc.tex
@@ -446,6 +446,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--41
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 41.
+
+Underfull \hbox (badness 1430) in paragraph at lines 41--41
+[]\T1/ptm/m/n/12 1. AOP, By-te-code En-gi-ne-e-ring, Meta-programação, Fra-
+ []
+
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 41.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -581,17 +586,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--49
 
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 94.
+(Font)              <7> on input line 93.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 94.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 104.
+(Font)              <5> on input line 93.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 103.
 
 
 (/usr/share/texmf-texlive/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 104.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 103.
  [17]
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 18
@@ -620,7 +625,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [24]
-Overfull \hbox (10.89195pt too wide) in paragraph at lines 256--257
+Overfull \hbox (10.89195pt too wide) in paragraph at lines 255--256
 \T1/ptm/m/n/12 modo a criar uma ins-tân-cia do com-po-nente es-pe-cí-fico (DA-M
 A’E-VIƒIUS; ’TUIKYS,
  []
@@ -640,7 +645,7 @@ File: figuras/criandoAnnotation.jpg Graphic file (type jpg)
 File: figuras/usandoAnnotation.jpg Graphic file (type jpg)
 
 <use figuras/usandoAnnotation.jpg>
-Overfull \hbox (19.97694pt too wide) in paragraph at lines 320--321
+Overfull \hbox (19.97694pt too wide) in paragraph at lines 319--320
 \T1/ptm/m/n/12 ta-mente com o pa-cote \T1/ptm/m/it/12 java.lang \T1/ptm/m/n/12 
 que con-tém as clas-ses \T1/ptm/m/it/12 Class \T1/ptm/m/n/12 e \T1/ptm/m/it/12 
 Pac-kage\T1/ptm/m/n/12 , e \T1/ptm/m/it/12 java.lang.annotation
@@ -723,7 +728,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 Here is how much of TeX's memory you used:
  4075 strings out of 495041
  52203 string characters out of 1181897
- 114978 words of memory out of 3000000
+ 114976 words of memory out of 3000000
  7165 multiletter control sequences out of 15000+50000
  52459 words of font info for 54 fonts, out of 3000000 for 9000
  33 hyphenation exceptions out of 8191
@@ -734,7 +739,7 @@ live/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/
 urw/helvetic/uhvro8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a
 .pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/tex
 mf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on tcc.pdf (43 pages, 219327 bytes).
+Output written on tcc.pdf (43 pages, 219342 bytes).
 PDF statistics:
  173 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
