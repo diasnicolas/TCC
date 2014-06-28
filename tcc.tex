@@ -1,4 +1,5 @@
 \documentclass[tc,openright]{iiufrgs}
+
 \usepackage[T1]{fontenc}        % pacote para conj. de caracteres correto
 \usepackage[utf8]{inputenc}   % pacote para acentua\c c\~ ao
 \usepackage{graphicx}           % pacote para importar figuras
@@ -11,8 +12,10 @@
 \usepackage{tabularx}
 %\usepackage{hyperref}
 %\usepackage{float}
+\usepackage{setspace}
 
 \bibliographystyle{abnt}
+
 %\bibliographystyle{apalike}
 
 \hyphenation{en-si-na-men-tos a-gra-de-ci-men-to de-se-nha-dos}
@@ -85,17 +88,21 @@ Resumo ...
 
 \end{abstract}
 
+\setstretch{1.5}
+
 \chapter{Introdução}
 Atualmente o setor de desenvolvimento de software é um dos setores que mais cresce em todo o mundo, devido a esse grande crescimento a preocupação das empresas em desenvolver software de qualidade têm aumentado constantemente. A grande maioria das empresas atuantes no mercado, fazem uso do paradigma de Programação Orientada a Objetos (\textit{Object Oriented Programming} - OOP) no desenvolvimento de seus softwares, com intuito de ter um produto manutenível e que se adapte a mudanças, mas com uma qualidade permanente.
 
 Um dos principais motivos que vez com que OOP se tornasse um dos paradigmas mais utilizados foi a sua capacidade de encapsulamento, tornando o projeto de software mais claro, aumentando a reusabilidade de módulos, implementação simplificada e redução nos custos de manutenção. Porém existem interesses que não se aplicam à apenas um módulo, por exemplo o tratamento de exceções deveria estar encapsulado em um módulo distinto, mas na prática ele esta espalhado por diversas partes da aplicação (diversos módulos). Estes interesses são chamados de interesses transverssais (\textit{crosscuting concerns}).
 
-Para encapsular os interesses transversais em um módulo único surgiu o paradigma de Programação Orientada a Aspectos (\textit{Aspect Oriented Programming} - AOP)\footnote{Em AOP interesses transversais recebem o nome de "aspectos".} que é uma extensão de OOP. Quando AOP é utilizado juntamente com OOP, pode-se garantir que independentemente do tipo de interesse (interesse central ou interesse transverssal) tem-se um sistema altamente modularizado sem espalhamento ou entrelaçamento de código.
+Para encapsular um interesse transversal em um módulo único surgiu o paradigma de Programação Orientada a Aspectos (\textit{Aspect Oriented Programming} - AOP)\footnote{Em AOP interesses transversais recebem o nome de "aspectos".} que é uma extensão de OOP. Quando AOP é utilizado juntamente com OOP, pode-se garantir que independentemente do tipo de interesse (interesse central ou interesse transverssal) tem-se um sistema altamente modularizado, sem espalhamento ou entrelaçamento de código.
 
+A maioria das linguagens orientada à objetos, possuem ferramentas ou até outras linguagens que dão suporte a programação orientada a aspectos. A linguagem mais popular e madura que dá suporte a AOP para a linguagem Java é o AspectJ, porém o seu maior ponto fraco na opinião de diversos desenvolvedores é a complexidade no aprendizado, por ser uma linguagem que possui uma sintaxe própria.
 
+Para diminuir a complexidade na utilização de aspectos na linguagem Java, este trabalho propõe a criação de um \textit{framework}\footnote{Uma abstração entre classes comuns entre vários projetos, provendo uma funcionalidade genérica.} que implemente os principais conceitos de AOP, com o obejtivo de encapsular os interesses transversais, mantendo uma API simplificada, apenas utilizando as contruções da linguagem Java, fazendo com que o desenvolvedor não precise aprender uma nova linguagem para a utilização do framework, apenas conheça a própria linguagem base.
 
 \section{Objetivo}
-Este trabalho tem como objetivo geral desenvolver um \textit{framework}\footnote{Uma abstração que classes comuns entre vários projetos, provendo uma funcionalidade genérica.} que aplique os conceitos básicos de Programação Orientada à Aspectos.
+Este trabalho tem como objetivo geral desenvolver um \textit{framework} que aplique os conceitos básicos de Programação Orientada à Aspectos.
 
 Os objetivos específicos deste trabalho são: 
 
@@ -108,7 +115,7 @@ Os objetivos específicos deste trabalho são:
 
 \section{Motivação}
 
-Existe uma variedade de ferramentas que implementam AOP, porém estas ferramentas na maioria das vezes se tornam complexas na resolução de um simples problema. Esta complexidade durante o uso da ferramenta, acarreta em um tempo maior de aprendizagem, e consequentemente desencoraja o seu uso pelos usuários. Por este motivo, este trabalho propõe o desenvolvimento de um \textit{framework} que resolva a maioria dos problemas encontrados no desenvolvimento orientado à aspectos, porém a complexidade do \textit{framework} desenvolvido será reduzida consideravelmente, pois será implementado apenas os conceitos necessários.
+Existe uma variedade de ferramentas que implementam AOP, porém estas ferramentas na maioria das vezes se tornam complexas na resolução de um simples problema. Esta complexidade durante o uso da ferramenta, acarreta em um tempo maior de aprendizagem, e consequentemente desencoraja o seu uso pelos usuários. Por este motivo, este trabalho propõe o desenvolvimento de um \textit{framework} que resolva a maioria dos problemas que AOP se responsabiliza em resolver, porém a complexidade do \textit{framework} desenvolvido será reduzida consideravelmente, pois será implementado apenas os conceitos necessários.
 
 \section{Resumo dos capítulos}
 
@@ -131,15 +138,15 @@ Neste capítulo será abordado de forma geral o paradigma de programação orien
 \section{Definição}
 AOP é um paradigma de programação que foi construído tomando como base outros paradigmas (OOP e \textit{procedural programming}) , cujo o principal objetivo seria a modularização de interesses transversais, utilizando um dos paradigmas base na implementação dos interesses centrais. A forma como AOP e o paradigma base se integram se dá com a utilização de aspectos que determinam a forma como os diferentes módulos se relacionam entre si na formação do sistema final \cite{laddad2003aspectj}.
 \section{História}
-Após um grande período de estudos, pesquisadores chegaram a conclusão que para desenvolver um software de qualidade era fundamental separar os interesses do sistema, ou seja, deveria então ser aplicado o princípio de \textit{Separation of Concerns} (SoC)\footnote{Para saber mais sobre SoC consulte o Glossário.}. Em 1972, David Parnas escreveu um artigo, que tinha como  proposta aplicar SoC através de um processo de modularização, onde cada módulo deveria esconder as suas decisões de outros módulos.Passado alguns anos, pesquisadores continuaram a estudar diversas formas de separação de interesses. OOP foi a melhor, se tratando de separação de interesses centrais, mas quando se tratava de interesses transversais, acabava deixando a desejar. Diversas metodologias — \textit{generative programming, meta-programming, reflective programming, compositional filtering, adaptive programming, subject-oriented programming, aspect oriented programming,} e  \textit{intentional programming} — surgiram como possíveis abordagens para modularização de interesses transversais. AOP acabou se tornando a mais popular entre elas \cite{laddad2003aspectj}.
+Após um grande período de estudos, pesquisadores chegaram a conclusão que para desenvolver um software de qualidade era fundamental separar os interesses do sistema, ou seja, deveria então ser aplicado o princípio de \textit{Separation of Concerns} (SoC)\footnote{Para saber mais sobre SoC consulte o Glossário.}. Em 1972, David Parnas escreveu um artigo, que tinha como  proposta aplicar SoC através de um processo de modularização, onde cada módulo deveria esconder as suas decisões de outros módulos. Passado alguns anos, pesquisadores continuaram a estudar diversas formas de separação de interesses. OOP foi a melhor, se tratando de separação de interesses centrais, mas quando se tratava de interesses transversais, acabava deixando a desejar. Diversas metodologias — \textit{generative programming, meta-programming, reflective programming, compositional filtering, adaptive programming, subject-oriented programming, aspect oriented programming,} e  \textit{intentional programming} — surgiram como possíveis abordagens para modularização de interesses transversais. AOP acabou se tornando a mais popular entre elas \cite{laddad2003aspectj}.
 
-Em 1997 Gregor Kiczales e sua equipe descreveram de forma sólida o conceito de Programação Orientada a Aspectos, durante um trabalho de pesquisa realizado pelo PARC, uma subsidiária da \textit{Xerox Corporation}. O documento descreve uma solução complementar a OOP, ou seja, seriam utilizados "aspectos" para encapsular as preocupações transversais, de forma a garantir a reutilização por outros módulos de um sistema.Sugeriu também diversas implementações de AOP, servindo como base para a criação do AspectJ\footnote{No final dos anos 90, a Xerox Corporation, transferiu o projeto AspectJ para a comunidade Open Source em eclipse.org.}, uma linguagem AOP muito difundida nos dias de hoje \cite{groves2013aop}.
+Em 1997 Gregor Kiczales e sua equipe descreveram de forma sólida o conceito de Programação Orientada a Aspectos, durante um trabalho de pesquisa realizado pelo PARC, uma subsidiária da \textit{Xerox Corporation}. O documento descreve uma solução complementar a OOP, ou seja, seriam utilizados "aspectos" para encapsular as preocupações transversais, de forma a garantir a reutilização por outros módulos de um sistema. Sugeriu também diversas implementações de AOP, servindo como base para a criação do AspectJ\footnote{No final dos anos 90, a Xerox Corporation, transferiu o projeto AspectJ para a comunidade \textit{Open Source} em eclipse.org.}, uma linguagem AOP muito difundida nos dias de hoje \cite{groves2013aop}.
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.6]{figuras/funcionamentoAOP.png}
-	\caption{Funcionamento de AOP.}
-	\small{Fonte: Autoria própria.}
+	\caption{Implementação de um sistema com e sem a utilização de aspectos.}
+	\small{Fonte: \cite{steinmacher2003estudo}.}
 	\label{fig:funcionamentoAOP}
 \end{figure}
 
@@ -147,7 +154,7 @@ Em 1997 Gregor Kiczales e sua equipe descreveram de forma sólida o conceito de 
 
 Para entender melhor o funcionamento de AOP, é preciso compreender seus principais conceitos. 
 
-Os 5 principais conceitos de AOP são:
+Os 6 principais conceitos de AOP são:
 
 \begin{description}
 \item [Aspecto] (\textit{aspect}) - pode ser definido como um interesse transversal, ou seja, interesse onde sua implementação é espalhada por diversos módulos ou componentes de um sistema.
@@ -160,7 +167,7 @@ Os 5 principais conceitos de AOP são:
 \end{description}
 
 
-Pode-se comparar também os conceitos de AOP com os principais conceitos de OOP:
+Pode-se comparar também a complexidade de alguns conceitos de AOP com os principais conceitos de OOP:
 
 \begin{table}[ht]
 	\centering
@@ -170,22 +177,31 @@ Pode-se comparar também os conceitos de AOP com os principais conceitos de OOP:
 		\hline 
 		\textbf{AOP} & \textbf{OOP} \\
 		\hline
-		\textit{Aspect}&Classe \\
-		\textit{Advice}&Método \\
-		\textit{Joinpoint}&Atributo \\
+		Aspecto&Classe \\
+		Conselho&Método \\
+		Ponto de junção&Atributo \\
 		\hline
 	\end{tabular}
 	\label{tab:comparacaoAOPOOP}
 \end{table}
 
-\textit{Pointcut} não se encaixa em nenhum conceito de orientação a objetos, mas podemos comparar um \textit{pointcut} com um gatilho (\textit{trigger}) da linguagem SQL (\textit{Structured Query Language}) \cite{jacobson2004aspect}.
+\textit{Pointcut} não se encaixa em termos de complexidade em nenhum conceito de orientação a objetos, mas podemos comparar um \textit{pointcut} com um gatilho (\textit{trigger}) da linguagem SQL (\textit{Structured Query Language}) \cite{jacobson2004aspect}.
+
+\subsection{Tipos de combinação}
+
+Uma importante decisão de projeto que deve ser tomada, ao planejar uma ferramenta ou linguagem AOP, é o tipo de combinação que será utilizada na integração dos interesses. Existem dois tipos de combinação:
+
+\begin{description}
+\item [Estática]  consiste na modificação de bytecodes em tempo de compilação, para integração dos interesses centrais e transversais. Possui um desempenho maior em relação a combinação dinâmica, por ser um processo que necessita de menos passos para ser concluído \cite{steinmacher2003estudo}.
+\item [Dinâmica] a combinação é feita em tempo de execução e oferece maior flexibilidade ao programador podendo alterar, modificar e remover aspectos. Porém o desempenho do sistema é afetado, podendo causar também erros durante a execução do programa \cite{steinmacher2003estudo}. 
+\end{description}
 
 \section{Benefícios}
 
-De forma geral pode-se dizer que todo paradigma possui seus prós e contras, sendo assim difícilmente será encontrada uma metodologia que resolva todos os problemas da melhor maneira. Com AOP não é diferente, mas deve-se considerar sua larga escala de benefícios:
+De forma geral pode-se dizer que todo paradigma possui seus prós e contras, sendo assim, difícilmente será encontrada uma metodologia que resolva todos os problemas da melhor maneira. Com AOP não é diferente, mas deve-se considerar sua larga escala de benefícios:
 
 \begin{itemize}
-\item Separação de interesses e Alta modularização - com AOP pode-se separar o projeto em módulos responsáveis por implementar apenas os interesses centrais do sistema, possuindo assim um acoplamento mínimo que extingui o codigo duplicado, fazendo com que o sistema fique muito mais fácil de entender e manter, colocando os interesses transversais (aspectos) em módulos completamente diferentes \cite{laddad2003aspectj}.
+\item Separação de interesses e Alta modularização - com AOP pode-se separar o projeto em módulos distintos, possuindo assim um acoplamento mínimo que extingui o codigo duplicado, fazendo com que o sistema fique muito mais fácil de entender e manter \cite{laddad2003aspectj}.
 \item Fácil evolução - utilizando AOP o sistema fica muito mais flexível quando se trata da adição de novas funcionalidades, fazendo com que a resposta às exigências se tornem mais rápidas.
 \item Foco na prioridade - o arquiteto do projeto pode se concentar nos requisitos básicos atuais do sistema, os novos requisitos que abordam interesses transverssais podem ser tratados fácilmente com a criação de novos aspectos. AOP trabalha em harmonia com metodos agéis, por exemplo apóia a prática YAGNI (\textit{"You aren’t gonna need it"}) \footnote{Em português significa "Você não vai precisar dele". Para saber mais sobre YAGNI consulte o Glossário.}, do \textit{Extreme Programming} (XP)\footnote{É um dos métodos agéis mais utilizados na atualidade.} \cite{laddad2003aspectj}.
 \item Maior reutilização de código - a chave para a reutização de código definitiva é uma implementação flexível, com AOP é possível pois cada aspecto é implementado como um módulo distinto, se tornando adaptavél a implementações equivalentes convencionais \cite{laddad2003aspectj}. 
@@ -195,46 +211,50 @@ De forma geral pode-se dizer que todo paradigma possui seus prós e contras, sen
 
 \section{Considerações finais}
 
+Neste capítulo foi definido os principais conceitos de AOP, que serão tomados como base para o desenvolvimento deste trabalho . Também foi possível perceber a importância em utilizar AOP como paradigma responsável pela modularização dos interesses transverssais.
+
 \chapter{Bytecode Engineering}
-Neste capítulo serão abordados alguns conceitos fundamentais de bytecode, também será definida a técnica de Bytecode Engineering, apresentando algumas vantagens em sua utilização e ferramentas que podem ser utilizadas para aplicar esta técnica. 
+Neste capítulo serão abordados alguns conceitos fundamentais de \textit{bytecode}, também será definida a técnica de \textit{Bytecode Engineering}, apresentando algumas vantagens em sua utilização e ferramentas que podem ser utilizadas para aplicar esta técnica. 
 
 \section{Fundamentos de bytecode}
 
-Basicamente pode-se dizer que bytecode é a linguagem intermediária entre o código fonte e o código de máquina, que faz com que os programas Java possam ser executados em múltiplas plataformas. O documento responsável pela definição de bytecode é a Especificação da Máquina Virtual Java (\textit{Java Virtual Machine Specification})\footnote{Pode ser acessada em : http://docs.oracle.com/javase/specs/jls/se8/jls8.pdf} que descreve também os conceitos da linguagem, formato dos arquivos de classes, os requisitos da \textit{Java Virtual Machine} (JVM), entre outros \cite{kalinovsky2004covert}.
+Basicamente pode-se dizer que \textit{bytecode} é a linguagem intermediária entre o código fonte e o código de máquina, que faz com que os programas Java possam ser executados em múltiplas plataformas. O documento responsável pela definição de \textit{bytecode} é a Especificação da Máquina Virtual Java (\textit{Java Virtual Machine Specification})\footnote{Pode ser acessada em : http://docs.oracle.com/javase/specs/jls/se8/jls8.pdf} que descreve também os conceitos da linguagem, formato dos arquivos de classes, os requisitos da \textit{Java Virtual Machine} (JVM), entre outros \cite{kalinovsky2004covert}.
 
-A JVM que executa sobre o sistema operacional, é responsável pelo ambiente de execução dos programas Java, sendo também a responsável pela conversão de instruções de bytecode Java em instruções nativas de máquina \cite{stark2001java}.
+A JVM que executa sobre o sistema operacional, é responsável pelo ambiente de execução dos programas Java, sendo também a responsável pela conversão de instruções de \textit{bytecode} Java em instruções nativas de máquina \cite{stark2001java}.
 
 \section{Definição}
-Bytecode Engineering é uma técnica normalmente utilizada para criação, manipulação e modificação de classes Java compiladas à nível de bytecode. Muitas tecnologias  utilizam esta técnica para otimizar, ou melhorar classes já existentes.
+Bytecode Engineering é uma técnica normalmente utilizada para criação, manipulação e modificação de classes Java compiladas à nível de \textit{bytecode}. Muitas tecnologias  utilizam esta técnica para otimizar, ou melhorar classes já existentes.
 \section {Vantagens}
 
-Dentre as principais vantagens em utilizar bytecode engineering estão:
+Dentre as principais vantagens em utilizar \textit{Bytecode Engineering} estão:
 
 \begin{itemize}
-\item Consegue-se manipular o bytecode sem a necessidade de recompilação, ou obtenção do código fonte original.
-\item O bytecode pode ser gerado ou instrumentado por \textit{class loader} em tempo real, enquanto as classes são carregadas em uma JVM \cite{kalinovsky2004covert}.
-\item É muito mais fácil e rápido automatizar a geração de bytecode por ser um processo mais baixo nível e também por não haver a necessidade de execução do compilador, ao contrário da geração de código fonte que possui alguns passos a mais no seu processo, e também necessita da execução do compilador \cite{kalinovsky2004covert}.
-\item Instrumentar métodos, tendo como objetivo a inserção de lógica adicional, que não necessita estar nos arquvos de código fonte. Por exemplo, pode-se deixar no arquivo fonte apenas os interesses centrais do sistema, e incluir os interesses transversais utilizando bytecode engineering. 
+\item Consegue-se manipular o \textit{bytecode} sem a necessidade de recompilação, ou obtenção do código fonte original.
+\item O \textit{bytecode} pode ser gerado ou instrumentado por \textit{class loader} em tempo real, enquanto as classes são carregadas em uma JVM \cite{kalinovsky2004covert}.
+\item É muito mais fácil e rápido automatizar a geração de \textit{bytecode} por ser um processo mais baixo nível e também por não haver a necessidade de execução do compilador, ao contrário da geração de código fonte que possui alguns passos a mais no seu processo, e também necessita da execução do compilador \cite{kalinovsky2004covert}.
+\item Instrumentar métodos, tendo como objetivo a inserção de lógica adicional, que não necessita estar nos arquivos de código fonte. Por exemplo, pode-se deixar no arquivo fonte apenas os interesses centrais do sistema, e incluir os interesses transversais utilizando \textit{Bytecode Engineering}. 
 \end{itemize}
 
 \section{Ferramentas}
 
-Pode-se dizer que a manipulação de bytecode é uma tarefa complexa, pois bytecode é uma linguagem de baixo nível, e o aprendizado desta linguagem para programadores de alto nível, tende a ser muito lenta, fazendo com que seja inviável o seu aprendizado dentro do escopo de um projeto.
+Pode-se dizer que a manipulação direta de \textit{bytecode} é uma tarefa complexa, pois se trata de uma linguagem de baixo nível, e o aprendizado desta linguagem para programadores de alto nível, tende a ser muito lenta, fazendo com que seja inviável o seu aprendizado dentro do escopo de um projeto.
 
-Pensando neste problema, foram criadas algumas bibliotecas que tornam o processo de manipulação de bytecode mais alto nível, facilitando o seu aprendizado. As bibliotecas mais utilizadas que aplicam a técnica de \textit{bytecode engineering} são: \textit{Javassist}, \textit{Byte Code Engineering Library (BCEL)} e \textit{ASM}.
+Pensando neste problema, foram criadas algumas bibliotecas que tornam o processo de manipulação de \textit{bytecode} mais alto nível, facilitando o seu aprendizado. As bibliotecas mais utilizadas que aplicam a técnica de \textit{Bytecode Engineering} são: \textit{Javassist}, \textit{Byte Code Engineering Library (BCEL)} e \textit{ASM}.
 
 \subsection {Javassist}
 
-Javassist (Assistente de Programação Java) é uma biblioteca de classes utilizada na manipulação de bytecodes em Java, permitindo que classes sejam criadas em tempo de execução e manipuladas no tempo de carregamento da JVM. A principal diferença do Javassist para outros manipuladores de bytecode, é que javassist possui  API no nível de código fonte e no nível de bytecode \cite{javassist}.
+Javassist (Assistente de Programação Java) é uma biblioteca de classes utilizada na manipulação de \textit{bytecode} em Java, permitindo que classes sejam criadas em tempo de execução e manipuladas no tempo de carregamento da JVM. A principal diferença do Javassist para outros manipuladores de \textit{bytecode}, é que Javassist possui  API no nível de código fonte e no nível de \textit{bytecode} \cite{javassist}.
 \subsection {BCEL}
- BCEL tem como objetivo oferecer aos usuários (desenvolvedores) uma maneira conveniente de analizar, criar, manipular arquivos de classe Java (binário). No BCEL as classes são representadas por objetos que contêm todas as suas informações (métodos, campos e instruções de bytecode) \cite{bcel}.
+BCEL tem como objetivo oferecer aos usuários (desenvolvedores) uma maneira conveniente de analizar, criar, manipular arquivos de classe Java (binário). No BCEL as classes são representadas por objetos que contêm todas as suas informações (métodos, campos e instruções de \textit{bytecode}) \cite{bcel}.
 \subsection {ASM}
-ASM é uma estrutura de manipulação de bytecode Java. Ela pode ser usada para gerar classes dinamicamente, diretamente na forma binária, ou modificar dinamicamente as classes em tempo de carregamento, ou seja, antes de serem carregados pela JVM. ASM oferece funcionalidades semelhantes ao BCEL, mas é muito menor e mais rápido do que essa ferramenta \cite{asmjavasource}.
+ASM é uma estrutura de manipulação de \textit{bytecode} Java. Ela pode ser usada para gerar classes dinamicamente, diretamente na forma binária, ou modificar dinamicamente as classes em tempo de carregamento, ou seja, antes de serem carregados pela JVM. ASM oferece funcionalidades semelhantes ao BCEL, mas é muito menor e mais rápido do que essa ferramenta \cite{asmjavasource}.
 
 \section{Considerações finais}
 
+Pode-se perceber que a manipulação de bytecodes não requer necessáriamente conhecimentos específicos de bytecode, além do mais existem uma variedade de frameworks que fazem o trabalho "pesado", possibilitando a manipulação utilizando uma API de mais alto nível. Os conceitos abordados neste capítulo auxiliam o entendimento do trabalho em capítulos futuros.
+
 \chapter{Metaprogramação}
-Neste capitulo serão introduzidos  os princípais conceitos de metaprogramação, falando também dos principais benefícios em aplicar esta metodologia em seus programas. Também é apresentado neste capítulo informações relevantes sobre o uso de anotações e reflexão na linguagem Java.
+Neste capítulo serão introduzidos  os princípais conceitos de metaprogramação, falando também dos principais benefícios em aplicar esta metodologia em seus programas. Também é apresentado neste capítulo informações relevantes sobre o uso de anotações e reflexão na linguagem Java.
 
 \section{Definição}
 
@@ -264,7 +284,7 @@ Metadados estão disponíveis na linguagem Java apartir da versão 5,  represent
 Uma anotação associa uma informação arbitrária ou um metadado com um elemento de um programa Java. Cada anotação tem um nome e zero ou mais membros. Cada membro tem um nome e um valor, e são
 estes pares \textit{nome = valor} que carregam as informações da anotação \cite{flanagan2005java}.
 
-Anotações são um tipo especial de interface, designado pelo caractere \textit{@} que é precedido da palavra-chave \textit{interface}.Anotações são aplicados aos elementos do programa, ou também em outras anotações, com o intuito de fornecer informações adicionais \cite{arnold2000java}.
+Anotações são um tipo especial de interface, designado pelo caractere \textit{@} que é precedido da palavra-chave \textit{interface}. Anotações são aplicadas aos elementos do programa, ou também em outras anotações, com o intuito de fornecer informações adicionais \cite{arnold2000java}.
 
 \subsection{Conceitos}
 
@@ -282,14 +302,14 @@ tipo do membro \cite{flanagan2005java}.
 
 \subsection{Utilidades}
 
-Utilizando anotações em java pode-se adicionar diversas funcionalidades e recursos ao software, sem que haja depêndencias com as classes.
+Utilizando anotações em Java pode-se adicionar diversas funcionalidades e recursos ao \textit{software}, sem que haja depêndencias entre as classes.
 
  Dentre as principais utilidades em usar anotações estão:
 
 \begin{itemize}
 \item Fornecer informações ao compilador - por exemplo, pode-se utilizar este recurso para detectar erros especifícos em determinada parte do programa em tempo de compilação, também pode-se informar ao compilador que ignore determinados tipos de avisos, etc.
 \item Processamento em tempo de compilação - normalmente utiliza-se este recurso através de ferramentas capazes de processar anotações, com o intuito de gerar código, arquivos, etc. 
-\item Processamento em tempo de execução - pode-se utilizar para marcar elementos, com o objetivo de ler sua estrutura (tipo, modificadores de acesso,etc) através de reflexão em tempo de execução, fazendo com que o programa se adapte com determinadas situações.
+\item Processamento em tempo de execução - pode-se utilizar para marcar elementos, com o objetivo de ler sua estrutura (tipo, modificadores de acesso,etc) através de reflexão em tempo de execução, fazendo com que o programa se adapte a determinadas situações.
 \end{itemize}
 \subsection{Exemplo}
 
@@ -313,10 +333,9 @@ Na figura \ref{fig:usandoAnotacao} é mostrado como utilizar a anotação criada
 	\label{fig:usandoAnotacao}
 \end{figure}
 
-Para ler as informações de uma anotação visível em tempo de execução é necessário consultar a API de reflexão do \textit{java.lang.reflect}.
-
 \section{Reflexão em Java}
 Na linguagem Java pode-se utilizar reflexão por meio do pacote \textit{java.lang.reflect}, juntamente com o pacote \textit{java.lang} que contém as classes \textit{Class} e \textit{Package}, e \textit{java.lang.annotation} que faz referência à classe \textit{Annotation}. Este conjunto de pacotes oferecem uma variedade de classes responsáveis pela leitura e modificação da estrutura de um programa em tempo de execução.
+
 
 \subsection{Aplicações}
 
@@ -324,23 +343,23 @@ Normalmente utiliza-se reflexão para tomar alguma decisão com base na estrutur
 
 \subsection{Funcionamento}
 
-A reflexão em um programa Java tem inicio apartir de um objeto do tipo \textit{Class}. Com um objeto do tipo \textit{Class} pode-se ober sua lista completa de membros(métodos, atributos) e informações sobre eles, podendo descobrir também todos os tipos desta classe(interfaces que implementa, classes que estende), e descobrir informações sobre a própria classe, como os modificadores aplicados a ela (\textit{public}, \textit{protected}, \textit{private}, etc) \cite{arnold2000java}.
+A reflexão em um programa Java tem inicio apartir de um objeto do tipo \textit{Class}. Com um objeto do tipo \textit{Class} pode-se obter sua lista completa de membros (métodos, atributos) e informações sobre eles, podendo descobrir também todos os tipos desta classe (interfaces que implementa, classes que estende), e descobrir informações sobre a própria classe, como os modificadores aplicados a ela (\textit{public}, \textit{protected}, \textit{private}, etc) \cite{arnold2000java}.
 
 \subsection{Lendo anotações}
-
-Os pacotes utilizados para reflexão possuem uma API \footnote{Visite: "http://docs.oracle.com/javase/7/docs/api/"  para saber mais sobre a api.} de fácil entendimento, e que oferecem suporte à leitura de anotações.
-
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.6]{figuras/lendoAnnotation.jpg}
-	\caption{Lendo informações de uma anotação.}
+	\includegraphics[scale=0.5]{figuras/lendoAnnotation.jpg}
+	\caption{Lendo uma anotação.}
 	\small{Fonte: Autoria própria.}
 	\label{fig:lendoAnotacao}
 \end{figure}
+Os pacotes utilizados para reflexão possuem uma API\footnote{Visite: "http://docs.oracle.com/javase/7/docs/api/"  para saber mais sobre a api.} de fácil entendimento, e que oferecem suporte à leitura de anotações.
 
 Na figura \ref{fig:lendoAnotacao} é mostrado como ler anotações presentes em classes, e também como ler informações presentes nos membros de uma anotação.
 
 \section{Considerações finais}
+
+Este capítulo apresentou os principais conceitos de Metaprogramação, Reflexão e Metadados. Também foi abordado neste capítulo a utilização superficial da API de reflexão e metadados da linguagem Java. 
 
 \chapter{Ferramentas utilizadas}
 
@@ -361,6 +380,8 @@ Na figura \ref{fig:lendoAnotacao} é mostrado como ler anotações presentes em 
 \chapter{Conclusão}
 
 Conclusões ...
+
+\singlespacing
 
 \bibliography{bibliografia}
 
