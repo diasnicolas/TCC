@@ -342,7 +342,6 @@ Na linguagem Java pode-se utilizar reflexão por meio do pacote \textit{java.lan
 Normalmente utiliza-se reflexão para tomar alguma decisão com base na estrutura do programa, ou apenas mostrar informações sobre ela, ou seja,  utiliza-se o(s) pacote(s) de reflexão do Java para descobrir diversos tipos de informações relacionadas com a estrutura de classes, métodos, atributos e etc. Também pode-se utilizar reflexão para instanciar objetos de um tipo determinado, invocar método(s) de uma classe específica, ler anotações, entre outros.
 
 \subsection{Funcionamento}
-
 A reflexão em um programa Java tem inicio apartir de um objeto do tipo \textit{Class}. Com um objeto do tipo \textit{Class} pode-se obter sua lista completa de membros (métodos, atributos) e informações sobre eles, podendo descobrir também todos os tipos desta classe (interfaces que implementa, classes que estende), e descobrir informações sobre a própria classe, como os modificadores aplicados a ela (\textit{public}, \textit{protected}, \textit{private}, etc) \cite{arnold2000java}.
 
 \subsection{Lendo anotações}
@@ -358,12 +357,31 @@ Os pacotes utilizados para reflexão possuem uma API\footnote{Visite: "http://do
 Na figura \ref{fig:lendoAnotacao} é mostrado como ler anotações presentes em classes, e também como ler informações presentes nos membros de uma anotação.
 
 \section{Considerações finais}
-
+ com o intuito de incentivar
 Este capítulo apresentou os principais conceitos de Metaprogramação, Reflexão e Metadados. Também foi abordado neste capítulo a utilização superficial da API de reflexão e metadados da linguagem Java. 
 
-\chapter{Ferramentas utilizadas}
+\chapter{Tecnologias e ferramentas utilizadas}
+Este capítulo apresenta  de forma clara e objetiva as tecnologias e ferramentas que serão utilizadas para o desenvolvimento deste trabalho, apresentando os motivos que fizeram com que estas ferramentas e tecnologias fossem as escolhidas para este estudo.
+
+\section{Eclipse}
+
+O projeto Eclipse foi inicialmente criado pela IBM no ano de 2001. No ano de 2004 foi criada a Eclipse Foundation, uma corporação sem fins lucrativos, visando desenvolver tecnologias de código-fonte aberto com o intuito de incentivar os desenvolvedores de software a usar a tecnologia Eclipse para a construção de seus produtos e serviços de software comercial \cite{eclipsefoundation}.
+
+O Eclipse foi escolhido como Ambiente de Desenvolvimento Integrado (\textit{Integrated Development Environment - IDE}) para a realização deste trabalho, por ser um dos mais utilizados no desenvolvimento de \textit{software} utilizando a linguagem Java, e também por oferecer diversas ferramentas que facilitam e agilizam o desenvolvimento do(s) projeto(s). Outra vantagem do Eclipse é que todas as ferramentas são oferecidas gratuitamento para uso comercial e não-comercial. 
+\section{Java 7}
+
+
+
+\section{JavaAgent}
+
+Agentes Java são componentes de \textit{software} que oferecem recursos de instrumentação de aplicações, recurso este que foi introduzido apartir da versão 5 do Java. No contexto dos agentes, instrumentação fornece a capacidade de re-definir o conteúdo da classe que é carregada  em tempo de execução \cite{javaagents}.
+
+Este recurso da linguagem java será utilizado neste trabalho para interceptação das classes, com a finalidade de combinar os interesses centrais com os interesses transverssais de um sistema, ou seja, será em cima do Agente Java que será desenvolvido o combinador de aspectos (\textit{weaver aspects}).
+
+\section{Javassist}
 
 \chapter{Soluções Existentes}
+Neste capítulo será abordado as características, vantagens e desvantagens dos projetos relacionados, e o que o conhecimento das estruturas das soluções existentes irão agregar no estudo e execução deste trabalho.
 
 \section{PostSharp}
 

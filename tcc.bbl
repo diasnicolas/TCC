@@ -10,7 +10,7 @@
 
 \bibitem[BCEL(2014)BCEL]{bcel} BCEL, A.~C\@. \textbf{Apache Commons BCEL™}.
   Disponível em: <http://commons.apache.org/proper/commons-bcel/>. Acesso em:
-  20 junho. 2014.
+  20 Junho. 2014.
 
 \bibitem[BECK; ANDRES(2004)BECK; ANDRES]{beck2004extreme} BECK, K.; ANDRES,
   C\@. \textbf{Extreme programming explained}: embrace change. [S.l.]:
@@ -18,7 +18,7 @@
 
 \bibitem[CHIBA(2013)CHIBA]{javassist} CHIBA, S\@. \textbf{Javassist}.
   Disponível em: <http://www.csg.ci.i.u-tokyo.ac.jp/~chiba/javassist/>. Acesso
-  em: 16 junho. 2014.
+  em: 16 Junho. 2014.
 
 \bibitem[DAMA{\v{S}}EVI{\v{C}}IUS; {\v{S}}TUIKYS(2008)DAMA{\v{S}}EVI{\v{C}}IUS;
   {\v{S}}TUIKYS]{damavsevivcius2008taxonomy} DAMA{\v{S}}EVI{\v{C}}IUS, R.;
@@ -45,7 +45,7 @@
 
 \bibitem[JAVA-SOURCE(2012)JAVA-SOURCE]{asmjavasource} JAVA-SOURCE. \textbf{Open
   Source ByteCode Libraries in Java}. Disponível em:
-  <http://java-source.net/open-source/bytecode-libraries>. Acesso em: 20 junho.
+  <http://java-source.net/open-source/bytecode-libraries>. Acesso em: 20 Junho.
   2014.
 
 \bibitem[KALINOVSKY(2004)KALINOVSKY]{kalinovsky2004covert} KALINOVSKY, A\@.
@@ -60,9 +60,18 @@
   tutorial on behavioral reflection and its implementation. In: REFLECTION,
   1996. \textbf{Proceedings{\ldots}} [S.l.:~s.n.], 1996. v.96, p.1--20.
 
+\bibitem[MILINKOVICH(2008)MILINKOVICH]{eclipsefoundation} MILINKOVICH, M\@.
+  \textbf{About the Eclipse Foundation}. Disponível em:
+  <http://www.eclipse.org/org/>. Acesso em: 19 Outubro. 2014.
+
 \bibitem[PRESSMAN(2010)PRESSMAN]{pressman2010engineering} PRESSMAN, R\@.
   \textbf{{Software engineering}: a practitioner’s approach}. [S.l.]: McGraw
   Hill, 2010.
+
+\bibitem[SRINIVASAN(2011)SRINIVASAN]{javaagents} SRINIVASAN, K\@.
+  \textbf{Introduction to Java Agents}. Disponível em:
+  <http://www.javabeat.net/introduction-to-java-agents/>. Acesso em: 19
+  Outubro. 2014.
 
 \bibitem[ST{\"A}RK; SCHMID; B{\"O}RGER(2001)ST{\"A}RK; SCHMID;
   B{\"O}RGER]{stark2001java} ST{\"A}RK, R.~F.; SCHMID, J.; B{\"O}RGER, E\@.

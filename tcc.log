@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  12 OCT 2014 16:38
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  19 OCT 2014 17:41
 entering extended mode
  %&-line parsing enabled.
 **tcc.tex
@@ -538,17 +538,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--40
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--41
- []  
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 44--44
- []  
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 47--47
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
  []  
  []
 
@@ -558,12 +548,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--48
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--49
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
  []  
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 50--50
+Underfull \hbox (badness 10000) in paragraph at lines 52--52
+ []  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--53
+ []  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
  []  
  []
 
@@ -699,9 +699,9 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 38
  []
 
-[38
+[38] [39
 
-] [39]
+]
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 40
  []
@@ -744,7 +744,25 @@ Underfull \hbox (badness 5189) in paragraph at lines 46--50
  in Java\T1/ptm/m/n/12 . Dis-po-ní-vel em:
  []
 
-[47])
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--66
+[]\T1/ptm/m/n/12 MILINKOVICH, M. \T1/ptm/b/n/12 About the Eclipse Foun-da-tion\
+T1/ptm/m/n/12 . Dis-po-ní-vel em:
+ []
+
+[47]
+Underfull \hbox (badness 10000) in paragraph at lines 71--75
+[]\T1/ptm/m/n/12 SRINIVASAN, K. \T1/ptm/b/n/12 In-tro-duc-tion to Java Agents\T
+1/ptm/m/n/12 . Dis-po-ní-vel em:
+ []
+
+
+Underfull \hbox (badness 8189) in paragraph at lines 71--75
+\T1/ptm/m/n/12 <http://www.javabeat.net/introduction-to-java-agents/>. Acesso e
+m: 19 Ou-tu-bro.
+ []
+
+)
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 48
  []
@@ -753,10 +771,10 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 ] (./tcc.aux) ) 
 Here is how much of TeX's memory you used:
- 4112 strings out of 495041
- 52883 string characters out of 1181897
- 115431 words of memory out of 3000000
- 7197 multiletter control sequences out of 15000+50000
+ 4118 strings out of 495041
+ 53012 string characters out of 1181897
+ 115513 words of memory out of 3000000
+ 7203 multiletter control sequences out of 15000+50000
  55307 words of font info for 56 fonts, out of 3000000 for 9000
  33 hyphenation exceptions out of 8191
  39i,8n,32p,1223b,289s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -766,7 +784,7 @@ live/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/
 urw/helvetic/uhvro8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a
 .pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/tex
 mf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on tcc.pdf (49 pages, 291142 bytes).
+Output written on tcc.pdf (49 pages, 293688 bytes).
 PDF statistics:
  190 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
