@@ -1,0 +1,13 @@
+Os principais conceitos na programação de aspectos são:
+
+·         joinpoints - representam eventos de interesse do fluxo de execução. Quando a execução passa por um joinpoint o aspecto pode agir naquele ponto. Exemplo de joinpoints: invocação de métodos, alteração de atributos e exceções.
+
+·         pointcuts - usados para representar um conjunto de joinpoints, pois podem acontecer muitas ocorrências de joinpoints de um mesmo tipo. O AspectJ [ASPECTJ] utiliza expressões regulares na definição de pointcuts.
+
+·         advices - são os procedimentos realizados quando os pointcuts são ativados. Os advices podem ser executados antes (before), depois (after) ou em substituição ao joinpoint. Advices são a implementação dos interesses transversais.
+
+ 
+
+Talvez o leitor entenda melhor estes conceitos se pensar que aspectos são estruturas semelhantes a classes, advices são semelhantes a métodos, joinpoints seriam atributos e os pointcuts algo como triggers (gatilhos) sobre os joinpoints.
+
+Leia mais em: Introdução à programação orientada a aspectos - Conceitos http://www.devmedia.com.br/introducao-a-programacao-orientada-a-aspectos-conceitos/3062#ixzz31L4tDtcd

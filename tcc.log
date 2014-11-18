@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  19 OCT 2014 17:41
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  18 NOV 2014 08:07
 entering extended mode
  %&-line parsing enabled.
 **tcc.tex
@@ -538,32 +538,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--40
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--45
+Underfull \hbox (badness 10000) in paragraph at lines 46--46
  []  
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--48
+Underfull \hbox (badness 10000) in paragraph at lines 49--49
  []  
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--51
+Underfull \hbox (badness 10000) in paragraph at lines 55--55
  []  
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--52
+Underfull \hbox (badness 10000) in paragraph at lines 56--56
  []  
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--53
+Underfull \hbox (badness 10000) in paragraph at lines 57--57
  []  
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--54
+Underfull \hbox (badness 10000) in paragraph at lines 58--58
  []  
  []
 
@@ -708,26 +708,43 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [40
 
-] [41]
+]
+Underfull \vbox (badness 2707) has occurred while \output is active []
+
+ [41]
+<diagramas/Framework_AOP.png, id=141, 1412.27625pt x 957.5775pt>
+File: diagramas/Framework_AOP.png Graphic file (type png)
+
+<use diagramas/Framework_AOP.png>
+Overfull \hbox (138.10915pt too wide) in paragraph at lines 434--435
+ [][] 
+ []
+
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 42
  []
 
-[42
-
-] [43]
+[42] [43 <./diagramas/Framework_AOP.png>]
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 44
  []
 
-[44
+[44] [45
 
-] (./tcc.bbl [45]
+]
 Underfull \hbox (badness 10000) has occurred while \output is active
 \T1/ptm/m/n/10.95 46
  []
 
 [46
+
+] (./tcc.bbl [47]
+Underfull \hbox (badness 10000) has occurred while \output is active
+\T1/ptm/m/n/10.95 48
+ []
+
+[48
 
 ]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
@@ -750,7 +767,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--66
 T1/ptm/m/n/12 . Dis-po-ní-vel em:
  []
 
-[47]
+[49]
 Underfull \hbox (badness 10000) in paragraph at lines 71--75
 []\T1/ptm/m/n/12 SRINIVASAN, K. \T1/ptm/b/n/12 In-tro-duc-tion to Java Agents\T
 1/ptm/m/n/12 . Dis-po-ní-vel em:
@@ -764,17 +781,17 @@ m: 19 Ou-tu-bro.
 
 )
 Underfull \hbox (badness 10000) has occurred while \output is active
-\T1/ptm/m/n/10.95 48
+\T1/ptm/m/n/10.95 50
  []
 
-[48] AED: lastpage setting LastPage [49
+[50] AED: lastpage setting LastPage [51
 
 ] (./tcc.aux) ) 
 Here is how much of TeX's memory you used:
- 4118 strings out of 495041
- 53012 string characters out of 1181897
- 115513 words of memory out of 3000000
- 7203 multiletter control sequences out of 15000+50000
+ 4125 strings out of 495041
+ 53190 string characters out of 1181897
+ 115524 words of memory out of 3000000
+ 7208 multiletter control sequences out of 15000+50000
  55307 words of font info for 56 fonts, out of 3000000 for 9000
  33 hyphenation exceptions out of 8191
  39i,8n,32p,1223b,289s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -784,9 +801,9 @@ live/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/
 urw/helvetic/uhvro8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a
 .pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/tex
 mf-texlive/fonts/type1/urw/times/utmri8a.pfb>
-Output written on tcc.pdf (49 pages, 293688 bytes).
+Output written on tcc.pdf (51 pages, 615328 bytes).
 PDF statistics:
- 190 PDF objects out of 1000 (max. 8388607)
+ 199 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

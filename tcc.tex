@@ -93,29 +93,29 @@ Resumo ...
 \chapter{Introdução}
 Atualmente o setor de desenvolvimento de software é um dos setores que mais cresce em todo o mundo, devido a esse grande crescimento a preocupação das empresas em desenvolver software de qualidade têm aumentado constantemente. A grande maioria das empresas atuantes no mercado, fazem uso do paradigma de Programação Orientada a Objetos (\textit{Object Oriented Programming} - OOP) no desenvolvimento de seus softwares, com intuito de ter um produto manutenível e que se adapte a mudanças, mas com uma qualidade permanente.
 
-Um dos principais motivos que fez com que OOP se tornasse um dos paradigmas mais utilizados foi a sua capacidade de encapsulamento, tornando o projeto de software mais claro, aumentando a reusabilidade de módulos, implementação simplificada e redução nos custos de manutenção. Porém existem interesses que não se aplicam à apenas um módulo, por exemplo o tratamento de exceções deveria estar encapsulado em um módulo distinto, mas na prática ele esta espalhado por diversas partes da aplicação (diversos módulos). Estes interesses são chamados de interesses transversais (\textit{crosscuting concerns}).
+Um dos principais motivos que fez com que OOP se tornasse um dos paradigmas mais utilizados foi a sua capacidade de encapsulamento, tornando o projeto de software mais claro, aumentando a reusabilidade de módulos, implementação simplificada e redução nos custos de manutenção. Porém existem interesses que não se aplicam à apenas um módulo, por exemplo o tratamento de exceções deveria estar encapsulado em um módulo distinto, mas na prática ele está espalhado por diversas partes da aplicação (diversos módulos). Estes interesses são chamados de interesses transversais (\textit{crosscuting concerns}).
 
 Para encapsular um interesse transversal em um módulo único surgiu o paradigma de Programação Orientada a Aspectos (\textit{Aspect Oriented Programming} - AOP)\footnote{Em AOP interesses transversais recebem o nome de "aspectos".} que é uma extensão de OOP. Quando AOP é utilizado juntamente com OOP, pode-se garantir que independentemente do tipo de interesse (interesse central ou interesse transversal) tem-se um sistema altamente modularizado, sem espalhamento ou entrelaçamento de código.
 
-A maioria das linguagens orientada à objetos, possuem ferramentas ou até outras linguagens que dão suporte a programação orientada a aspectos. A linguagem mais popular e madura que dá suporte a AOP para a linguagem Java é o AspectJ, porém o seu maior ponto fraco na opinião de diversos desenvolvedores é a complexidade no aprendizado, por ser uma linguagem que possui uma sintaxe própria.
+A maioria das linguagens orientada à objetos, possuem ferramentas ou até outras linguagens complementares que dão suporte a programação orientada a aspectos. A linguagem mais popular e madura que dá suporte a AOP para a linguagem Java é o AspectJ, que oferece diversos recursos e funcionalidades que auxiliam na projeção e execução de projetos utilizando OOP e AOP de forma conjunta.
 
-Para diminuir a complexidade na utilização de aspectos na linguagem Java, este trabalho propõe a criação de um \textit{framework}\footnote{Uma abstração entre classes comuns entre vários projetos, provendo uma funcionalidade genérica.} que implemente os principais conceitos de AOP, com o obejtivo de encapsular os interesses transversais, mantendo uma API simplificada, apenas utilizando as construções da linguagem Java, fazendo com que o desenvolvedor não precise aprender uma nova linguagem para a utilização do framework, apenas conheça a própria linguagem base.
+Visando complementar e aumentar os estudos sobre AOP, decidiu-se desenvolver um \textit{framework}\footnote{Uma abstração entre classes comuns entre vários projetos, provendo uma funcionalidade genérica.}, cujo objetivo é desenvolver uma funcionalidade genérica capaz de encapsular os interesses transverssais de um sistema, com o intuíto de aplicar os conceitos de AOP no desenvolvimento de softwares de forma simples e descomplicada, de forma que todo o código-fonte da ferramenta seja aberto para a comunidade de desenvolvedores e pesquisadores, podendo servir como uma base mais concreta para o estudo, desenvolvimento e aprimoramento de outros trabalhos.
 
 \section{Objetivo}
-Este trabalho tem como objetivo geral desenvolver um \textit{framework} que aplique os conceitos básicos de Programação Orientada à Aspectos.
+Este trabalho tem como objetivo geral desenvolver um \textit{framework} AOP de código-fonte aberto visando encapsular os interesses transverssais de um sistema Java.
 
 Os objetivos específicos deste trabalho são: 
 
 \begin{itemize}
 \item Entender os principais conceitos de AOP.
-\item Aplicar os conceitos fundamentais de AOP no desenvolvimento de um \textit{framework}.
+\item Aplicar os conceitos fundamentais de AOP no desenvolvimento de um \textit{framework} de código aberto.
 \item Utilizar técnicas de \textit{Bytecode Engineering}.
-\item Desenvolver um estudo de caso para demostrar as funcionalidades do \textit{framework} desenvolvido.
+\item Desenvolver um estudo de caso de instrumentação para demostrar as funcionalidades do \textit{framework} desenvolvido.
 \end{itemize}
 
 \section{Motivação}
 
-Existe uma variedade de ferramentas que implementam AOP, porém estas ferramentas na maioria das vezes se tornam complexas na resolução de um simples problema. Esta complexidade durante o uso da ferramenta, acarreta em um tempo maior de aprendizagem, e consequentemente desencoraja o seu uso pelos usuários. Por este motivo, este trabalho propõe o desenvolvimento de um \textit{framework} que resolva a maioria dos problemas que AOP se responsabiliza em resolver, porém a complexidade do \textit{framework} desenvolvido será reduzida consideravelmente, pois será implementado apenas os conceitos necessários.
+Existe uma variedade de ferramentas que implementam os conceitos de AOP, porém estas ferramentas não servem de base para outros estudos, por não oferecerem informações concretas, ou robustas sobre o real funcionamento interno das mesmas, fazendo com que pesquisadores e estudiosos que desejam ingressar e aprofundar-se dentro deste paradigma tenham uma grande dificuldade ao encontrar um ponto de partida. Por este motivo este trabalho propõe não só demonstrar o uso e o desenvolvimento de um \textit{framework} AOP, mas também oferecer uma base concreta e prática, buscando incentivar e facilitar a aprendizagem e o entendimento do paradigma.
 
 \section{Resumo dos capítulos}
 
@@ -370,15 +370,27 @@ O projeto Eclipse foi inicialmente criado pela IBM no ano de 2001. No ano de 200
 O Eclipse foi escolhido como Ambiente de Desenvolvimento Integrado (\textit{Integrated Development Environment - IDE}) para a realização deste trabalho, por ser um dos mais utilizados no desenvolvimento de \textit{software} utilizando a linguagem Java, e também por oferecer diversas ferramentas que facilitam e agilizam o desenvolvimento do(s) projeto(s). Outra vantagem do Eclipse é que todas as ferramentas são oferecidas gratuitamento para uso comercial e não-comercial. 
 \section{Java 7}
 
+Java é uma linguagem de programação e plataforma computacional lançada pela primeira vez pela Sun Microsystems em 1995.  O paradigma de programação que mais caracteriza a linguagem Java é OOP,  e uma das características que justifica a enorme compatibilidade com diversos aparelhos é a portabilidade da plataforma, que roda independentemente do sistema operacional \cite{stark2001java}. 
 
+A proposta do trabalho justifica a escolha de Java como linguagem de programação, pois os principais objetivos envolvem um \textit{framework} AOP para linguagem Java e a utilização de técnicas de \textit{bytecode enginnering}. Será utilizado a versão 7, por ser uma versão que dispõe de diversos recursos e estabilidade alta.
 
 \section{JavaAgent}
 
 Agentes Java são componentes de \textit{software} que oferecem recursos de instrumentação de aplicações, recurso este que foi introduzido apartir da versão 5 do Java. No contexto dos agentes, instrumentação fornece a capacidade de re-definir o conteúdo da classe que é carregada  em tempo de execução \cite{javaagents}.
 
-Este recurso da linguagem java será utilizado neste trabalho para interceptação das classes, com a finalidade de combinar os interesses centrais com os interesses transverssais de um sistema, ou seja, será em cima do Agente Java que será desenvolvido o combinador de aspectos (\textit{weaver aspects}).
+Este recurso da linguagem java será utilizado neste trabalho para interceptação das classes, com a finalidade de desenvolver o combinador de aspectos, responsável pela formação do sistema final (\textit{weaver aspects}).
 
 \section{Javassist}
+
+Javassist é uma biblioteca de \textit{bytecode enginnering} desenvolvida em cima da linguagem Java e que fornece uma API de mais alto nível em relação a outras bibliotecas do mesmo gênero \cite{javassist}.
+
+A maioria das bilbiotecas requerem um mínimo de conhecimentos de \textit{bytecode}, Javassist trabalha de forma diferente, o usuário passa para a biblioteca cadeias de caractéres no formato de código-fonte, e a própria biblioteca se encarrega de transformar esta cadeia de caracteres de código de alto nível para a linguagem de \textit{bytecode}.
+
+A escolha da biblioteca Javassist para auxiliar na aplicação das técnicas de \textit{Bytecode enginnering} se deu devido a sua facilidade no aprendizado , além de não requerer como pré-requisito conhecimentos de \textit{bytecode}.
+
+\section{Considerações finais}
+
+Este capítulo apresentou de forma objetiva as principais ferramentas e tecnologias que serão utilizadas no desenvolvimento deste trabalho. Foi justificado de forma clara os motivos que contribuíram para a escolha destas ferramentas e tecnologias com o intuito de resolver o problema apresentado.
 
 \chapter{Soluções Existentes}
 Neste capítulo será abordado as características, vantagens e desvantagens dos projetos relacionados, e o que o conhecimento das estruturas das soluções existentes irão agregar no estudo e execução deste trabalho.
@@ -389,7 +401,58 @@ Neste capítulo será abordado as características, vantagens e desvantagens dos
 
 \chapter{O Framework}
 
+Este capítulo aborda em detalhes o \textit{framework} desenvolvido, desde a parte de análise  e projeto até a parte de implementação, explicando de forma clara os caminhos percorridos durante a evolução do trabalho.
+
+\section{Introdução}
+
+Para a realização da análise e desenvolvimento do \textit{framework} fez-se necessário o estudo de diversos conceitos e tecnologias,  cujo embasamento teórico se encontra nos capítulos anteriores. O trabalho apresentado se concentra em torno dos seguintes conceitos: Programação Orientada à aspectos, \textit{Bytecode Enginnering}, Metaprogramação (metadados e reflexão).
+
+Para o desenvolvimento do framework foi utilizado Java versão 7 como linguagem de programação orientada a objetos, devido a sua grande utilização e aceitação no mercado, fez-se uso também do Eclipse como ambiente de desenvolvimento de software, pois possui diversas ferramentas integradas que facilitam e agilizam a programação. Foi utilizado também a biblioteca Javassist, responsável por abstraír a forma como é criado, manipulado e modificado \textit{bytecode} de classes Java em tempo de carregamento. 
+
+Este projeto tem por intenção estudar os principais conceitos de AOP,  criando uma ferramenta para abstrair estes conceitos, de forma que facilite a aprendizagem, a aplicação prática e também sirva de base para outros estudos e pesquisas. A ferramenta projetada e desenvolvida será em forma de \textit{framework}, que terá como metodologia de uso a utilização de anotações, com o intuito de facilitar a utilização por parte do desenvolvedor e também visando um código mais limpo, concentrando as informações principais do módulo em forma de código, e as informações adicionais (conceitos de AOP) sobre as classes, métodos e atributos serão informadas em forma de metadados (anotações).
 \section{Análise e projeto}
+
+Nesta seção será apresentada a parte de análise e projeto do \textit{framework}, visando o entendimento da estrutura e arquitetura do trabalho desenvolvido.
+
+\subsection{Especificações do projeto}
+
+A ferramenta deve ser capaz de encapsular os conceitos básicos de AOP (\textit{joinpoint, advice, aspect} e \textit{weaver}), visando uma funcionalidade genérica, que tem por objetivo separar os interesses centrais dos interesses transverssais, concentrando cada interesse em seu devido módulo.
+
+A ferramenta terá a capacidade de interceptação de métodos, ou seja, executar algum bloco de código antes, depois ou em volta da chamada ao método interceptado, podendo também durante esta interceptação modificar o retorno do método (caso ele retorne alguma informação). Com base nessas informações pode-se definir que os \textit{joinpoints} (pontos de junção) serão as chamadas dos métodos interceptados.
+
+Os \textit{advices} (antes, depois ou em volta) serão implementados por meio de uma \textit{interface}, que quando implementada deverá ser tratada pelo \textit{weaver} (combinador) como sendo um aspecto. Para informar ao método o tipo de aspecto e advice que será ser executado na sua interceptação deve ser utilizado \textit{annotations}.
+
+Para implementação do combinador deve ser utilizado técnicas de \textit{Bytecode Enginnering} para realizar modificações em classes já compiladas durante o carregamento destas classes para a máquina virtual do Java (JVM). O combinador será utilizado para integração dos interesses centrais com os interesses transverssais durante o carregamento do sistema.
+
+\subsection{Diagrama de classes}
+
+Na figura \ref{fig:diagramaClassesAOP} é apresentado o diagrama de classes utilizado como base para a implementação do \textit{framework}. Este diagrama foi construído com a ajuda da ferramenta \textit{Astah Community 6.9.0}.
+
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.4]{diagramas/Framework_AOP.png}
+	\caption{Diagrama de classes do framework.}
+	\label{fig:diagramaClassesAOP}
+\end{figure}
+
+Abaixo está a descrição de cada uma das classes apresentadas no diagrama da figura \ref{fig:diagramaClassesAOP}:
+
+\begin{description}
+\item [Agent] Esta é a classe principal do agente que será utilizado para interceptação das classes durante o seu carregamento para a máquina virtual do Java.
+\item [ClassFileTransformer] Esta é uma \textit{interface} que deve ser implementada por classes que desejam ser responsáveis pela modificação de outras classes antes do carregamento para a máquina virtual.
+\item [AOPClassFileTransformer] Esta é a classe responsável por realizar e retornar para o \textit{classLoader} (carregador de classes do Java) as classes já modificadas. Esta classe implementa a \textit{interface} ClassFileTransformer. É ela que faz a análise de quais classes vão ser combinadas, e quais as regras de combinação que devem ser consideradas. 
+\item [Weaver] Esta classe representa o combinador de aspectos, ou seja, é nesta classe que são feitas as combinações de módulos OOP com módulos AOP. As informações necessárias para combinação são recebidas de AOPClassFileTransformer.
+\item [AdviceType] É um enumerado que representa o tipo de \textit{advice}, pode ser \textit{Before} (antes), \textit{After} (depois) ou \textit{Around} (em volta). Utilizado para representar o tipo de \textit{advice} que está sendo combinado.
+\item [IAspect] Esta é a \textit{interface} que deve ser implementada pelo desenvolvedor ( usuário do \textit{framework} ) para informar que a classe será interpretada pelo modificador como sendo um aspecto.
+\item [MethodExecution] Representa o método que está sendo interceptado. Possui informações sobre os parâmetros do método, e também um método auxiliar, cuja função é continuar a execução do método interceptado.
+\item [Params]  Esta classe é responsável por encapsular (guardar) os tipos e valores dos parâmetros do método interceptado.
+\item [ClassPool (Javassist)] Esta classe simula o \textit{classLoader} do java, esta classe é bastante utilizada para montar em forma de objeto as classes interceptadas.
+\item [CtClass (Javassist)] Esta classe modela a estrutura de uma classe da linguagem Java, uma instância desta classe possui informações relevantes sobre ela e também métodos que navegam pela sua estrutura (métodos, atributos, construtores, etc). 
+\item [CtBehavior (Javassist)] Esta classe modela de forma genérica métodos e construtores. Ela oferece métodos que são bastante utilizados para adição de código para dentro do escopo de um construtor ou método.
+\item [CtMethod (Javassist)] Esta classe é parecida com \textit{CtBehavior}, porém modela apenas métodos, ou seja, possui algumas informações mais específicas sobre métodos.
+\item [CtField (Javassist)] Esta classe modela um campo ou atributo de uma classe, possuindo uma gama de informações sobre eles e diversos métodos para possíveis modificações.
+\end{description}
 
 \section{Implementação}
 

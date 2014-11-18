@@ -40,16 +40,20 @@
 \contentsline {chapter}{\numberline {5}Tecnologias e ferramentas utilizadas}{37}
 \contentsline {section}{\numberline {5.1}Eclipse}{37}
 \contentsline {section}{\numberline {5.2}Java 7}{37}
-\contentsline {section}{\numberline {5.3}JavaAgent}{37}
+\contentsline {section}{\numberline {5.3}JavaAgent}{38}
 \contentsline {section}{\numberline {5.4}Javassist}{38}
+\contentsline {section}{\numberline {5.5}Considera\IeC {\c c}\IeC {\~o}es finais}{38}
 \contentsline {chapter}{\numberline {6}Solu\IeC {\c c}\IeC {\~o}es Existentes}{39}
 \contentsline {section}{\numberline {6.1}PostSharp}{39}
 \contentsline {section}{\numberline {6.2}AspectJ}{39}
 \contentsline {chapter}{\numberline {7}O Framework}{41}
-\contentsline {section}{\numberline {7.1}An\IeC {\'a}lise e projeto}{41}
-\contentsline {section}{\numberline {7.2}Implementa\IeC {\c c}\IeC {\~a}o}{41}
-\contentsline {chapter}{\numberline {8}Estudo de caso - Instrumenta\IeC {\c c}\IeC {\~a}o}{43}
-\contentsline {chapter}{\numberline {9}Conclus\IeC {\~a}o}{45}
-\contentsline {chapter}{Refer{\^e}ncias}{47}
-\contentsline {chapter}{Gloss\IeC {\'a}rio}{49}
+\contentsline {section}{\numberline {7.1}Introdu\IeC {\c c}\IeC {\~a}o}{41}
+\contentsline {section}{\numberline {7.2}An\IeC {\'a}lise e projeto}{42}
+\contentsline {subsection}{\numberline {7.2.1}Especifica\IeC {\c c}\IeC {\~o}es do projeto}{42}
+\contentsline {subsection}{\numberline {7.2.2}Diagrama de classes}{42}
+\contentsline {section}{\numberline {7.3}Implementa\IeC {\c c}\IeC {\~a}o}{44}
+\contentsline {chapter}{\numberline {8}Estudo de caso - Instrumenta\IeC {\c c}\IeC {\~a}o}{45}
+\contentsline {chapter}{\numberline {9}Conclus\IeC {\~a}o}{47}
+\contentsline {chapter}{Refer{\^e}ncias}{49}
+\contentsline {chapter}{Gloss\IeC {\'a}rio}{51}
 \setbox \@tempboxa \hbox {{{\sffamily \textbf {\MakeUppercase {Ap{\^e}ndice} }}}}\ii@chapnumindent \wd \@tempboxa \setbox \@tempboxa \box \voidb@x \advance \ii@chapnumindent 1.8em\relax 
