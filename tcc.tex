@@ -1,4 +1,4 @@
-\documentclass[tc,openright]{iiufrgs}
+\documentclass[tc,oneside]{iiufrgs}
 
 \usepackage[T1]{fontenc}        % pacote para conj. de caracteres correto
 \usepackage[utf8]{inputenc}   % pacote para acentua\c c\~ ao
@@ -378,7 +378,7 @@ A proposta do trabalho justifica a escolha de Java como linguagem de programaç�
 
 Agentes Java são componentes de \textit{software} que oferecem recursos de instrumentação de aplicações, recurso este que foi introduzido apartir da versão 5 do Java. No contexto dos agentes, instrumentação fornece a capacidade de re-definir o conteúdo da classe que é carregada  em tempo de execução \cite{javaagents}.
 
-Este recurso da linguagem java será utilizado neste trabalho para interceptação das classes, com a finalidade de desenvolver o combinador de aspectos, responsável pela formação do sistema final (\textit{weaver aspects}).
+Este recurso da linguagem java será utilizado neste trabalho para interceptação das classes, com a finalidade de desenvolver o combinador de aspectos (\textit{weaver aspects}), responsável pela formação do sistema final.
 
 \section{Javassist}
 
@@ -405,54 +405,79 @@ Este capítulo aborda em detalhes o \textit{framework} desenvolvido, desde a par
 
 \section{Introdução}
 
-Para a realização da análise e desenvolvimento do \textit{framework} fez-se necessário o estudo de diversos conceitos e tecnologias,  cujo embasamento teórico se encontra nos capítulos anteriores. O trabalho apresentado se concentra em torno dos seguintes conceitos: Programação Orientada à aspectos, \textit{Bytecode Enginnering}, Metaprogramação (metadados e reflexão).
+Para a realização da análise e desenvolvimento do \textit{framework} fez-se necessário o estudo de diversos conceitos e tecnologias,  cujo embasamento teórico se encontra nos capítulos anteriores. O trabalho apresentado se concentra em torno dos seguintes conceitos: Programação Orientada à Aspectos, \textit{Bytecode Enginnering}, Metaprogramação (metadados e reflexão).
 
-Para o desenvolvimento do framework foi utilizado Java versão 7 como linguagem de programação orientada a objetos, devido a sua grande utilização e aceitação no mercado, fez-se uso também do Eclipse como ambiente de desenvolvimento de software, pois possui diversas ferramentas integradas que facilitam e agilizam a programação. Foi utilizado também a biblioteca Javassist, responsável por abstraír a forma como é criado, manipulado e modificado \textit{bytecode} de classes Java em tempo de carregamento. 
+Para o desenvolvimento do framework foi utilizado o Kit de Desenvolvimento Java versão 7 (\textit{Java Development Kit} - JDK), cuja versão é estável, proporcionando uma alta utilização e aceitação no mercado, fez-se uso também do Eclipse como ambiente de desenvolvimento de \textit{software}, pois possui diversas ferramentas integradas que facilitam e agilizam a programação. Foi utilizado também a biblioteca Javassist, responsável por abstraír a forma como é criado, manipulado e modificado \textit{bytecode} de classes Java em tempo de carregamento. 
 
 Este projeto tem por intenção estudar os principais conceitos de AOP,  criando uma ferramenta para abstrair estes conceitos, de forma que facilite a aprendizagem, a aplicação prática e também sirva de base para outros estudos e pesquisas. A ferramenta projetada e desenvolvida será em forma de \textit{framework}, que terá como metodologia de uso a utilização de anotações, com o intuito de facilitar a utilização por parte do desenvolvedor e também visando um código mais limpo, concentrando as informações principais do módulo em forma de código, e as informações adicionais (conceitos de AOP) sobre as classes, métodos e atributos serão informadas em forma de metadados (anotações).
 \section{Análise e projeto}
 
-Nesta seção será apresentada a parte de análise e projeto do \textit{framework}, visando o entendimento da estrutura e arquitetura do trabalho desenvolvido.
+Nesta seção será apresentada a parte de análise e projeto do \textit{framework}, visando o entendimento da estrutura, arquitetura e funcionamento da ferramenta.
 
 \subsection{Especificações do projeto}
 
-A ferramenta deve ser capaz de encapsular os conceitos básicos de AOP (\textit{joinpoint, advice, aspect} e \textit{weaver}), visando uma funcionalidade genérica, que tem por objetivo separar os interesses centrais dos interesses transverssais, concentrando cada interesse em seu devido módulo.
+Para cumprimento dos objetivos propostos pelo projeto, foi definido algumas especificações que devem ser cumpridas para que o projeto seja considerado apto. Entre as principais especificações estão: 
+\begin{itemize}
+\item A ferramenta deve ser capaz de encapsular os conceitos básicos de AOP (\textit{joinpoint, advice, aspect} e \textit{weaver}), visando uma funcionalidade genérica, que tem por objetivo separar os interesses centrais dos interesses transverssais, concentrando cada interesse em seu devido módulo.
 
-A ferramenta terá a capacidade de interceptação de métodos, ou seja, executar algum bloco de código antes, depois ou em volta da chamada ao método interceptado, podendo também durante esta interceptação modificar o retorno do método (caso ele retorne alguma informação). Com base nessas informações pode-se definir que os \textit{joinpoints} (pontos de junção) serão as chamadas dos métodos interceptados.
+\item A ferramenta terá a capacidade de interceptação de métodos, ou seja, executar algum bloco de código antes, depois ou em volta da chamada ao método interceptado, podendo também durante esta interceptação modificar o retorno do método (caso ele retorne alguma informação). Com base nessas informações pode-se definir que os \textit{joinpoints} (pontos de junção) serão as chamadas dos métodos interceptados.
 
-Os \textit{advices} (antes, depois ou em volta) serão implementados por meio de uma \textit{interface}, que quando implementada deverá ser tratada pelo \textit{weaver} (combinador) como sendo um aspecto. Para informar ao método o tipo de aspecto e advice que será ser executado na sua interceptação deve ser utilizado \textit{annotations}.
+\item Os \textit{advices} (antes, depois ou em volta) serão implementados por meio de uma \texttt{interface}, que quando implementada deverá ser tratada pelo \textit{weaver} (combinador) como sendo um aspecto. Para informar ao método o tipo de aspecto e \textit{advice} que deverá ser executado na sua interceptação deve ser utilizado \textit{annotations}.
 
-Para implementação do combinador deve ser utilizado técnicas de \textit{Bytecode Enginnering} para realizar modificações em classes já compiladas durante o carregamento destas classes para a máquina virtual do Java (JVM). O combinador será utilizado para integração dos interesses centrais com os interesses transverssais durante o carregamento do sistema.
+\item Para implementação do combinador deve ser utilizado técnicas de \textit{Bytecode Enginnering} para realizar modificações em classes já compiladas durante o carregamento destas classes para a Máquina Virtual do Java (JVM). O combinador será utilizado para integração dos interesses centrais com os interesses transverssais durante o carregamento do sistema.
+\end{itemize}
+\subsection{Fluxograma}
+
+A figura \ref{fig:fluxogramaAgent} mostra todos os processos realizados pela JVM quando é chamado um Agent junto à chama de um sistema. O fluxograma foi desenvolvido utilizando ferramentas disponibilizadas em \textit{http://cacoo.com}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.6]{diagramas/fluxograma_Agent.png}
+	\caption{Fluxograma de processos da JVM na execução de um agent \cite{stark2001java}.}
+	\label{fig:fluxogramaAgent}
+\end{figure}
 
 \subsection{Diagrama de classes}
 
-Na figura \ref{fig:diagramaClassesAOP} é apresentado o diagrama de classes utilizado como base para a implementação do \textit{framework}. Este diagrama foi construído com a ajuda da ferramenta \textit{Astah Community 6.9.0}.
-
+Na figura \ref{fig:diagramaClassesAOP} é apresentado o diagrama de classes "simplificado" utilizado como base para a implementação do \textit{framework}. Este diagrama serve para visualização do modelo de classes do sistema e seus relacionamentos, e foi construído com a ajuda da ferramenta \textit{Astah Community 6.9.0}. Para ver o diagrama completo vá para o Apêndice \ref{apend:A}.
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.4]{diagramas/Framework_AOP.png}
-	\caption{Diagrama de classes do framework.}
+	\caption{Diagrama de classes.}
 	\label{fig:diagramaClassesAOP}
 \end{figure}
 
 Abaixo está a descrição de cada uma das classes apresentadas no diagrama da figura \ref{fig:diagramaClassesAOP}:
 
 \begin{description}
-\item [Agent] Esta é a classe principal do agente que será utilizado para interceptação das classes durante o seu carregamento para a máquina virtual do Java.
-\item [ClassFileTransformer] Esta é uma \textit{interface} que deve ser implementada por classes que desejam ser responsáveis pela modificação de outras classes antes do carregamento para a máquina virtual.
-\item [AOPClassFileTransformer] Esta é a classe responsável por realizar e retornar para o \textit{classLoader} (carregador de classes do Java) as classes já modificadas. Esta classe implementa a \textit{interface} ClassFileTransformer. É ela que faz a análise de quais classes vão ser combinadas, e quais as regras de combinação que devem ser consideradas. 
-\item [Weaver] Esta classe representa o combinador de aspectos, ou seja, é nesta classe que são feitas as combinações de módulos OOP com módulos AOP. As informações necessárias para combinação são recebidas de AOPClassFileTransformer.
+\item [Agent] Esta é a classe que possui o \texttt{premain}, sendo assim é a classe principal do agente que será utilizado para interceptação das classes durante o seu carregamento para a JVM.
+\item [ClassFileTransformer] Esta é uma \texttt{interface} que deve ser implementada por classes que desejam ser responsáveis pela modificação de outras classes antes do carregamento para a máquina virtual.
+\item [AOPClassFileTransformer] Esta é a classe responsável por realizar e retornar para o \textit{classLoader} (carregador de classes do Java) as classes já modificadas. Esta classe implementa a \textit{interface} ClassFileTransformer. É ela que faz a análise de quais classes vão ser combinadas, e quais as regras de combinação que devem ser consideradas para cada método. 
+\item [Weaver] Esta classe representa o combinador de aspectos, ou seja, é nesta classe que são feitas as combinações de módulos OOP com módulos AOP. As informações necessárias para combinação são recebidas de \texttt{AOPClassFileTransformer}.
 \item [AdviceType] É um enumerado que representa o tipo de \textit{advice}, pode ser \textit{Before} (antes), \textit{After} (depois) ou \textit{Around} (em volta). Utilizado para representar o tipo de \textit{advice} que está sendo combinado.
-\item [IAspect] Esta é a \textit{interface} que deve ser implementada pelo desenvolvedor ( usuário do \textit{framework} ) para informar que a classe será interpretada pelo modificador como sendo um aspecto.
+\item [IAspect] Esta é a \texttt{interface} que deve ser implementada pelo desenvolvedor ( usuário do \textit{framework} ) para informar que a classe será interpretada pelo modificador como sendo um aspecto.
 \item [MethodExecution] Representa o método que está sendo interceptado. Possui informações sobre os parâmetros do método, e também um método auxiliar, cuja função é continuar a execução do método interceptado.
 \item [Params]  Esta classe é responsável por encapsular (guardar) os tipos e valores dos parâmetros do método interceptado.
-\item [ClassPool (Javassist)] Esta classe simula o \textit{classLoader} do java, esta classe é bastante utilizada para montar em forma de objeto as classes interceptadas.
+\item [ClassPool (Javassist)] Esta classe simula o \textit{classLoader} do Java, esta classe é bastante utilizada para montar em forma de objeto as classes interceptadas.
 \item [CtClass (Javassist)] Esta classe modela a estrutura de uma classe da linguagem Java, uma instância desta classe possui informações relevantes sobre ela e também métodos que navegam pela sua estrutura (métodos, atributos, construtores, etc). 
 \item [CtBehavior (Javassist)] Esta classe modela de forma genérica métodos e construtores. Ela oferece métodos que são bastante utilizados para adição de código para dentro do escopo de um construtor ou método.
 \item [CtMethod (Javassist)] Esta classe é parecida com \textit{CtBehavior}, porém modela apenas métodos, ou seja, possui algumas informações mais específicas sobre métodos.
 \item [CtField (Javassist)] Esta classe modela um campo ou atributo de uma classe, possuindo uma gama de informações sobre eles e diversos métodos para possíveis modificações.
 \end{description}
+
+
+
+\subsection{Diagrama de sequência}
+
+O diagrama de sequência foi utilizado para demonstrar a forma como se dá a chamada dos métodos durante o processo inicialização do Agent até a parte de modificação (combinação de classes e aspectos) de \textit{bytecode} das classes interceptadas. Este diagrama pode ser visto na figura \ref{fig:sequenciaCombinador}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.4]{diagramas/diagramaSequencia_Combinando.png}
+	\caption{Diagrama de sequência.}
+	\label{fig:sequenciaCombinador}
+\end{figure}
 
 \section{Implementação}
 
@@ -477,6 +502,10 @@ Conclusões ...
 \end{description}
 
 \appendix
+
+
+\chapter{Versão completa dos diagramas}
+\label{apend:A}
 
 \end{document}
 

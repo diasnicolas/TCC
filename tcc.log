@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  20 NOV 2014 07:51
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  22 NOV 2014 17:56
 entering extended mode
  %&-line parsing enabled.
 **tcc.tex
@@ -486,10 +486,7 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
 
 ] [5
 
-] [6
-
-]
-(./tcc.toc
+] (./tcc.toc
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 2.
 
@@ -532,7 +529,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--26
  []  
  []
 
-[7]
+[6
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 40--40
  []  
  []
@@ -548,16 +547,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--49
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
- []  
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--56
- []  
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 57--57
  []  
  []
@@ -567,34 +556,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--58
  []  
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--59
+ []  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--60
+ []  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--62
+ []  
+ []
+
 )
 \tf@toc=\write3
 \openout3 = `tcc.toc'.
 
- [8] [9
-
-] [10
+ [7] [8
 
 ] (./tcc.lof)
 \tf@lof=\write4
 \openout4 = `tcc.lof'.
 
- [11] [12
+ [9
 
 ] (./tcc.lot)
 \tf@lot=\write5
 \openout5 = `tcc.lot'.
 
- [13] [14
+ [10
 
-] [15] [16
+] [11
 
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 98.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 98.
- [17]
+ [12
+
+]
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 110.
 
 
@@ -603,69 +607,32 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 110.
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-\T1/ptm/m/n/10.95 18
- []
-
-[18] [19]
-Underfull \hbox (badness 10000) has occurred while \output is active
-\T1/ptm/m/n/10.95 20
- []
-
-[20
-
-] [21] <figuras/funcionamentoAOP.png, id=74, 419.31656pt x 276.28218pt>
-File: figuras/funcionamentoAOP.png Graphic file (type png)
-
-<use figuras/funcionamentoAOP.png>
-Underfull \hbox (badness 10000) has occurred while \output is active
-\T1/ptm/m/n/10.95 22
- []
-
-[22 <./figuras/funcionamentoAOP.png (PNG copy)>] [23]
-Underfull \hbox (badness 10000) has occurred while \output is active
-\T1/ptm/m/n/10.95 24
- []
-
-[24] [25]
-Underfull \hbox (badness 10000) has occurred while \output is active
-\T1/ptm/m/n/10.95 26
- []
-
-[26
+ [13] [14] [15
 
 ]
+<figuras/funcionamentoAOP.png, id=55, 419.31656pt x 276.28218pt>
+File: figuras/funcionamentoAOP.png Graphic file (type png)
+
+<use figuras/funcionamentoAOP.png> [16 <./figuras/funcionamentoAOP.png (PNG cop
+y)>] [17] [18] [19]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [27]
-Underfull \hbox (badness 10000) has occurred while \output is active
-\T1/ptm/m/n/10.95 28
- []
+ [20
 
-[28] [29]
-Underfull \hbox (badness 10000) has occurred while \output is active
-\T1/ptm/m/n/10.95 30
- []
+]
+[21] [22] [23
 
-[30
-
-] [31]
+]
 Overfull \hbox (10.89195pt too wide) in paragraph at lines 275--276
 \T1/ptm/m/n/12 modo a criar uma ins-tân-cia do com-po-nente es-pe-cí-fico (DA-M
 A’E-VIƒIUS; ’TUIKYS,
  []
 
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-\T1/ptm/m/n/10.95 32
- []
-
-[32] [33] <figuras/criandoAnnotation.jpg, id=113, 702.625pt x 145.54375pt>
+[24] [25] <figuras/criandoAnnotation.jpg, id=88, 702.625pt x 145.54375pt>
 File: figuras/criandoAnnotation.jpg Graphic file (type jpg)
 
 <use figuras/criandoAnnotation.jpg>
-<figuras/usandoAnnotation.jpg, id=114, 331.2375pt x 89.33376pt>
+<figuras/usandoAnnotation.jpg, id=89, 331.2375pt x 89.33376pt>
 File: figuras/usandoAnnotation.jpg Graphic file (type jpg)
 
 <use figuras/usandoAnnotation.jpg>
@@ -675,76 +642,48 @@ que con-tém as clas-ses \T1/ptm/m/it/12 Class \T1/ptm/m/n/12 e \T1/ptm/m/it/12
 Pac-kage\T1/ptm/m/n/12 , e \T1/ptm/m/it/12 java.lang.annotation
  []
 
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-\T1/ptm/m/n/10.95 34
- []
-
-[34 <./figuras/criandoAnnotation.jpg> <./figuras/usandoAnnotation.jpg>]
-<figuras/lendoAnnotation.jpg, id=118, 702.625pt x 351.3125pt>
+[26 <./figuras/criandoAnnotation.jpg> <./figuras/usandoAnnotation.jpg>]
+<figuras/lendoAnnotation.jpg, id=93, 702.625pt x 351.3125pt>
 File: figuras/lendoAnnotation.jpg Graphic file (type jpg)
 
 <use figuras/lendoAnnotation.jpg>
 Underfull \vbox (badness 5519) has occurred while \output is active []
 
- [35 <./figuras/lendoAnnotation.jpg>]
-Underfull \hbox (badness 10000) has occurred while \output is active
-\T1/ptm/m/n/10.95 36
- []
+ [27 <./figuras/lendoAnnotation.jpg>] [28] [29
 
-[36] [37
-
-]
-Underfull \hbox (badness 10000) has occurred while \output is active
-\T1/ptm/m/n/10.95 38
- []
-
-[38] [39
-
-]
-Underfull \hbox (badness 10000) has occurred while \output is active
-\T1/ptm/m/n/10.95 40
- []
-
-[40
+] [30] [31
 
 ]
 Underfull \vbox (badness 2707) has occurred while \output is active []
 
- [41]
-<diagramas/Framework_AOP.png, id=141, 1279.78125pt x 996.72375pt>
+ [32
+
+]
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 425.
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+) [33]
+<diagramas/fluxograma_Agent.png, id=117, 501.875pt x 702.625pt>
+File: diagramas/fluxograma_Agent.png Graphic file (type png)
+
+<use diagramas/fluxograma_Agent.png>
+<diagramas/Framework_AOP.png, id=119, 850.67813pt x 1038.88126pt>
 File: diagramas/Framework_AOP.png Graphic file (type png)
 
-<use diagramas/Framework_AOP.png>
-Overfull \hbox (85.11209pt too wide) in paragraph at lines 434--435
+<use diagramas/Framework_AOP.png> [34 <./diagramas/fluxograma_Agent.png>]
+[35 <./diagramas/Framework_AOP.png>] [36]
+<diagramas/diagramaSequencia_Combinando.png, id=131, 1072.75781pt x 490.83376pt
+>
+File: diagramas/diagramaSequencia_Combinando.png Graphic file (type png)
+ <use diagramas/diagramaSequencia_Combinando.png>
+Overfull \hbox (2.30417pt too wide) in paragraph at lines 477--478
  [][] 
  []
 
+[37 <./diagramas/diagramaSequencia_Combinando.png>] [38
 
-Underfull \hbox (badness 10000) has occurred while \output is active
-\T1/ptm/m/n/10.95 42
- []
-
-[42] [43 <./diagramas/Framework_AOP.png>]
-Underfull \hbox (badness 10000) has occurred while \output is active
-\T1/ptm/m/n/10.95 44
- []
-
-[44] [45
-
-]
-Underfull \hbox (badness 10000) has occurred while \output is active
-\T1/ptm/m/n/10.95 46
- []
-
-[46
-
-] (./tcc.bbl [47]
-Underfull \hbox (badness 10000) has occurred while \output is active
-\T1/ptm/m/n/10.95 48
- []
-
-[48
+] (./tcc.bbl [39
 
 ]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
@@ -767,7 +706,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--66
 T1/ptm/m/n/12 . Dis-po-ní-vel em:
  []
 
-[49]
+[40
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 71--75
 []\T1/ptm/m/n/12 SRINIVASAN, K. \T1/ptm/b/n/12 In-tro-duc-tion to Java Agents\T
 1/ptm/m/n/12 . Dis-po-ní-vel em:
@@ -779,35 +720,29 @@ Underfull \hbox (badness 8189) in paragraph at lines 71--75
 m: 19 Ou-tu-bro.
  []
 
-)
-Underfull \hbox (badness 10000) has occurred while \output is active
-\T1/ptm/m/n/10.95 50
- []
+) [41] [42
 
-[50] AED: lastpage setting LastPage [51
+] AED: lastpage setting LastPage [43
 
-] (./tcc.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+] (./tcc.aux) ) 
 Here is how much of TeX's memory you used:
- 4125 strings out of 495041
- 53190 string characters out of 1181897
- 115524 words of memory out of 3000000
- 7208 multiletter control sequences out of 15000+50000
- 55307 words of font info for 56 fonts, out of 3000000 for 9000
+ 4171 strings out of 495041
+ 54073 string characters out of 1181897
+ 115541 words of memory out of 3000000
+ 7247 multiletter control sequences out of 15000+50000
+ 55928 words of font info for 58 fonts, out of 3000000 for 9000
  33 hyphenation exceptions out of 8191
- 39i,8n,32p,1223b,289s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
-ve/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/ty
-pe1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/
-uhvro8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/sh
-are/texmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fo
-nts/type1/urw/times/utmri8a.pfb>
-Output written on tcc.pdf (51 pages, 617500 bytes).
+ 39i,8n,32p,1223b,285s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/shar
+e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-tex
+live/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-texlive/fonts/type1/u
+rw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvro
+8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/t
+exmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/t
+ype1/urw/times/utmri8a.pfb>
+Output written on tcc.pdf (43 pages, 643374 bytes).
 PDF statistics:
- 199 PDF objects out of 1000 (max. 8388607)
+ 182 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
