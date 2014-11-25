@@ -522,7 +522,7 @@ A figura \ref{fig:manifest} mostra o conteúdo do arquivo.
 	\label{fig:manifest}
 \end{figure}
 
-A \texttt{linha 2} informa qual a classe possui o \textit{premain}, e a \texttt{linha 3} adiciona o Javassist ao caminho de classes do \textit{agent}. Este manifesto vai ser utilizado na hora da construção do arquivo \textit{.jar}.
+A \texttt{linha 2} informa qual a classe possui o \textit{premain}, e a \texttt{linha 3} adiciona o Javassist ao caminho de classes do \textit{agent}. Este manifesto vai ser utilizado no momentoda construção do arquivo \textit{.jar}.
 
 \subsection{Transform}
 
@@ -546,7 +546,7 @@ O \texttt{transform} armazena na variável \texttt{ignoredPackages} os pacotes q
 	\label{fig:processClass}
 \end{figure}
 
-Através do \textit{byecode} da classe que foi recebido por parâmetro o método \texttt{processClass}, monta a classe recebida em um objeto do tipo \texttt{CtClass}. Objeto do tipo \texttt{CtClass} possuem informações sobre toda a estrutura de uma classe, sendo assim percorre-se todos os métodos existentes na classe  em busca de métodos anotados. Para cada anotação existente em um método é invocada uma chamada ao método \texttt{addAdviceIfAnnotated}. A implementação deste método pode ser vista na figura \ref{fig:addadviceifannotated}.
+Através do \textit{byecode} da classe que foi recebido por parâmetro, o método \texttt{processClass}, monta a classe recebida em um objeto do tipo \texttt{CtClass}. Objeto do tipo \texttt{CtClass} possuem informações sobre toda a estrutura de uma classe, sendo assim percorre-se todos os métodos existentes na classe  em busca de métodos anotados. Para cada anotação existente em um método é invocada uma chamada ao método \texttt{addAdviceIfAnnotated}. A implementação deste método pode ser vista na figura \ref{fig:addadviceifannotated}.
 
 \begin{figure}[ht]
 	\centering
@@ -556,6 +556,26 @@ Através do \textit{byecode} da classe que foi recebido por parâmetro o método
 \end{figure}
 
 O método \texttt{addAdviceIfAnnotated} é responsável por verificar se a anotação presente no método é uma anotação suportada pelo \textit{framework}, se for repassa a responsabilidade para o método mais apropriado para tratar o modelo de anotação utilizado.
+
+Se a anotação for nativa é chamado o método \texttt{addNativeAdvice}, caso contrário ela será uma anotação de extensão, cujo método chamado será \texttt{addExtensionAdvice}. A implementação de \texttt{addNativeAdvice} e \texttt{addExtensionAdvice}, são mostradas nas figuras \ref{fig:addnativeadvice} e \ref{fig:addextensionadvice}, respectivamente.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.4]{figuras/implementacao/addnativeadvice.png}
+	\caption{Implementação do método \texttt{addNativeAdvice}.}
+	\label{fig:addnativeadvice}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.5]{figuras/implementacao/addextensionadvice.png}
+	\caption{Implementação do método \texttt{addExtensionAdvice}.}
+	\label{fig:addextensionadvice}
+\end{figure}
+
+O foco dos métodos representados nas figuras \ref{fig:addnativeadvice} e \ref{fig:addextensionadvice} se resume em recolher as informações contidas nas anotações (anotações nativas e de extensão), e posteriormente mandar as informações recolhidas para o combinador (\textit{Weaver}). As informações que o combinador precisa receber são: método interceptado, aspecto e tipo de \textit{advice}. 
+
+A classe \texttt{Weaver}, responsável pela combinação será detalhada na seção  \ref{combinacao}, neste mesmo capitulo.
 
 \subsubsection{Anotações nativas}
 
@@ -570,8 +590,11 @@ As anotações de extensão foram criadas para oferecer ao desenvolvedor uma for
 Por exemplo se é criado um aspecto para modularizar a lógica de \textit{cache}, sendo que esta lógica envolve apenas o \textit{advice around}. De forma nativa a anotação utilizada para marcar a utilização de \textit{cache} em um método seria a seguinte: \texttt{@Around(Cache.class)}. Por outro lado se o desenvolvedor criar uma anotação que estende a anotação \texttt{@Around}, ele pode conseguir o seguinte resultado na utilização: \texttt{@Cache}, obtendo uma leitura mais limpa e uma API personalizada. A criação e a utilização de anotações de extensão será demonstrada no capítulo \ref{estudodecaso} referente ao estudo de caso.
 
 \subsection{Combinador}
+\label{combinacao}
+
 
 \chapter{Estudo de caso - Instrumentação}
+\label{estudodecaso}
 
 \chapter{Conclusão}
 

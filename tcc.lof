@@ -25,6 +25,8 @@
 \contentsline {figure}{\numberline {Figura\nobreakspace 7.6:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {transform}.}}{40}
 \contentsline {figure}{\numberline {Figura\nobreakspace 7.7:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {processClass}.}}{40}
 \contentsline {figure}{\numberline {Figura\nobreakspace 7.8:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addAdviceIfAnnotated}.}}{41}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.9:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addNativeAdvice}.}}{41}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.10:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addExtensionAdvice}.}}{42}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

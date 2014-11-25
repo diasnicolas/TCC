@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  24 NOV 2014 22:19
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  25 NOV 2014 07:02
 entering extended mode
  %&-line parsing enabled.
 **tcc.tex
@@ -705,10 +705,10 @@ File: figuras/implementacao/transform.png Graphic file (type png)
 File: figuras/implementacao/processClass.png Graphic file (type png)
 
 <use figuras/implementacao/processClass.png>
-Overfull \hbox (14.58685pt too wide) in paragraph at lines 549--550
+Overfull \hbox (17.73085pt too wide) in paragraph at lines 549--550
 []\T1/ptm/m/n/12 Através do \T1/ptm/m/it/12 bye-code \T1/ptm/m/n/12 da classe q
-ue foi re-ce-bido por pa-râ-me-tro o mé-todo \T1/pcr/m/n/12 processClass\T1/ptm
-/m/n/12 ,
+ue foi re-ce-bido por pa-râ-me-tro, o mé-todo \T1/pcr/m/n/12 processClass\T1/pt
+m/m/n/12 ,
  []
 
 [40 <./figuras/implementacao/transform.png> <./figuras/implementacao/processCla
@@ -722,16 +722,31 @@ Overfull \hbox (15.86581pt too wide) in paragraph at lines 553--554
  []
 
 
-Overfull \hbox (2.59752pt too wide) in paragraph at lines 562--563
+Overfull \hbox (0.81409pt too wide) in paragraph at lines 560--561
+\T1/ptm/m/n/12 ela será uma ano-ta-ção de ex-ten-são, cujo mé-todo cha-mado ser
+á \T1/pcr/m/n/12 addExtensionAdvice\T1/ptm/m/n/12 .
+ []
+
+<figuras/implementacao/addnativeadvice.png, id=155, 702.625pt x 316.18124pt>
+File: figuras/implementacao/addnativeadvice.png Graphic file (type png)
+
+<use figuras/implementacao/addnativeadvice.png>
+<figuras/implementacao/addextensionadvice.png, id=156, 772.8875pt x 210.7875pt>
+File: figuras/implementacao/addextensionadvice.png Graphic file (type png)
+<use figuras/implementacao/addextensionadvice.png> [41 <./figuras/implementacao
+/addadviceifannotated.png> <./figuras/implementacao/addnativeadvice.png>]
+Overfull \hbox (2.59752pt too wide) in paragraph at lines 582--583
 []\T1/ptm/m/n/12 As ano-ta-ções na-ti-vas são ano-ta-ções (\T1/ptm/m/it/12 an-n
 o-ta-ti-ons\T1/ptm/m/n/12 ) uti-li-za-das por pa-drão pelo \T1/ptm/m/it/12 fra-
 mework
  []
 
-[41 <./figuras/implementacao/addadviceifannotated.png>] [42] [43
 
-] (./tcc.bbl
-[44
+Underfull \vbox (badness 1845) has occurred while \output is active []
+
+ [42 <./figuras/implementacao/addextensionadvice.png>] [43] [44
+
+] (./tcc.bbl [45
 
 ]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
@@ -754,7 +769,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--66
 T1/ptm/m/n/12 . Dis-po-ní-vel em:
  []
 
-[45
+[46
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 71--75
@@ -768,16 +783,16 @@ Underfull \hbox (badness 8189) in paragraph at lines 71--75
 m: 19 Ou-tu-bro.
  []
 
-) [46] [47
+) [47] [48
 
-] AED: lastpage setting LastPage [48
+] AED: lastpage setting LastPage [49
 
 ] (./tcc.aux) ) 
 Here is how much of TeX's memory you used:
- 4204 strings out of 495041
- 55127 string characters out of 1181897
- 115616 words of memory out of 3000000
- 7274 multiletter control sequences out of 15000+50000
+ 4217 strings out of 495041
+ 55603 string characters out of 1181897
+ 115652 words of memory out of 3000000
+ 7285 multiletter control sequences out of 15000+50000
  55928 words of font info for 58 fonts, out of 3000000 for 9000
  33 hyphenation exceptions out of 8191
  39i,8n,32p,1223b,285s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -788,9 +803,9 @@ rw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvro
 8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/t
 exmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/t
 ype1/urw/times/utmri8a.pfb>
-Output written on tcc.pdf (48 pages, 800179 bytes).
+Output written on tcc.pdf (49 pages, 858342 bytes).
 PDF statistics:
- 207 PDF objects out of 1000 (max. 8388607)
+ 215 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
