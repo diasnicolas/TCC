@@ -592,6 +592,30 @@ Por exemplo se é criado um aspecto para modularizar a lógica de \textit{cache}
 \subsection{Combinador}
 \label{combinacao}
 
+A utilização de AOP junto à OOP, resulta em um sistema altamente modularizado, organizado e semânticamente correto à nível de codigo-fonte. Mas a integração entre os dois paradigmas deve ser feita em algum momento para que haja uma comunicação entre os módulos. Este comunicação é feita à nível de \textit{bytecode}, sendo assim o desenvolvedor não visualiza esta comunicação. A única forma de relacionamento entre os dois paradigmas à nível de codigo-fonte é atráves de anotações, tornando muito mais simples o entendimento e a aplicação de relacionamentos entre módulos. Desta forma os módulos se tornam completamente desacoplados, ou seja, um módulo não depende do outro diretamente.
+
+A responsável por realizar essas combinações à nível de \textit{bytecode} é a classe \texttt{Weaver}. Esta classe faz uso das técnicas de \textit{Bytecode Enginnering} através da utilização do \textit{framework} Javassist.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.5]{figuras/implementacao/weaver.png}
+	\caption{Atributos e construtor da classe \texttt{Weaver}.}
+	\label{fig:weaver}
+\end{figure}
+
+A classe \texttt{Weaver} possui quatro atributos, como pode ser visto na figura \ref{fig:weaver}:
+
+\begin{description}
+\item [target] Este atributo irá armazenar o método alvo de interceptação e a sua estrutura, para possíveis modificações.
+\item [aspect] Este atributo armazena a classe que representa o aspecto utilizado pelo método alvo. Este atributo é uma das chaves para a combinação.
+\item [classTarget] Este atributo armazena a classe que possui o método alvo, ou seja, alterações realizadas fora do método alvo serão feitas atráves deste objeto.
+\item [adviceType] Este atributo é utilizado para saber qual o tipo de \textit{advice} do aspecto está sendo utilizado. Este atributo será fundamental para o recolhimento de informações do aspecto.
+\end{description}
+
+Para construir um novo combinador é preciso informar algumas regras básicas de combinação. Estas regras são informadas através do construtor que recebe uma instância do método alvo, o \textit{.class} do aspecto (\texttt{nomeDoAspecto.class}), e o tipo de \textit{advice} da combinação.
+
+A classe estática \texttt{ClassPool} é um canal intermediário de comunicação entre o \textit{Class Loader} e o \textit{framework}. No construtor é necessário acessar o \textit{Class Loader} através do \texttt{ClassPool} para conseguir uma instância de \texttt{CtClass} para o aspecto.
+
 
 \chapter{Estudo de caso - Instrumentação}
 \label{estudodecaso}

@@ -27,6 +27,7 @@
 \contentsline {figure}{\numberline {Figura\nobreakspace 7.8:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addAdviceIfAnnotated}.}}{41}
 \contentsline {figure}{\numberline {Figura\nobreakspace 7.9:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addNativeAdvice}.}}{41}
 \contentsline {figure}{\numberline {Figura\nobreakspace 7.10:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addExtensionAdvice}.}}{42}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.11:}{\ignorespaces Atributos e construtor da classe \texttt {Weaver}.}}{43}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
