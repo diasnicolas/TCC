@@ -357,7 +357,6 @@ Os pacotes utilizados para reflexão possuem uma API\footnote{Visite: "http://do
 Na figura \ref{fig:lendoAnotacao} é mostrado como ler anotações presentes em classes, e também como ler informações presentes nos membros de uma anotação.
 
 \section{Considerações finais}
- com o intuito de incentivar
 Este capítulo apresentou os principais conceitos de Metaprogramação, Reflexão e Metadados. Também foi abordado neste capítulo a utilização superficial da API de reflexão e metadados da linguagem Java. 
 
 \chapter{Tecnologias e ferramentas utilizadas}
@@ -428,7 +427,7 @@ Para cumprimento dos objetivos propostos pelo projeto, foi definido algumas espe
 \end{itemize}
 \subsection{Fluxograma}
 
-A figura \ref{fig:fluxogramaAgent} mostra todos os processos realizados pela JVM quando é chamado um Agent junto à chama de um sistema. O fluxograma foi desenvolvido utilizando ferramentas disponibilizadas em \textit{http://cacoo.com}.
+A figura \ref{fig:fluxogramaAgent} mostra todos os processos realizados pela JVM quando é chamado um Agent junto à chamada de um sistema. O fluxograma foi desenvolvido utilizando ferramentas disponibilizadas em \textit{http://cacoo.com}.
 
 \begin{figure}[ht]
 	\centering
@@ -466,8 +465,6 @@ Abaixo está a descrição de cada uma das classes apresentadas no diagrama da f
 \item [CtField (Javassist)] Esta classe modela um campo ou atributo de uma classe, possuindo uma gama de informações sobre eles e diversos métodos para possíveis modificações.
 \end{description}
 
-
-
 \subsection{Diagrama de sequência}
 
 O diagrama de sequência foi utilizado para demonstrar a forma como se dá a chamada dos métodos durante o processo inicialização do Agent até a parte de modificação (combinação de classes e aspectos) de \textit{bytecode} das classes interceptadas. Este diagrama pode ser visto na figura \ref{fig:sequenciaCombinador}.
@@ -479,7 +476,100 @@ O diagrama de sequência foi utilizado para demonstrar a forma como se dá a cha
 	\label{fig:sequenciaCombinador}
 \end{figure}
 
+O \textit{Bootstrap Class Loader} é o carregador de classes inicial, ou seja, é ele que carrega as classes e bibliotecas padrões do Java para JVM \cite{kalinovsky2004covert}. O \textit{Bootstrap Class Loader} é responsável por invocar (chamar) o método \texttt{premain} que por sua vez irá criar e adicionar o transformador de classes, neste caso \texttt{AOPClassFileTransformer}, que irá realizar a instrumentação do \textit{bytecode} das classes antes de seu carregamento para JVM.
+
+Após criado e adicionado o transformador pelo \texttt{premain} começa o processo de instrumentação, o \textit{Bootstrap} pega o \textit{bytecode} da classe interceptada e envia através do método \texttt{transform} para o transformador realizar possíveis modificações no \textit{bytecode}.
+
+O método \texttt{transform} por sua vez verifica todos os métodos da classe, procurando por métodos que utilizam algum tipo de aspecto de forma anotada, ou seja, métodos marcados com anotações específicas do \textit{framework}. Se alguma anotação correspondente for encontrada, então é recolhida as informações contidas nela (classe do aspecto, tipo de \textit{advice}) e enviadas para o combinador junto ao método anotado, que apartir deste momento torna-se um método alvo de interceptação.
+
+O combinador (\texttt{Weaver}) recebe as informações necessárias para realizar a combinação da classe interceptada e do aspecto informado na anotação. Após realizada a combinação, em todos os métodos anotados da classe, é retornado então para o \textit{Bootstrap} o \textit{bytecode} da classe já modificado. O processo citado acima se dá em todas as classes que estão sendo carregadas para JVM, basicamente pode-se dizer que estas classes interceptadas são as classes do sistema que está utilizando o \textit{framework}. Maiores detalhes sobre a implementação do \textit{framework} e o seu funcionamento são encontradas na seção \ref{sec:imp}.
+
 \section{Implementação}
+\label{sec:imp}
+
+Nesta seção será abordada a forma como o \textit{framework} foi implementada de forma detalhada. Também será das características e do funcionamento geral do \textit{framework}.
+
+\subsection{Primeiros passos}
+
+Muitas pesquisas foram realizadas para encontrar as tecnologias capazes de suprir as necessidades do projeto, inicialmente sabia-se que deveria-se trabalhar em cima de algum \textit{framework} para aplicar as técnicas de \textit{Bytecode Enginnering} e também que deveria ser aplicada alguma técnica de interceptação ou em tempo de carregamento das classes, ou em tempo de compilação, para possíveis combinações.
+
+Inicialmente foi realizado diversos testes utilizando a técnica de Processadores de Anotações (\textit{Annotations Processors}), que é um recurso utilizado para ler as anotações que estão visíveis em tempo de compilação. A idéia central para a utilização de Processadores de Anotações era de ler as anotações das classes em tempo de compilação, verificar se havia regras de combinação nestas anotações e posteriorente realizar a combinação. 
+
+Esta abordagem não foi bem-sucedida pois em tempo de compilação não haveria a possibilidade de modificação das classes, pois o \textit{framework} de \textit{Bytecode Enginnering} utilizado (Javassist) só dá suporte á modificação em tempo de carregamento. Cogitou-se então 2 possíveis saídas: mudar o \textit{framework} de \textit{Bytecode Enginnering} ou mudar a forma de interceptação das classes.
+
+Decidiu-se então mudar a técnica de interceptação de classes, pois a mudança de \textit{framework} iria atrasar o andamento do projeto, pois outros \textit{frameworks} disponíveis exigem conhecimentos específicos de \textit{bytecode}, fazendo com que se tornasse inapropriado para o escopo do projeto. Foi neste momento que decidiu-se utilizar Java Agentes como abordagem de interceptação de classes.
+
+\subsection{Premain}
+
+O \texttt{premain} é o método responsável pela inicialização do \textit{agent}. É dentro deste método que são adicionados o(s) transformador(es) de classes que irão realizar a interceptação. Como mostrado na figura \ref{fig:imppremain} o método \texttt{premain} do nosso \textit{agent} AOP adiciona o transformador \texttt{AOPClassFileTransformer} ao instrumentador.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.6]{figuras/implementacao/premain.png}
+	\caption{Implementação do método \texttt{premain}.}
+	\label{fig:imppremain}
+\end{figure}
+
+\subsubsection{Manifesto}
+
+Existe uma configuração que deve ser feita para que o \textit{agent} saiba qual classe possui o método \texttt{premain}. Esta configuração deve ser feita em um arquivo de manifesto cujo nome deve ser \textit{Manifest.mf}, localizado dentro da pasta do projeto.  
+A figura \ref{fig:manifest} mostra o conteúdo do arquivo.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.7]{figuras/implementacao/manifesto.png}
+	\caption{Conteúdo do arquivo de manifesto.}
+	\label{fig:manifest}
+\end{figure}
+
+A \texttt{linha 2} informa qual a classe possui o \textit{premain}, e a \texttt{linha 3} adiciona o Javassist ao caminho de classes do \textit{agent}. Este manifesto vai ser utilizado na hora da construção do arquivo \textit{.jar}.
+
+\subsection{Transform}
+
+Quando implementa-se a \texttt{interface ClassFileTransformer}, o desenvolvedor é obrigado a implementar o método \texttt{transform}, pois a idéia central do transformador de classes é receber e modificar o \textit{bytecode} de uma classe, sendo que o recebimento destes \textit{bytes} é feito pelo método \texttt{transform}, então obrigatóriamente ele deve estar implementado.
+
+Na figura \ref{fig:transform} é mostrado a forma de implementação do método \texttt{transform} da classe \texttt{AOPClassFileTransformer}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.6]{figuras/implementacao/transform.png}
+	\caption{Implementação do método \texttt{transform}.}
+	\label{fig:transform}
+\end{figure}
+
+O \texttt{transform} armazena na variável \texttt{ignoredPackages} os pacotes que devem ser ignorados, ou seja, as classes que pertencem aos pacotes listados (classes padrão do Java) vão ser ignoradas pelo transformador, retornando para o \textit{Bootstrap Class Loader} o seu \textit{bytecode} original. Se a classe interceptada não for uma classe padrão do Java, então ela será processada pelo método \texttt{processClass}, cuja implementação está na figura \ref{fig:processClass}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.5]{figuras/implementacao/processClass.png}
+	\caption{Implementação do método \texttt{processClass}.}
+	\label{fig:processClass}
+\end{figure}
+
+Através do \textit{byecode} da classe que foi recebido por parâmetro o método \texttt{processClass}, monta a classe recebida em um objeto do tipo \texttt{CtClass}. Objeto do tipo \texttt{CtClass} possuem informações sobre toda a estrutura de uma classe, sendo assim percorre-se todos os métodos existentes na classe  em busca de métodos anotados. Para cada anotação existente em um método é invocada uma chamada ao método \texttt{addAdviceIfAnnotated}. A implementação deste método pode ser vista na figura \ref{fig:addadviceifannotated}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.6]{figuras/implementacao/addadviceifannotated.png}
+	\caption{Implementação do método \texttt{addAdviceIfAnnotated}.}
+	\label{fig:addadviceifannotated}
+\end{figure}
+
+O método \texttt{addAdviceIfAnnotated} é responsável por verificar se a anotação presente no método é uma anotação suportada pelo \textit{framework}, se for repassa a responsabilidade para o método mais apropriado para tratar o modelo de anotação utilizado.
+
+\subsubsection{Anotações nativas}
+
+As anotações nativas são anotações (\textit{annotations}) utilizadas por padrão pelo \textit{framework} para marcar o tipo de \textit{advice} utilizado e a qual aspecto este \textit{advice} pertence. 
+
+O \textit{framework} possui 3 anotações nativas: \texttt{@Before, @After, @Around}. Sendo que todas elas recebem um parâmetro que representa o aspecto que possui o \textit{advice}, da seguinte forma: \texttt{NomeDoAspecto.class}.
+
+\subsubsection{Anotações de extensão}
+
+As anotações de extensão foram criadas para oferecer ao desenvolvedor uma forma de estender as anotações nativas, dando-lhes a oportunidade de criar uma API mais simples e uma melhor descrição do interesse transverssal implementado como aspecto.
+
+Por exemplo se é criado um aspecto para modularizar a lógica de \textit{cache}, sendo que esta lógica envolve apenas o \textit{advice around}. De forma nativa a anotação utilizada para marcar a utilização de \textit{cache} em um método seria a seguinte: \texttt{@Around(Cache.class)}. Por outro lado se o desenvolvedor criar uma anotação que estende a anotação \texttt{@Around}, ele pode conseguir o seguinte resultado na utilização: \texttt{@Cache}, obtendo uma leitura mais limpa e uma API personalizada. A criação e a utilização de anotações de extensão será demonstrada no capítulo \ref{estudodecaso} referente ao estudo de caso.
+
+\subsection{Combinador}
 
 \chapter{Estudo de caso - Instrumentação}
 

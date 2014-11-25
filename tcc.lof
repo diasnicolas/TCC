@@ -20,6 +20,11 @@
 \contentsline {figure}{\numberline {Figura\nobreakspace 7.1:}{\ignorespaces Fluxograma de processos da JVM na execu\IeC {\c c}\IeC {\~a}o de um agent \citep {stark2001java}.}}{34}
 \contentsline {figure}{\numberline {Figura\nobreakspace 7.2:}{\ignorespaces Diagrama de classes.}}{35}
 \contentsline {figure}{\numberline {Figura\nobreakspace 7.3:}{\ignorespaces Diagrama de sequ\IeC {\^e}ncia.}}{37}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.4:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {premain}.}}{39}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.5:}{\ignorespaces Conte\IeC {\'u}do do arquivo de manifesto.}}{39}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.6:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {transform}.}}{40}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.7:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {processClass}.}}{40}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.8:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addAdviceIfAnnotated}.}}{41}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

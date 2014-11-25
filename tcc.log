@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  22 NOV 2014 17:56
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  24 NOV 2014 22:19
 entering extended mode
  %&-line parsing enabled.
 **tcc.tex
@@ -547,27 +547,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--49
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--57
+Underfull \hbox (badness 10000) in paragraph at lines 64--64
  []  
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--58
+Underfull \hbox (badness 10000) in paragraph at lines 65--65
  []  
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--59
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
  []  
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 60--60
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
  []  
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--62
+Underfull \hbox (badness 10000) in paragraph at lines 69--69
  []  
  []
 
@@ -577,11 +577,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--62
 
  [7] [8
 
-] (./tcc.lof)
+] (./tcc.lof
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 23.
+ (/usr/share/texmf-texlive/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+))
 \tf@lof=\write4
 \openout4 = `tcc.lof'.
 
- [9
+
+[9
 
 ] (./tcc.lot)
 \tf@lot=\write5
@@ -610,7 +615,7 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
  [13] [14] [15
 
 ]
-<figuras/funcionamentoAOP.png, id=55, 419.31656pt x 276.28218pt>
+<figuras/funcionamentoAOP.png, id=56, 419.31656pt x 276.28218pt>
 File: figuras/funcionamentoAOP.png Graphic file (type png)
 
 <use figuras/funcionamentoAOP.png> [16 <./figuras/funcionamentoAOP.png (PNG cop
@@ -628,11 +633,11 @@ Overfull \hbox (10.89195pt too wide) in paragraph at lines 275--276
 A’E-VIƒIUS; ’TUIKYS,
  []
 
-[24] [25] <figuras/criandoAnnotation.jpg, id=88, 702.625pt x 145.54375pt>
+[24] [25] <figuras/criandoAnnotation.jpg, id=89, 702.625pt x 145.54375pt>
 File: figuras/criandoAnnotation.jpg Graphic file (type jpg)
 
 <use figuras/criandoAnnotation.jpg>
-<figuras/usandoAnnotation.jpg, id=89, 331.2375pt x 89.33376pt>
+<figuras/usandoAnnotation.jpg, id=90, 331.2375pt x 89.33376pt>
 File: figuras/usandoAnnotation.jpg Graphic file (type jpg)
 
 <use figuras/usandoAnnotation.jpg>
@@ -643,7 +648,7 @@ Pac-kage\T1/ptm/m/n/12 , e \T1/ptm/m/it/12 java.lang.annotation
  []
 
 [26 <./figuras/criandoAnnotation.jpg> <./figuras/usandoAnnotation.jpg>]
-<figuras/lendoAnnotation.jpg, id=93, 702.625pt x 351.3125pt>
+<figuras/lendoAnnotation.jpg, id=94, 702.625pt x 351.3125pt>
 File: figuras/lendoAnnotation.jpg Graphic file (type jpg)
 
 <use figuras/lendoAnnotation.jpg>
@@ -659,12 +664,7 @@ Underfull \vbox (badness 2707) has occurred while \output is active []
  [32
 
 ]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 425.
-
-(/usr/share/texmf-texlive/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [33]
-<diagramas/fluxograma_Agent.png, id=117, 501.875pt x 702.625pt>
+[33] <diagramas/fluxograma_Agent.png, id=117, 501.875pt x 702.625pt>
 File: diagramas/fluxograma_Agent.png Graphic file (type png)
 
 <use diagramas/fluxograma_Agent.png>
@@ -677,13 +677,61 @@ File: diagramas/Framework_AOP.png Graphic file (type png)
 >
 File: diagramas/diagramaSequencia_Combinando.png Graphic file (type png)
  <use diagramas/diagramaSequencia_Combinando.png>
-Overfull \hbox (2.30417pt too wide) in paragraph at lines 477--478
+Overfull \hbox (2.30417pt too wide) in paragraph at lines 474--475
  [][] 
  []
 
-[37 <./diagramas/diagramaSequencia_Combinando.png>] [38
 
-] (./tcc.bbl [39
+Overfull \hbox (2.04976pt too wide) in paragraph at lines 479--480
+\T1/ptm/m/n/12 criar e adi-ci-o-nar o trans-for-ma-dor de clas-ses, neste caso 
+\T1/pcr/m/n/12 AOPClassFileTransformer\T1/ptm/m/n/12 ,
+ []
+
+[37 <./diagramas/diagramaSequencia_Combinando.png>] [38]
+<figuras/implementacao/premain.png, id=140, 652.4375pt x 140.525pt>
+File: figuras/implementacao/premain.png Graphic file (type png)
+
+<use figuras/implementacao/premain.png>
+<figuras/implementacao/manifesto.png, id=141, 341.275pt x 55.20625pt>
+File: figuras/implementacao/manifesto.png Graphic file (type png)
+
+<use figuras/implementacao/manifesto.png> [39 <./figuras/implementacao/premain.
+png> <./figuras/implementacao/manifesto.png>]
+<figuras/implementacao/transform.png, id=147, 707.64375pt x 286.06876pt>
+File: figuras/implementacao/transform.png Graphic file (type png)
+
+<use figuras/implementacao/transform.png>
+<figuras/implementacao/processClass.png, id=148, 702.625pt x 401.5pt>
+File: figuras/implementacao/processClass.png Graphic file (type png)
+
+<use figuras/implementacao/processClass.png>
+Overfull \hbox (14.58685pt too wide) in paragraph at lines 549--550
+[]\T1/ptm/m/n/12 Através do \T1/ptm/m/it/12 bye-code \T1/ptm/m/n/12 da classe q
+ue foi re-ce-bido por pa-râ-me-tro o mé-todo \T1/pcr/m/n/12 processClass\T1/ptm
+/m/n/12 ,
+ []
+
+[40 <./figuras/implementacao/transform.png> <./figuras/implementacao/processCla
+ss.png>]
+<figuras/implementacao/addadviceifannotated.png, id=154, 737.75626pt x 315.1775
+pt>
+File: figuras/implementacao/addadviceifannotated.png Graphic file (type png)
+ <use figuras/implementacao/addadviceifannotated.png>
+Overfull \hbox (15.86581pt too wide) in paragraph at lines 553--554
+ [][] 
+ []
+
+
+Overfull \hbox (2.59752pt too wide) in paragraph at lines 562--563
+[]\T1/ptm/m/n/12 As ano-ta-ções na-ti-vas são ano-ta-ções (\T1/ptm/m/it/12 an-n
+o-ta-ti-ons\T1/ptm/m/n/12 ) uti-li-za-das por pa-drão pelo \T1/ptm/m/it/12 fra-
+mework
+ []
+
+[41 <./figuras/implementacao/addadviceifannotated.png>] [42] [43
+
+] (./tcc.bbl
+[44
 
 ]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
@@ -706,7 +754,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--66
 T1/ptm/m/n/12 . Dis-po-ní-vel em:
  []
 
-[40
+[45
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 71--75
@@ -720,16 +768,16 @@ Underfull \hbox (badness 8189) in paragraph at lines 71--75
 m: 19 Ou-tu-bro.
  []
 
-) [41] [42
+) [46] [47
 
-] AED: lastpage setting LastPage [43
+] AED: lastpage setting LastPage [48
 
 ] (./tcc.aux) ) 
 Here is how much of TeX's memory you used:
- 4171 strings out of 495041
- 54073 string characters out of 1181897
- 115541 words of memory out of 3000000
- 7247 multiletter control sequences out of 15000+50000
+ 4204 strings out of 495041
+ 55127 string characters out of 1181897
+ 115616 words of memory out of 3000000
+ 7274 multiletter control sequences out of 15000+50000
  55928 words of font info for 58 fonts, out of 3000000 for 9000
  33 hyphenation exceptions out of 8191
  39i,8n,32p,1223b,285s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -740,9 +788,9 @@ rw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvro
 8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/t
 exmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/t
 ype1/urw/times/utmri8a.pfb>
-Output written on tcc.pdf (43 pages, 643374 bytes).
+Output written on tcc.pdf (48 pages, 800179 bytes).
 PDF statistics:
- 182 PDF objects out of 1000 (max. 8388607)
+ 207 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
