@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  25 NOV 2014 12:48
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  26 NOV 2014 08:06
 entering extended mode
  %&-line parsing enabled.
 **tcc.tex
@@ -547,16 +547,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--49
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--64
- []  
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 65--65
- []  
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 66--66
  []  
  []
@@ -567,7 +557,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--67
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 68--68
+ []  
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 69--69
+ []  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--71
  []  
  []
 
@@ -578,15 +578,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--69
  [7] [8
 
 ] (./tcc.lof
+Overfull \hbox (0.94562pt too wide) in paragraph at lines 20--20
+ [][] []\T1/ptm/m/n/12 Fluxograma de pro-ces-sos da JVM na exe-cu-ção de um \T1
+/ptm/m/it/12 Agent \T1/ptm/m/n/12 (STÄRK; 
+ []
+
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 23.
- (/usr/share/texmf-texlive/tex/latex/psnfss/t1pcr.fd
+(/usr/share/texmf-texlive/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ))
 \tf@lof=\write4
 \openout4 = `tcc.lof'.
 
-
-[9
+ [9
 
 ] (./tcc.lot)
 \tf@lot=\write5
@@ -594,7 +598,8 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 
  [10
 
-] [11
+]
+[11
 
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -606,16 +611,15 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 ]
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 110.
 
-
-(/usr/share/texmf-texlive/tex/latex/psnfss/omsptm.fd
+ (/usr/share/texmf-texlive/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 110.
- [13] [14] [15
+ [13] [14]
+[15
 
-]
-<figuras/funcionamentoAOP.png, id=56, 419.31656pt x 276.28218pt>
+] <figuras/funcionamentoAOP.png, id=56, 419.31656pt x 276.28218pt>
 File: figuras/funcionamentoAOP.png Graphic file (type png)
 
 <use figuras/funcionamentoAOP.png> [16 <./figuras/funcionamentoAOP.png (PNG cop
@@ -748,9 +752,31 @@ Underfull \vbox (badness 1845) has occurred while \output is active []
 File: figuras/implementacao/weaver.png Graphic file (type png)
 
 <use figuras/implementacao/weaver.png> [43 <./figuras/implementacao/weaver.png>
-] [44] [45
+] <figuras/implementacao/combine.png, id=172, 381.425pt x 143.53625pt>
+File: figuras/implementacao/combine.png Graphic file (type png)
 
-] (./tcc.bbl [46
+<use figuras/implementacao/combine.png>
+<figuras/implementacao/addfields.png, id=173, 577.15625pt x 271.0125pt>
+File: figuras/implementacao/addfields.png Graphic file (type png)
+
+<use figuras/implementacao/addfields.png> [44 <./figuras/implementacao/combine.
+png>] <figuras/implementacao/addfield.png, id=178, 752.8125pt x 175.65625pt>
+File: figuras/implementacao/addfield.png Graphic file (type png)
+
+<use figuras/implementacao/addfield.png>
+Overfull \hbox (24.89963pt too wide) in paragraph at lines 647--648
+ [][] 
+ []
+
+
+<figuras/implementacao/getinitialvaluefield.png, id=179, 642.4pt x 271.0125pt>
+File: figuras/implementacao/getinitialvaluefield.png Graphic file (type png)
+
+<use figuras/implementacao/getinitialvaluefield.png> [45 <./figuras/implementac
+ao/addfields.png> <./figuras/implementacao/addfield.png>] [46 <./figuras/implem
+entacao/getinitialvaluefield.png>] [47
+
+] (./tcc.bbl [48
 
 ]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
@@ -773,7 +799,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--66
 T1/ptm/m/n/12 . Dis-po-ní-vel em:
  []
 
-[47
+[49
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 71--75
@@ -787,16 +813,16 @@ Underfull \hbox (badness 8189) in paragraph at lines 71--75
 m: 19 Ou-tu-bro.
  []
 
-) [48] [49
+) [50] [51
 
-] AED: lastpage setting LastPage [50
+] AED: lastpage setting LastPage [52
 
 ] (./tcc.aux) ) 
 Here is how much of TeX's memory you used:
- 4223 strings out of 495041
- 55772 string characters out of 1181897
- 115664 words of memory out of 3000000
- 7290 multiletter control sequences out of 15000+50000
+ 4248 strings out of 495041
+ 56584 string characters out of 1181897
+ 115712 words of memory out of 3000000
+ 7311 multiletter control sequences out of 15000+50000
  55928 words of font info for 58 fonts, out of 3000000 for 9000
  33 hyphenation exceptions out of 8191
  39i,8n,32p,1223b,285s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -807,9 +833,9 @@ rw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvro
 8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/t
 exmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/t
 ype1/urw/times/utmri8a.pfb>
-Output written on tcc.pdf (50 pages, 901979 bytes).
+Output written on tcc.pdf (52 pages, 990021 bytes).
 PDF statistics:
- 220 PDF objects out of 1000 (max. 8388607)
+ 234 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 96 words of extra memory for PDF output out of 10000 (max. 10000000)
 

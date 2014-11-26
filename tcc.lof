@@ -28,6 +28,10 @@
 \contentsline {figure}{\numberline {Figura\nobreakspace 7.9:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addNativeAdvice}.}}{41}
 \contentsline {figure}{\numberline {Figura\nobreakspace 7.10:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addExtensionAdvice}.}}{42}
 \contentsline {figure}{\numberline {Figura\nobreakspace 7.11:}{\ignorespaces Atributos e construtor da classe \texttt {Weaver}.}}{43}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.12:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {combine}.}}{44}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.13:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addFields}.}}{45}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.14:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addField}.}}{45}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.15:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {getInitialValueField}.}}{46}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -61,9 +61,11 @@
 \contentsline {subsubsection}{\numberline {7.3.3.1}Anota\IeC {\c c}\IeC {\~o}es nativas}{42}
 \contentsline {subsubsection}{\numberline {7.3.3.2}Anota\IeC {\c c}\IeC {\~o}es de extens\IeC {\~a}o}{42}
 \contentsline {subsection}{\numberline {7.3.4}Combinador}{43}
-\contentsline {chapter}{\numberline {8}Estudo de caso - Instrumenta\IeC {\c c}\IeC {\~a}o}{45}
-\contentsline {chapter}{\numberline {9}Conclus\IeC {\~a}o}{46}
-\contentsline {chapter}{Refer{\^e}ncias}{47}
-\contentsline {chapter}{Gloss\IeC {\'a}rio}{49}
+\contentsline {subsubsection}{\numberline {7.3.4.1}AddFields}{44}
+\contentsline {subsubsection}{\numberline {7.3.4.2}AddAdviceMethod}{45}
+\contentsline {chapter}{\numberline {8}Estudo de caso - Instrumenta\IeC {\c c}\IeC {\~a}o}{47}
+\contentsline {chapter}{\numberline {9}Conclus\IeC {\~a}o}{48}
+\contentsline {chapter}{Refer{\^e}ncias}{49}
+\contentsline {chapter}{Gloss\IeC {\'a}rio}{51}
 \setbox \@tempboxa \hbox {{{\sffamily \textbf {\MakeUppercase {Ap{\^e}ndice} }}}}\ii@chapnumindent \wd \@tempboxa \setbox \@tempboxa \box \voidb@x \advance \ii@chapnumindent 1.8em\relax 
-\contentsline {chapter}{\numberline {\MakeUppercase {Ap{\^e}ndice} A}Vers\IeC {\~a}o completa dos diagramas}{50}
+\contentsline {chapter}{\numberline {\MakeUppercase {Ap{\^e}ndice} A}Vers\IeC {\~a}o completa dos diagramas}{52}

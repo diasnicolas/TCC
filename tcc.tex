@@ -614,8 +614,50 @@ A classe \texttt{Weaver} possui quatro atributos, como pode ser visto na figura 
 
 Para construir um novo combinador é preciso informar algumas regras básicas de combinação. Estas regras são informadas através do construtor que recebe uma instância do método alvo, o \textit{.class} do aspecto (\texttt{nomeDoAspecto.class}), e o tipo de \textit{advice} da combinação.
 
-A classe estática \texttt{ClassPool} é um canal intermediário de comunicação entre o \textit{Class Loader} e o \textit{framework}. No construtor é necessário acessar o \textit{Class Loader} através do \texttt{ClassPool} para conseguir uma instância de \texttt{CtClass} para o aspecto.
+A classe estática \texttt{ClassPool} é um canal intermediário de comunicação entre o \textit{Class Loader} e o \textit{framework}. No construtor é necessário acessar o \textit{Class Loader} através do \texttt{ClassPool} para conseguir uma instância de \texttt{CtClass} para acessar as estrutura do aspecto.
 
+Após a execução do construtor da classe \texttt{Weaver}, ou seja, após a criação do combinador, é executado o método \texttt{combine}, que inicia o processo de combinação. A implementação do método \texttt{combine} é mostrada na figura \ref{fig:combine}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.6]{figuras/implementacao/combine.png}
+	\caption{Implementação do método \texttt{combine}.}
+	\label{fig:combine}
+\end{figure}
+
+A implementação do método \texttt{combine} é bem simples, ele apenas chama outros dois métodos. O \texttt{addFields} e seus "sub-métodos" encapsulam toda a lógica de adição de novos campos na classe alvo, ou seja, todos campos existentes no aspecto e que não estão na classe alvo são copiados. Já o método \texttt{addAdviceMethod} e seus "sub-métodos" encapsulam a lógica de combinação do método interceptado com o seu \textit{advice} correspondente. 
+
+Nas próximas subseções serão abordados os detalhes de implementação dos dois métodos citados acima..
+
+\subsubsection{AddFields}
+
+Para iniciar realmente o processo de combinação, deve-se começar copiando campos existentes na no aspecto, para a classe alvo, caso esses campos ainda não existam. Este processo inicia pelo método \texttt{addFields}, cuja implementação está na figura \ref{fig:addfields}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.6]{figuras/implementacao/addfields.png}
+	\caption{Implementação do método \texttt{addFields}.}
+	\label{fig:addfields}
+\end{figure}
+
+O método \texttt{addFields} verifica se cada campo existente no aspecto, existe na classe alvo, caso não exista é chamado o método \texttt{addField} para realizar a cópia deste campo para a classe alvo. Pode-se notar que a API do Javassist não oferece um método para verificar se determinado campo existe, mas ela lança uma exceção quando tenta-se acessar algum membro inexistente. Pensando desta forma fez-se o uso de um bloco \texttt{try-catch} para verificar se o campo já existe, se a execução do método cair no bloco \texttt{catch} significa que uma exceção foi capturada e o campo não existe, providenciando então a sua cópia pelo método \texttt{addField}. O método \texttt{addField} e sua implementação pode ser vista na figura \ref{fig:addfield}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.6]{figuras/implementacao/addfield.png}
+	\caption{Implementação do método \texttt{addField}.}
+	\label{fig:addfield}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.5]{figuras/implementacao/getinitialvaluefield.png}
+	\caption{Implementação do método \texttt{getInitialValueField}.}
+	\label{fig:getinitialvaluefield}
+\end{figure}
+
+
+\subsubsection{AddAdviceMethod}
 
 \chapter{Estudo de caso - Instrumentação}
 \label{estudodecaso}
