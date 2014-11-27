@@ -631,7 +631,7 @@ Nas próximas subseções serão abordados os detalhes de implementação dos do
 
 \subsubsection{AddFields}
 
-Para iniciar realmente o processo de combinação, deve-se começar copiando campos existentes na no aspecto, para a classe alvo, caso esses campos ainda não existam. Este processo inicia pelo método \texttt{addFields}, cuja implementação está na figura \ref{fig:addfields}.
+Para iniciar realmente o processo de combinação, deve-se começar copiando os campos existentes no aspecto para a classe alvo, caso esses campos ainda não existam. Este processo inicia pelo método \texttt{addFields}, cuja implementação está na figura \ref{fig:addfields}.
 
 \begin{figure}[ht]
 	\centering
@@ -644,21 +644,67 @@ O método \texttt{addFields} verifica se cada campo existente no aspecto, existe
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.6]{figuras/implementacao/addfield.png}
+	\includegraphics[scale=0.5]{figuras/implementacao/addfield.png}
 	\caption{Implementação do método \texttt{addField}.}
 	\label{fig:addfield}
 \end{figure}
 
+O método \texttt{addField} é responsável por adicionar o campo à classe alvo. Primeiramente é obtido o valor inicial do campo através do método \texttt{getInitialValueField}, caso não tenha sido declarado nenhum valor inicial é retornado uma \texttt{String} vazia. Após obter, ou não o valor inicial do campo, é utilizado o método \texttt{addField} da classe alvo para realizar a adição do campo, este método recebe uma nova instância de \textit{CtField} que recebe o campo a ser copiado, e a classe que receberá este campo.
+
+Na figura \ref{fig:getinitialvaluefield} é mostrado a implementação de \texttt{getInitialValueField}.
+
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.5]{figuras/implementacao/getinitialvaluefield.png}
+	\includegraphics[scale=0.6]{figuras/implementacao/getinitialvaluefield.png}
 	\caption{Implementação do método \texttt{getInitialValueField}.}
 	\label{fig:getinitialvaluefield}
 \end{figure}
 
+No aspecto o valor inicial de um campo pode ser informado através da utilização da anotação \texttt{@Initialize("valor")} antes do campo a ser inicializado, esta anotação foi criada pois através do Javassist não é possível pegar o valor de um campo. Desta forma se um campo for inicializado no aspecto através do operador \texttt{=}, esta inicialização não estará visível na combinação, por exemplo: \texttt{private int idade = 18}. Sendo assim a inicialização correta do campo seria: \texttt{@Initialize("18") private int idade}.
+
+Basicamente então para o método \texttt{getInitialValueField} pegar o valor inicial do campo, basta ler as anotações existentes no campo e verificar se ele possui a anotação \texttt{@Initialize}, se possuir retorna o valor inicial, caso contrário retorna uma \texttt{String} vazia.
 
 \subsubsection{AddAdviceMethod}
 
+Após a cópia dos campos para a classe alvo, é necessário realizar a integração entre o \textit{advice} e o método interceptado. è dada a partida para essa integração através da chamada ao método \texttt{addAdviceMethod}, cuja responsabilidade é fazer uma cópia do \textit{advice} e repassar esta cópia para o método correspondente ao tipo de \textit{advice}. Os métodos que combinam cada tipo de \textit{advice} são: \texttt{addBefore}, \texttt{addAfter}, \texttt{AddAround}. Na figura \ref{fig:addadvicemethod} é mostrado a implementação do método \texttt{addAdvicemethod}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.5]{figuras/implementacao/addadvicemethod.png}
+	\caption{Implementação do método \texttt{addAdviceMethod}.}
+	\label{fig:addadvicemethod}
+\end{figure}
+
+Para realizar a combinação do método com um \textit{advice} do tipo \textit{before} é utilizado o método \texttt{addBefore}. Primeiramente deve-se adicionar a cópia do \texttt{advice} que veio por parâmetro para a classe alvo, visando realizar chamadas diretas a esta cópia. O nome do método copiado é formado da seguinte maneira: \texttt{aspecto\$advice\$método}. Para adicionar uma chamada à cópia do \textit{advice} antes da execução do método interceptado é necessário utilizar o método \texttt{insertBefore} presente na classe \texttt{CtMethod} do Javassist. A chamada para o método \texttt{insertBefore} deve ser realizada pela instância do método interceptado. Na figura \ref{fig:addbefore} está a implementação do método \texttt{addBefore} da classe \texttt{Weaver}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.5]{figuras/implementacao/addbefore.png}
+	\caption{Implementação do método \texttt{addBefore}.}
+	\label{fig:addbefore}
+\end{figure}
+
+Adicionou-se uma variável local que chama-se \texttt{methodExecution} e é do tipo \texttt{MethodExecution} ao método alvo, esta variável é utilizada para armazenar as informações do método (valor dos parâmetros, tipo dos parâmetros, etc). Para formar a cadeia de caracteres que representa a instanciação da variável é utilizado o método \texttt{createMethodInfo} (na figura \ref{fig:createmethodinfo} encontra-se a implementação deste método). O método \texttt{insertBefore} recebe como parâmetro uma \texttt{String} que representa o código que deve ser adicionado antes da execução do método alvo, esta \texttt{String} é formada pela instanciação da variável local e pela chamada para à cópia do \textit{advice}. 
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.5]{figuras/implementacao/createmethodinfo.png}
+	\caption{Implementação do método \texttt{createMethodInfo}.}
+	\label{fig:createmethodinfo}
+\end{figure}
+
+Pode-se notar que para instanciar a classe \texttt{Params} na \texttt{linha 150} é passado dois parâmetros, o primeiro (\textit{\$args}) representa um objeto do tipo \texttt{Objeto[]} que possui os valores dos parâmetros e o segundo (\$sig) é do tipo \texttt{Class[]} que possui os tipos de cada parâmetro. Esta sintaxe utilizada em forma de \texttt{String} é traduzida para \textit{bytecode} pelo Javassist.
+ 
+ A implementação do método \texttt{addAfter} é praticamente a mesma do método \texttt{addBefore}, sendo que a única diferença é que \texttt{addAfter} utiliza o método \texttt{insertAfter} para adicionar código depois, e o \texttt{addBefore} utiliza o método \texttt{insertBefore} para adicionar depois. A implementação de \texttt{addAfter} pode ser vista na figura \ref{fig:addafter}.
+ 
+ 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.5]{figuras/implementacao/addafter.png}
+	\caption{Implementação do método \texttt{addAfter}.}
+	\label{fig:addafter}
+\end{figure}
+ 
 \chapter{Estudo de caso - Instrumentação}
 \label{estudodecaso}
 

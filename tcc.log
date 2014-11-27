@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  26 NOV 2014 08:06
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  27 NOV 2014 13:04
 entering extended mode
  %&-line parsing enabled.
 **tcc.tex
@@ -764,19 +764,38 @@ png>] <figuras/implementacao/addfield.png, id=178, 752.8125pt x 175.65625pt>
 File: figuras/implementacao/addfield.png Graphic file (type png)
 
 <use figuras/implementacao/addfield.png>
-Overfull \hbox (24.89963pt too wide) in paragraph at lines 647--648
- [][] 
- []
-
-
 <figuras/implementacao/getinitialvaluefield.png, id=179, 642.4pt x 271.0125pt>
 File: figuras/implementacao/getinitialvaluefield.png Graphic file (type png)
 
 <use figuras/implementacao/getinitialvaluefield.png> [45 <./figuras/implementac
-ao/addfields.png> <./figuras/implementacao/addfield.png>] [46 <./figuras/implem
-entacao/getinitialvaluefield.png>] [47
+ao/addfields.png> <./figuras/implementacao/addfield.png>]
+<figuras/implementacao/addadvicemethod.png, id=185, 526.96875pt x 265.99374pt>
+File: figuras/implementacao/addadvicemethod.png Graphic file (type png)
 
-] (./tcc.bbl [48
+<use figuras/implementacao/addadvicemethod.png> [46 <./figuras/implementacao/ge
+tinitialvaluefield.png>]
+<figuras/implementacao/addbefore.png, id=190, 682.55pt x 195.73125pt>
+File: figuras/implementacao/addbefore.png Graphic file (type png)
+
+<use figuras/implementacao/addbefore.png>
+<figuras/implementacao/createmethodinfo.png, id=191, 687.56876pt x 110.4125pt>
+File: figuras/implementacao/createmethodinfo.png Graphic file (type png)
+
+<use figuras/implementacao/createmethodinfo.png> [47 <./figuras/implementacao/a
+ddadvicemethod.png> <./figuras/implementacao/addbefore.png>]
+Overfull \hbox (25.92578pt too wide) in paragraph at lines 698--699
+[]\T1/ptm/m/n/12 A im-ple-men-ta-ção do mé-todo \T1/pcr/m/n/12 addAfter \T1/ptm
+/m/n/12 é pra-ti-ca-mente a mesma do mé-todo \T1/pcr/m/n/12 addBefore\T1/ptm/m/
+n/12 ,
+ []
+
+<figuras/implementacao/addafter.png, id=197, 672.5125pt x 200.75pt>
+File: figuras/implementacao/addafter.png Graphic file (type png)
+
+<use figuras/implementacao/addafter.png> [48 <./figuras/implementacao/createmet
+hodinfo.png> <./figuras/implementacao/addafter.png>] [49
+
+] (./tcc.bbl [50
 
 ]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
@@ -799,7 +818,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--66
 T1/ptm/m/n/12 . Dis-po-ní-vel em:
  []
 
-[49
+[51
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 71--75
@@ -813,16 +832,16 @@ Underfull \hbox (badness 8189) in paragraph at lines 71--75
 m: 19 Ou-tu-bro.
  []
 
-) [50] [51
+) [52] [53
 
-] AED: lastpage setting LastPage [52
+] AED: lastpage setting LastPage [54
 
 ] (./tcc.aux) ) 
 Here is how much of TeX's memory you used:
- 4248 strings out of 495041
- 56584 string characters out of 1181897
- 115712 words of memory out of 3000000
- 7311 multiletter control sequences out of 15000+50000
+ 4275 strings out of 495041
+ 57452 string characters out of 1181897
+ 115760 words of memory out of 3000000
+ 7334 multiletter control sequences out of 15000+50000
  55928 words of font info for 58 fonts, out of 3000000 for 9000
  33 hyphenation exceptions out of 8191
  39i,8n,32p,1223b,285s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -833,9 +852,9 @@ rw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvro
 8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/t
 exmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/t
 ype1/urw/times/utmri8a.pfb>
-Output written on tcc.pdf (52 pages, 990021 bytes).
+Output written on tcc.pdf (54 pages, 1114321 bytes).
 PDF statistics:
- 234 PDF objects out of 1000 (max. 8388607)
+ 248 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 116 words of extra memory for PDF output out of 10000 (max. 10000000)
 
