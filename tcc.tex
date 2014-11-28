@@ -575,7 +575,7 @@ Se a anotação for nativa é chamado o método \texttt{addNativeAdvice}, caso c
 
 O foco dos métodos representados nas figuras \ref{fig:addnativeadvice} e \ref{fig:addextensionadvice} se resume em recolher as informações contidas nas anotações (anotações nativas e de extensão), e posteriormente mandar as informações recolhidas para o combinador (\textit{Weaver}). As informações que o combinador precisa receber são: método interceptado, aspecto e tipo de \textit{advice}. 
 
-A classe \texttt{Weaver}, responsável pela combinação será detalhada na seção  \ref{combinacao}, neste mesmo capitulo.
+A classe \texttt{Weaver}, responsável pela combinação será detalhada na seção  \ref{combinacao}, neste mesmo capítulo.
 
 \subsubsection{Anotações nativas}
 
@@ -684,7 +684,8 @@ Para realizar a combinação do método com um \textit{advice} do tipo \textit{b
 	\label{fig:addbefore}
 \end{figure}
 
-Adicionou-se uma variável local que chama-se \texttt{methodExecution} e é do tipo \texttt{MethodExecution} ao método alvo, esta variável é utilizada para armazenar as informações do método (valor dos parâmetros, tipo dos parâmetros, etc). Para formar a cadeia de caracteres que representa a instanciação da variável é utilizado o método \texttt{createMethodInfo} (na figura \ref{fig:createmethodinfo} encontra-se a implementação deste método). O método \texttt{insertBefore} recebe como parâmetro uma \texttt{String} que representa o código que deve ser adicionado antes da execução do método alvo, esta \texttt{String} é formada pela instanciação da variável local e pela chamada para à cópia do \textit{advice}. 
+Adicionou-se uma variável local que chama-se \texttt{methodExecution} e é do tipo \texttt{MethodExecution} ao método alvo, esta variável é utilizada para armazenar as informações do método (valor dos parâmetros, tipo dos parâmetros, etc). Para formar a cadeia de caracteres que representa a instanciação da variável é utilizado o método \texttt{createMethodInfo} (na figura \ref{fig:createmethodinfo} encontra-se a implementação deste método). O método \texttt{insertBefore} recebe como parâmetro uma \texttt{String} que representa o código que deve ser adicionado antes da execução do método alvo, esta \texttt{String} é formada pela instanciação da variável local e pela chamada á cópia do \textit{advice}.  Para realizar a chamada ao \textit{advice} que foi copiado para a classe alvo, deve-se ter dois parâmetros em mãos, o primeiro representado por (\textit{\$0}) representa a instância real da classe que possui o método, e o segundo a instância de \texttt{MethodExecution}, explicado anteriormente.
+
 
 \begin{figure}[ht]
 	\centering
@@ -693,18 +694,50 @@ Adicionou-se uma variável local que chama-se \texttt{methodExecution} e é do t
 	\label{fig:createmethodinfo}
 \end{figure}
 
-Pode-se notar que para instanciar a classe \texttt{Params} na \texttt{linha 150} é passado dois parâmetros, o primeiro (\textit{\$args}) representa um objeto do tipo \texttt{Objeto[]} que possui os valores dos parâmetros e o segundo (\$sig) é do tipo \texttt{Class[]} que possui os tipos de cada parâmetro. Esta sintaxe utilizada em forma de \texttt{String} é traduzida para \textit{bytecode} pelo Javassist.
+Pode-se notar que para instanciar a classe \texttt{Params} na \texttt{linha 150}da figura \ref{fig:createmethodinfo} é passado dois parâmetros, o primeiro (\textit{\$args}) representa um objeto do tipo \texttt{Objeto[]} que possui os valores dos parâmetros e o segundo (\textit{\$sig}) é do tipo \texttt{Class[]} que possui os tipos de cada parâmetro. Esta sintaxe utilizada em forma de \texttt{String} é traduzida para \textit{bytecode} pelo Javassist.
  
- A implementação do método \texttt{addAfter} é praticamente a mesma do método \texttt{addBefore}, sendo que a única diferença é que \texttt{addAfter} utiliza o método \texttt{insertAfter} para adicionar código depois, e o \texttt{addBefore} utiliza o método \texttt{insertBefore} para adicionar depois. A implementação de \texttt{addAfter} pode ser vista na figura \ref{fig:addafter}.
+O método \texttt{addAfter} foi implementado praticamente da mesma forma que o método \texttt{addBefore}, sendo que a única diferença é que \texttt{addAfter} faz a utilização do método \texttt{insertAfter} para adicionar código depois, e o \texttt{addBefore} utiliza o método \texttt{insertBefore} para adicionar depois. A implementação de \texttt{addAfter} pode ser vista na figura \ref{fig:addafter}.
  
  
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.5]{figuras/implementacao/addafter.png}
+	\includegraphics[scale=0.6]{figuras/implementacao/addafter.png}
 	\caption{Implementação do método \texttt{addAfter}.}
 	\label{fig:addafter}
 \end{figure}
- 
+
+O \textit{advice} do tipo \textit{around} se resume em envolver a execução de um método com trechos de código, ou seja, nada mais é do que adicionar código antes e depois da chamada a um método. O tipo \textit{around}
+é um pouco mais complexo que \textit{before} e \textit{after}, e também o mais utilizado no encapsulamento de interesses transversais mais complexos.  
+
+O método da classe \texttt{Weaver} responsável por realizar a combinação do método interceptado com o \textit{advice around} é o método \texttt{addAround}, e a sua implementação se encontra na figura \ref{fig:addaround}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.5]{figuras/implementacao/addaround.png}
+	\caption{Implementação do método \texttt{addAround}.}
+	\label{fig:addaround}
+\end{figure}
+
+A implementação de \texttt{addAround} segue o mesmo modelo de implementação de \texttt{addBefore} e \texttt{addAfter}, porém desenvolvida de forma diferente. Primeiramente é preciso realizar uma cópia do método alvo, para manter a implementação intacta, o nome do método copiado terá a seguinte forma: \texttt{nomeOriginalMétodo\$Copy}. Após realizar a cópia do método é necessário adicionar à classe alvo a cópia do método original e a cópia do \textit{advice}, ficando assim disponíveis para futuras chamadas. Tendo a cópia do método, deve-se então reescrever o corpo do método original, para isso utiliza-se o método \texttt{setBody} disponível em instâncias de \texttt{CtMethod} do Javassist. Para adicionar variáveis locais ao corpo do método não é utilizado o método \texttt{addLocalVariable}, sendo assim foi utilizado o formato de \textit{String} para adicionar a variável \texttt{methodExecution}. É adicionado também ao corpo do método a chamada ao \textit{advice} copiado.
+
+Para informar ao \textit{advice around} o momento que deve ser executado o método original dentro do seu escopo, deve-se fazer a utilização do método \texttt{proceed} presente na instância da classe \texttt{MethodExecution} recebida por parâmetro, na figura \ref{fig:exemploproceed} um exemplo da utilização do \texttt{proceed} em um \textit{advice around}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.5]{figuras/implementacao/exemplo_proceed.png}
+	\caption{Exemplo de implementação do \textit{advice around}.}
+	\label{fig:exemploproceed}
+\end{figure}
+
+O método \texttt{proceed} faz o uso de reflexão para invocar uma chamada à copia do método original feita no \texttt{addAround}, esta chamada é feita pelo objeto \texttt{source}, que seria uma instância da classe alvo, ou seja a classe que recebeu a cópia do método. A implementação de \texttt{proceed} realizada na classe \texttt{MethodExecution}, pode ser vista na figura \ref{fig:proceed}. 
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.5]{figuras/implementacao/proceed.png}
+	\caption{Implementação do método \texttt{proceed}.}
+	\label{fig:proceed}
+\end{figure}
+
 \chapter{Estudo de caso - Instrumentação}
 \label{estudodecaso}
 

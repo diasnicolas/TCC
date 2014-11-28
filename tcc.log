@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  27 NOV 2014 13:04
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  28 NOV 2014 08:07
 entering extended mode
  %&-line parsing enabled.
 **tcc.tex
@@ -783,19 +783,27 @@ File: figuras/implementacao/createmethodinfo.png Graphic file (type png)
 
 <use figuras/implementacao/createmethodinfo.png> [47 <./figuras/implementacao/a
 ddadvicemethod.png> <./figuras/implementacao/addbefore.png>]
-Overfull \hbox (25.92578pt too wide) in paragraph at lines 698--699
-[]\T1/ptm/m/n/12 A im-ple-men-ta-ção do mé-todo \T1/pcr/m/n/12 addAfter \T1/ptm
-/m/n/12 é pra-ti-ca-mente a mesma do mé-todo \T1/pcr/m/n/12 addBefore\T1/ptm/m/
-n/12 ,
- []
-
 <figuras/implementacao/addafter.png, id=197, 672.5125pt x 200.75pt>
 File: figuras/implementacao/addafter.png Graphic file (type png)
 
-<use figuras/implementacao/addafter.png> [48 <./figuras/implementacao/createmet
-hodinfo.png> <./figuras/implementacao/addafter.png>] [49
+<use figuras/implementacao/addafter.png>
+<figuras/implementacao/addaround.png, id=198, 697.60625pt x 301.125pt>
+File: figuras/implementacao/addaround.png Graphic file (type png)
 
-] (./tcc.bbl [50
+<use figuras/implementacao/addaround.png> [48 <./figuras/implementacao/createme
+thodinfo.png> <./figuras/implementacao/addafter.png>]
+<figuras/implementacao/exemplo_proceed.png, id=204, 552.0625pt x 200.75pt>
+File: figuras/implementacao/exemplo_proceed.png Graphic file (type png)
+
+<use figuras/implementacao/exemplo_proceed.png>
+<figuras/implementacao/proceed.png, id=205, 572.1375pt x 245.91875pt>
+File: figuras/implementacao/proceed.png Graphic file (type png)
+
+<use figuras/implementacao/proceed.png> [49 <./figuras/implementacao/addaround.
+png> <./figuras/implementacao/exemplo_proceed.png>] [50 <./figuras/implementaca
+o/proceed.png>] [51
+
+] (./tcc.bbl [52
 
 ]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
@@ -818,7 +826,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--66
 T1/ptm/m/n/12 . Dis-po-ní-vel em:
  []
 
-[51
+[53
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 71--75
@@ -832,16 +840,16 @@ Underfull \hbox (badness 8189) in paragraph at lines 71--75
 m: 19 Ou-tu-bro.
  []
 
-) [52] [53
+) [54] [55
 
-] AED: lastpage setting LastPage [54
+] AED: lastpage setting LastPage [56
 
 ] (./tcc.aux) ) 
 Here is how much of TeX's memory you used:
- 4275 strings out of 495041
- 57452 string characters out of 1181897
- 115760 words of memory out of 3000000
- 7334 multiletter control sequences out of 15000+50000
+ 4293 strings out of 495041
+ 58036 string characters out of 1181897
+ 115796 words of memory out of 3000000
+ 7349 multiletter control sequences out of 15000+50000
  55928 words of font info for 58 fonts, out of 3000000 for 9000
  33 hyphenation exceptions out of 8191
  39i,8n,32p,1223b,285s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -852,9 +860,9 @@ rw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvro
 8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/t
 exmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/t
 ype1/urw/times/utmri8a.pfb>
-Output written on tcc.pdf (54 pages, 1114321 bytes).
+Output written on tcc.pdf (56 pages, 1205162 bytes).
 PDF statistics:
- 248 PDF objects out of 1000 (max. 8388607)
+ 261 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 116 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 131 words of extra memory for PDF output out of 10000 (max. 10000000)
 

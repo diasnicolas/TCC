@@ -36,6 +36,9 @@
 \contentsline {figure}{\numberline {Figura\nobreakspace 7.17:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addBefore}.}}{47}
 \contentsline {figure}{\numberline {Figura\nobreakspace 7.18:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {createMethodInfo}.}}{48}
 \contentsline {figure}{\numberline {Figura\nobreakspace 7.19:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addAfter}.}}{48}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.20:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addAround}.}}{49}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.21:}{\ignorespaces Exemplo de implementa\IeC {\c c}\IeC {\~a}o do \textit {advice around}.}}{49}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.22:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {proceed}.}}{50}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
