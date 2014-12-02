@@ -487,7 +487,7 @@ O combinador (\texttt{Weaver}) recebe as informações necessárias para realiza
 \section{Implementação}
 \label{sec:imp}
 
-Nesta seção será abordada a forma como o \textit{framework} foi implementada de forma detalhada. Também será das características e do funcionamento geral do \textit{framework}.
+Nesta seção será detalhada a abordagem utilizada para a implementação deste \textit{framework}. Também será discutida as características e o funcionamento geral do \textit{framework}.
 
 \subsection{Primeiros passos}
 
@@ -546,7 +546,7 @@ O \texttt{transform} armazena na variável \texttt{ignoredPackages} os pacotes q
 	\label{fig:processClass}
 \end{figure}
 
-Através do \textit{bytecode} da classe que foi recebido por parâmetro, o método \texttt{processClass}, monta a classe recebida em um objeto do tipo \texttt{CtClass}. Objeto do tipo \texttt{CtClass} possuem informações sobre toda a estrutura de uma classe, sendo assim percorre-se todos os métodos existentes na classe  em busca de métodos anotados. Para cada anotação existente em um método é invocada uma chamada ao método \texttt{addAdviceIfAnnotated}. A implementação deste método pode ser vista na figura \ref{fig:addadviceifannotated}.
+Através do \textit{bytecode} da classe que foi recebido por parâmetro, o método \texttt{processClass}, monta a classe recebida em um objeto do tipo \texttt{CtClass}. Objetos do tipo \texttt{CtClass} possuem informações sobre toda a estrutura de uma classe, sendo assim percorre-se todos os métodos existentes na classe  em busca de métodos anotados. Para cada anotação existente em um método é invocada uma chamada ao método \texttt{addAdviceIfAnnotated}. A implementação deste método pode ser vista na figura \ref{fig:addadviceifannotated}.
 
 \begin{figure}[ht]
 	\centering
@@ -561,7 +561,7 @@ Se a anotação for nativa é chamado o método \texttt{addNativeAdvice}, caso c
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.4]{figuras/implementacao/addnativeadvice.png}
+	\includegraphics[scale=0.5]{figuras/implementacao/addnativeadvice.png}
 	\caption{Implementação do método \texttt{addNativeAdvice}.}
 	\label{fig:addnativeadvice}
 \end{figure}
@@ -592,7 +592,7 @@ Por exemplo se é criado um aspecto para modularizar a lógica de \textit{cache}
 \subsection{Combinador}
 \label{combinacao}
 
-A utilização de AOP junto à OOP, resulta em um sistema altamente modularizado, organizado e semanticamente correto à nível de código-fonte. Mas a integração entre os dois paradigmas deve ser feita em algum momento para que haja uma comunicação entre os módulos. Este comunicação é feita à nível de \textit{bytecode}, sendo assim o desenvolvedor não visualiza esta comunicação. A única forma de relacionamento entre os dois paradigmas à nível de código-fonte é através de anotações, tornando muito mais simples o entendimento e a aplicação de relacionamentos entre módulos. Desta forma os módulos se tornam completamente desacoplados, ou seja, um módulo não depende do outro diretamente.
+A utilização de AOP junto à OOP, resulta em um sistema altamente modularizado, organizado e semanticamente correto à nível de código-fonte. Mas a integração entre os dois paradigmas deve ser feita em algum momento para que haja uma comunicação entre os módulos. Esta comunicação é feita à nível de \textit{bytecode}, sendo assim o desenvolvedor não visualiza esta comunicação. A única forma de relacionamento entre os dois paradigmas à nível de código-fonte é através de anotações, tornando muito mais simples o entendimento e a aplicação de relacionamentos entre módulos. Desta forma os módulos se tornam completamente desacoplados, ou seja, um módulo não depende do outro diretamente.
 
 A responsável por realizar essas combinações à nível de \textit{bytecode} é a classe \texttt{Weaver}. Esta classe faz uso das técnicas de \textit{Bytecode Enginnering} através da utilização do \textit{framework} Javassist.
 
@@ -627,7 +627,7 @@ Após a execução do construtor da classe \texttt{Weaver}, ou seja, após a cri
 
 A implementação do método \texttt{combine} é bem simples, ele apenas chama outros dois métodos. O \texttt{addFields} e seus "sub-métodos" encapsulam toda a lógica de adição de novos campos na classe alvo, ou seja, todos campos existentes no aspecto e que não estão na classe alvo são copiados. Já o método \texttt{addAdviceMethod} e seus "sub-métodos" encapsulam a lógica de combinação do método interceptado com o seu \textit{advice} correspondente. 
 
-Nas próximas subseções serão abordados os detalhes de implementação dos dois métodos citados acima..
+Nas próximas subseções serão abordados os detalhes de implementação dos dois métodos citados acima.
 
 \subsubsection{AddFields}
 
@@ -666,7 +666,7 @@ Basicamente então para o método \texttt{getInitialValueField} pegar o valor in
 
 \subsubsection{AddAdviceMethod}
 
-Após a cópia dos campos para a classe alvo, é necessário realizar a integração entre o \textit{advice} e o método interceptado. è dada a partida para essa integração através da chamada ao método \texttt{addAdviceMethod}, cuja responsabilidade é fazer uma cópia do \textit{advice} e repassar esta cópia para o método correspondente ao tipo de \textit{advice}. Os métodos que combinam cada tipo de \textit{advice} são: \texttt{addBefore}, \texttt{addAfter}, \texttt{AddAround}. Na figura \ref{fig:addadvicemethod} é mostrado a implementação do método \texttt{addAdvicemethod}.
+Após a cópia dos campos para a classe alvo, é necessário realizar a integração entre o \textit{advice} e o método interceptado. É dada a partida para essa integração através da chamada ao método \texttt{addAdviceMethod}, cuja responsabilidade é fazer uma cópia do \textit{advice} e repassar esta cópia para o método correspondente ao tipo de \textit{advice}. Os métodos que combinam cada tipo de \textit{advice} são: \texttt{addBefore}, \texttt{addAfter} e \texttt{AddAround}. Na figura \ref{fig:addadvicemethod} é mostrado a implementação do método \texttt{addAdviceMethod}.
 
 \begin{figure}[ht]
 	\centering
@@ -675,7 +675,16 @@ Após a cópia dos campos para a classe alvo, é necessário realizar a integra�
 	\label{fig:addadvicemethod}
 \end{figure}
 
-Para realizar a combinação do método com um \textit{advice} do tipo \textit{before} é utilizado o método \texttt{addBefore}. Primeiramente deve-se adicionar a cópia do \texttt{advice} que veio por parâmetro para a classe alvo, visando realizar chamadas diretas a esta cópia. O nome do método copiado é formado da seguinte maneira: \texttt{aspecto\$advice\$método}. Para adicionar uma chamada à cópia do \textit{advice} antes da execução do método interceptado é necessário utilizar o método \texttt{insertBefore} presente na classe \texttt{CtMethod} do Javassist. A chamada para o método \texttt{insertBefore} deve ser realizada pela instância do método interceptado. Na figura \ref{fig:addbefore} está a implementação do método \texttt{addBefore} da classe \texttt{Weaver}.
+O método \texttt{createMethod} é responsável por fazer a cópia do \textit{advice} para a classe alvo, e também por adicionar configurações ao método caso seja necessário. Este método faz a verificação se a classe alvo já não possui um método correspondente ao \textit{advice}, caso não possua é feita a cópia. Se o \textit{advice} utilizado for \textit{before} ou \textit{after} é adicionado um bloco \texttt{try/catch} ao \textit{advice} copiado, para tratar possíveis exceções lançadas por estes \textit{advices}. Após estes procedimentos a cópia é realmente adicionada à classe alvo. A figura \ref{fig:createmethod} mostra a implementação de \texttt{createMethod}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.5]{figuras/implementacao/createmethod.png}
+	\caption{Implementação do método \texttt{createMethod}.}
+	\label{fig:createmethod}
+\end{figure}
+
+Para realizar a combinação do método com um \textit{advice} do tipo \textit{before} é utilizado o método \texttt{addBefore}. O nome do método copiado recebido por parâmetro é formado da seguinte maneira: \texttt{aspecto\$advice}. Para adicionar uma chamada à cópia do \textit{advice} antes da execução do método interceptado é necessário utilizar o método \texttt{insertBefore} presente na classe \texttt{CtMethod} do Javassist. A chamada para o método \texttt{insertBefore} deve ser realizada pela instância do método interceptado. Na figura \ref{fig:addbefore} está a implementação do método \texttt{addBefore} da classe \texttt{Weaver}.
 
 \begin{figure}[ht]
 	\centering
@@ -694,9 +703,9 @@ Adicionou-se uma variável local que chama-se \texttt{methodExecution} e é do t
 	\label{fig:createmethodinfo}
 \end{figure}
 
-Pode-se notar que para instanciar a classe \texttt{Params} na \texttt{linha 150}da figura \ref{fig:createmethodinfo} é passado dois parâmetros, o primeiro (\textit{\$args}) representa um objeto do tipo \texttt{Objeto[]} que possui os valores dos parâmetros e o segundo (\textit{\$sig}) é do tipo \texttt{Class[]} que possui os tipos de cada parâmetro. Esta sintaxe utilizada em forma de \texttt{String} é traduzida para \textit{bytecode} pelo Javassist.
+Pode-se notar que para instanciar a classe \texttt{Params} na \texttt{linha 150} da figura \ref{fig:createmethodinfo} é passado dois parâmetros, o primeiro (\textit{\$args}) representa um objeto do tipo \texttt{Objeto[]} que possui os valores dos parâmetros e o segundo (\textit{\$sig}) é do tipo \texttt{Class[]} que possui os tipos de cada parâmetro. Esta sintaxe utilizada em forma de \texttt{String} é traduzida para \textit{bytecode} pelo Javassist.
  
-O método \texttt{addAfter} foi implementado praticamente da mesma forma que o método \texttt{addBefore}, sendo que a única diferença é que \texttt{addAfter} faz a utilização do método \texttt{insertAfter} para adicionar código depois, e o \texttt{addBefore} utiliza o método \texttt{insertBefore} para adicionar depois. A implementação de \texttt{addAfter} pode ser vista na figura \ref{fig:addafter}.
+O método \texttt{addAfter} foi implementado praticamente da mesma forma que o método \texttt{addBefore}, sendo que a única diferença é que \texttt{addAfter} faz a utilização do método \texttt{insertAfter} para adicionar código depois, e o \texttt{addBefore} utiliza o método \texttt{insertBefore} para adicionar antes. A implementação de \texttt{addAfter} pode ser vista na figura \ref{fig:addafter}.
  
  
 \begin{figure}[ht]
@@ -718,9 +727,9 @@ O método da classe \texttt{Weaver} responsável por realizar a combinação do 
 	\label{fig:addaround}
 \end{figure}
 
-A implementação de \texttt{addAround} segue o mesmo modelo de implementação de \texttt{addBefore} e \texttt{addAfter}, porém desenvolvida de forma diferente. Primeiramente é preciso realizar uma cópia do método alvo, para manter a implementação intacta, o nome do método copiado terá a seguinte forma: \texttt{nomeOriginalMétodo\$Copy}. Após realizar a cópia do método é necessário adicionar à classe alvo a cópia do método original e a cópia do \textit{advice}, ficando assim disponíveis para futuras chamadas. Tendo a cópia do método, deve-se então reescrever o corpo do método original, para isso utiliza-se o método \texttt{setBody} disponível em instâncias de \texttt{CtMethod} do Javassist. Para adicionar variáveis locais ao corpo do método não é utilizado o método \texttt{addLocalVariable}, sendo assim foi utilizado o formato de \textit{String} para adicionar a variável \texttt{methodExecution}. É adicionado também ao corpo do método a chamada ao \textit{advice} copiado.
+A implementação de \texttt{addAround} segue o mesmo modelo de implementação de \texttt{addBefore} e \texttt{addAfter}, porém desenvolvida de forma diferente. Primeiramente é preciso realizar uma cópia do método alvo, para manter a implementação intacta, o nome do método copiado terá a seguinte forma: \texttt{nomeOriginalMétodo\$Copy}. Tendo a cópia do método, deve-se então reescrever o corpo do método original, para isso utiliza-se o método \texttt{setBody} disponível em instâncias de \texttt{CtMethod} do Javassist. Para adicionar variáveis locais ao corpo do método não é utilizado o método \texttt{addLocalVariable}, sendo assim foi utilizado o formato de \textit{String} para adicionar a variável \texttt{methodExecution}. É adicionado também ao corpo do método a chamada ao \textit{advice} copiado.
 
-Para informar ao \textit{advice around} o momento que deve ser executado o método original dentro do seu escopo, deve-se fazer a utilização do método \texttt{proceed} presente na instância da classe \texttt{MethodExecution} recebida por parâmetro, na figura \ref{fig:exemploproceed} um exemplo da utilização do \texttt{proceed} em um \textit{advice around}.
+Para informar ao \textit{advice around} o momento que deve ser executado o método original dentro do seu escopo, deve-se fazer a utilização do método \texttt{proceed} presente na instância da classe \texttt{MethodExecution} recebida por parâmetro. Na figura \ref{fig:exemploproceed} um exemplo da utilização do \texttt{proceed} em um \textit{advice around}.
 
 \begin{figure}[ht]
 	\centering
@@ -729,7 +738,7 @@ Para informar ao \textit{advice around} o momento que deve ser executado o méto
 	\label{fig:exemploproceed}
 \end{figure}
 
-O método \texttt{proceed} faz o uso de reflexão para invocar uma chamada à copia do método original feita no \texttt{addAround}, esta chamada é feita pelo objeto \texttt{source}, que seria uma instância da classe alvo, ou seja a classe que recebeu a cópia do método. A implementação de \texttt{proceed} realizada na classe \texttt{MethodExecution}, pode ser vista na figura \ref{fig:proceed}. 
+O método \texttt{proceed} faz o uso de reflexão para invocar uma chamada à copia do método original feita no \texttt{addAround}, esta chamada é feita pelo objeto \texttt{source}, que seria uma instância da classe alvo, ou seja, a classe que recebeu a cópia do método. A implementação de \texttt{proceed} realizada na classe \texttt{MethodExecution}, pode ser vista na figura \ref{fig:proceed}. 
 
 \begin{figure}[ht]
 	\centering
@@ -737,6 +746,10 @@ O método \texttt{proceed} faz o uso de reflexão para invocar uma chamada à co
 	\caption{Implementação do método \texttt{proceed}.}
 	\label{fig:proceed}
 \end{figure}
+
+\subsection{Considerações finais}
+
+Este capítulo abordou as características do projeto e todos os seus detalhes de implementação, com o intuito de oferecer uma base teórica e prática para estudos sobre AOP. No próximo capítulo será utilizado os conhecimentos aqui adquiridos para o desenvolvimento de um estudo de caso.
 
 \chapter{Estudo de caso - Instrumentação}
 \label{estudodecaso}

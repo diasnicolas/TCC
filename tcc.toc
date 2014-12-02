@@ -63,6 +63,7 @@
 \contentsline {subsection}{\numberline {7.3.4}Combinador}{43}
 \contentsline {subsubsection}{\numberline {7.3.4.1}AddFields}{44}
 \contentsline {subsubsection}{\numberline {7.3.4.2}AddAdviceMethod}{46}
+\contentsline {subsection}{\numberline {7.3.5}Considera\IeC {\c c}\IeC {\~o}es finais}{50}
 \contentsline {chapter}{\numberline {8}Estudo de caso - Instrumenta\IeC {\c c}\IeC {\~a}o}{51}
 \contentsline {chapter}{\numberline {9}Conclus\IeC {\~a}o}{52}
 \contentsline {chapter}{Refer{\^e}ncias}{53}
