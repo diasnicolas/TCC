@@ -91,6 +91,7 @@ Resumo ...
 \setstretch{1.5}
 
 \chapter{Introdução}
+\label{cap1}
 Atualmente o setor de desenvolvimento de software é um dos setores que mais cresce em todo o mundo, devido a esse grande crescimento a preocupação das empresas em desenvolver software de qualidade têm aumentado constantemente. A grande maioria das empresas atuantes no mercado, fazem uso do paradigma de Programação Orientada a Objetos (\textit{Object Oriented Programming} - OOP) no desenvolvimento de seus softwares, com intuito de ter um produto manutenível e que se adapte a mudanças, mas com uma qualidade permanente.
 
 Um dos principais motivos que fez com que OOP se tornasse um dos paradigmas mais utilizados foi a sua capacidade de encapsulamento, tornando o projeto de software mais claro, aumentando a reusabilidade de módulos, implementação simplificada e redução nos custos de manutenção. Porém existem interesses que não se aplicam à apenas um módulo, por exemplo o tratamento de exceções deveria estar encapsulado em um módulo distinto, mas na prática ele está espalhado por diversas partes da aplicação (diversos módulos). Estes interesses são chamados de interesses transversais (\textit{crosscuting concerns}).
@@ -122,15 +123,15 @@ Existe uma variedade de ferramentas que implementam os conceitos de AOP, porém 
 Este trabalho está dividido em 9 capítulos, abaixo uma pequena descrição de cada um deles:
 
 \begin{description}
-\item [Capítulo 1] este capítulo traz uma visão geral do problema, também descreve os objetivos e a motivação encontrada para a realização deste trabalho.
-\item [Capítulo 2] este capítulo aborda os principais conceitos de Programação Orientada a Aspectos, e os principais benefícios no uso deste paradigma.
-\item [Capítulo 3] este capítulo descreve os conceitos básicos de \textit{bytecode} e \textit{Bytecode Engineering}, introduz também as principais ferramentas utilizadas na aplicação da técnica de \textit{Bytecode Engineering}.
-\item [Capítulo 4] este capítulo descreve os principais conceitos de meta programação, reflexão e metadados. Aborda de forma prática o uso de anotações (metadados) na linguagem Java.
-\item [Capítulo 5] este capítulo fala de forma superficial sobre as tecnologias e ferramentas utilizadas na realização deste trabalho.
-\item [Capítulo 6] este capítulo descreve de forma clara e objetiva as soluções já existentes, comentando as vantagens e desvantagens de cada solução.
-\item [Capítulo 7] este capítulo descreve todas as características do projeto, desde a parte de análise até a implementação.
-\item [Capítulo 8] neste capítulo será desenvolvido um estudo de caso para comprovar as funcionalidades do framework.
-\item [Capítulo 9] este capítulo descreve os pontos fortes e fracos do trabalho, trabalhos futuros e outras conclusões sobre o projeto. 
+\item [Capítulo 1 INTRODUÇÃO:] este capítulo traz uma visão geral do problema, também descreve os objetivos e a motivação encontrada para a realização deste trabalho.
+\item [Capítulo 2 ASPECT ORIENTED PROGRAMMING:] este capítulo aborda os principais conceitos de Programação Orientada a Aspectos, e os principais benefícios no uso deste paradigma.
+\item [Capítulo 3 BYTECODE ENGINEERING:] este capítulo descreve os conceitos básicos de \textit{bytecode} e \textit{Bytecode Engineering}, introduz também as principais ferramentas utilizadas na aplicação da técnica de \textit{Bytecode Engineering}.
+\item [Capítulo 4 META PROGRAMAÇÃO:] este capítulo descreve os principais conceitos de meta programação, reflexão e metadados. Aborda de forma prática o uso de anotações (metadados) na linguagem Java.
+\item [Capítulo 5 TECNOLOGIAS E FERRAMENTAS UTILIZADAS:] este capítulo fala de forma superficial sobre as tecnologias e ferramentas utilizadas na realização deste trabalho.
+\item [Capítulo 6 SOLUÇÕES EXISTENTES:] este capítulo descreve de forma clara e objetiva as soluções já existentes, comentando as vantagens e desvantagens de cada solução.
+\item [Capítulo 7 O FRAMEWORK:] este capítulo descreve todas as características do projeto, desde a parte de análise até a implementação.
+\item [Capítulo 8 ESTUDO DE CASO - INSTRUMENTAÇÃO:] neste capítulo será desenvolvido um estudo de caso para comprovar as funcionalidades do framework.
+\item [Capítulo 9 CONCLUSÃO:] este capítulo descreve os pontos fortes e fracos do trabalho, trabalhos futuros e outras conclusões sobre o projeto. 
 \end{description}
  
 \chapter{Aspect Oriented Programming}
@@ -427,7 +428,7 @@ Para cumprimento dos objetivos propostos pelo projeto, foi definido algumas espe
 \end{itemize}
 \subsection{Fluxograma}
 
-A figura \ref{fig:fluxogramaAgent} mostra todos os processos realizados pela JVM quando é chamado um \textit{Agent} junto à chamada de um sistema. O fluxograma foi desenvolvido utilizando ferramentas disponibilizadas em \textit{http://cacoo.com}.
+A figura \ref{fig:fluxogramaAgent} mostra todos os processos realizados pela JVM quando é chamado um \textit{Agent} junto à chamada de um sistema.
 
 \begin{figure}[ht]
 	\centering
@@ -438,7 +439,7 @@ A figura \ref{fig:fluxogramaAgent} mostra todos os processos realizados pela JVM
 
 \subsection{Diagrama de classes}
 
-Na figura \ref{fig:diagramaClassesAOP} é apresentado o diagrama de classes "simplificado" utilizado como base para a implementação do \textit{framework}. Este diagrama serve para visualização do modelo de classes do sistema e seus relacionamentos, e foi construído com a ajuda da ferramenta \textit{Astah Community 6.9.0}. Para ver o diagrama completo vá para o Apêndice \ref{apend:A}.
+Na figura \ref{fig:diagramaClassesAOP} é apresentado o diagrama de classes "reduzido" utilizado como base para a implementação do \textit{framework}. Este diagrama serve para visualização do modelo de classes do sistema e seus relacionamentos, e foi construído com a ajuda da ferramenta \textit{Astah Community 6.9.0}. O diagrama de classes completo está no Apêndice \ref{apend:A}.
 
 \begin{figure}[ht]
 	\centering

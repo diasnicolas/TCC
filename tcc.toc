@@ -60,7 +60,7 @@
 \contentsline {subsection}{\numberline {7.3.3}Transform}{39}
 \contentsline {subsubsection}{\numberline {7.3.3.1}Anota\IeC {\c c}\IeC {\~o}es nativas}{42}
 \contentsline {subsubsection}{\numberline {7.3.3.2}Anota\IeC {\c c}\IeC {\~o}es de extens\IeC {\~a}o}{42}
-\contentsline {subsection}{\numberline {7.3.4}Combinador}{43}
+\contentsline {subsection}{\numberline {7.3.4}Combinador}{42}
 \contentsline {subsubsection}{\numberline {7.3.4.1}AddFields}{44}
 \contentsline {subsubsection}{\numberline {7.3.4.2}AddAdviceMethod}{46}
 \contentsline {subsection}{\numberline {7.3.5}Considera\IeC {\c c}\IeC {\~o}es finais}{50}

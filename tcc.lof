@@ -32,9 +32,9 @@
 \contentsline {figure}{\numberline {Figura\nobreakspace 7.13:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addFields}.}}{45}
 \contentsline {figure}{\numberline {Figura\nobreakspace 7.14:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addField}.}}{45}
 \contentsline {figure}{\numberline {Figura\nobreakspace 7.15:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {getInitialValueField}.}}{46}
-\contentsline {figure}{\numberline {Figura\nobreakspace 7.16:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addAdviceMethod}.}}{47}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.16:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addAdviceMethod}.}}{46}
 \contentsline {figure}{\numberline {Figura\nobreakspace 7.17:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {createMethod}.}}{47}
-\contentsline {figure}{\numberline {Figura\nobreakspace 7.18:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addBefore}.}}{48}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.18:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addBefore}.}}{47}
 \contentsline {figure}{\numberline {Figura\nobreakspace 7.19:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {createMethodInfo}.}}{48}
 \contentsline {figure}{\numberline {Figura\nobreakspace 7.20:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addAfter}.}}{49}
 \contentsline {figure}{\numberline {Figura\nobreakspace 7.21:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addAround}.}}{49}
