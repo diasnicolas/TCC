@@ -755,6 +755,25 @@ Este capítulo abordou as características do projeto e todos os seus detalhes d
 \chapter{Estudo de caso - Instrumentação}
 \label{estudodecaso}
 
+Neste capítulo será desenvolvido um estudo de caso para demonstrar as funcionalidades do \textit{framework}. Neste capítulo será abordado a parte de análise e desenvolvimento do estudo de caso, e também detalhes sobre a combinação dos aspectos com as classes.
+
+\section{Introdução}
+
+Nos dias atuais a quantidade de produtos, serviços e ferramentas desenvolvidas para resolução de um problema é imensa, devido o aumento das necessidades em geral. No mundo do desenvolvimento de \textit{software} não é diferente, sistemas, aplicativos e ferramentas também são desenvolvidas visando na maioria das vezes a resolução de um problema, ou facilitar (automatizar) a execução de uma tarefa. 
+
+Pensando nisso são desenvolvidos casos de testes e/ou estudos de casos para demonstrar a eficiência e a capacidade de resolução do problema proposto, levando em conta a visão do cliente (usuário). Para demonstrar a capacidade do \textit{framework} de encapsular interesses transversais e a facilidade adquirida na sua utilização, será desenvolvido um estudo de caso para comprovar de forma prática os conceitos apresentados.
+
+\section{O problema}
+
+Um sistema hipotético, é formado por diversos módulos, sendo que cada módulo tem uma responsabilidade específica. Levando em conta que o carregamento destes módulos se dá durante a inicialização do sistema, desenvolver um aspecto que seja responsável por calcular o tempo de carregamento de cada módulo, e também o tempo total de carregamento do sistema, armazenando estas informações em um arquivo de \textit{log}\footnote{Para saber mais sobre \textit{log} consulte o Glossário ao final deste texto.}, sem que haja entrelaçamento e/ou espalhamento de código, fazendo com que o sistema e seus módulos sejam totalmente independentes em relação ao gerenciamento de tempo de cada módulo.
+
+\subsection{Instrumentação}
+
+Instrumentação é o nome dado à inserção de código adicional ao sistema, visando analisar e avaliar diversas medidas de desempenho durante a execução de um programa \cite{cabral2005instrumentaccao} . 
+
+A medida de desempenho aqui utilizada será o cálculo do tempo de execução de um método, com o intuito de avaliar o tempo de carregamento do sistema, realizando uma análise nos métodos envolvidos nesta tarefa.
+
+
 \chapter{Conclusão}
 
 Conclusões ...
@@ -771,6 +790,7 @@ Conclusões ...
 	\item[Extreme Programming] XP é um estilo de desenvolvimento de software com foco em excelentes técnicas de programação, comunicação clara e trabalho em equipe, que permite grande produtividade no desenvolvimento \cite{beck2004extreme}.
 \item [Decorator] é um padrão de projeto estrutural, cujo principal objetivo é adicionar funcionalidades a um objeto dinamicamente.
 \item [Proxy] é um padrão de projeto estrutural, cujo principal objetivo é controlar as chamadas a um objeto através de outro objeto de mesma interface.
+\item [Log] é o arquivo onde é registrado informações relevantes sobre o comportamento do sistema \cite{log}.
 \end{description}
 
 \appendix

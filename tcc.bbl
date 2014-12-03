@@ -16,6 +16,11 @@
   C\@. \textbf{Extreme programming explained}: embrace change. [S.l.]:
   Addison-Wesley Professional, 2004.
 
+\bibitem[CABRAL(2005)CABRAL]{cabral2005instrumentaccao} CABRAL, B. M.~B\@.
+  \textbf{Instrumenta{\c{c}}{\~a}o de C{\'o}digo na Plataforma .NET}. 2005.
+  Tese (Doutorado em Ci{\^e}ncia da Computa{\c{c}}{\~a}o) --- Universidade de
+  Coimbra.
+
 \bibitem[CHIBA(2013)CHIBA]{javassist} CHIBA, S\@. \textbf{Javassist}.
   Disponível em: <http://www.csg.ci.i.u-tokyo.ac.jp/~chiba/javassist/>. Acesso
   em: 16 Junho. 2014.
@@ -59,6 +64,10 @@
   DEMERS]{malenfant1996tutorial} MALENFANT, J.; JACQUES, M.; DEMERS, F.-N\@. A
   tutorial on behavioral reflection and its implementation. In: REFLECTION,
   1996. \textbf{Proceedings{\ldots}} [S.l.:~s.n.], 1996. v.96, p.1--20.
+
+\bibitem[MATOS(2014)MATOS]{log} MATOS, T\@. \textbf{Você sabe o que é log?}
+  Disponível em: <http://www.tiagomatos.com/blog/voce-sabe-o-que-e-log>.
+  Acesso em: 03 Dezembro. 2014.
 
 \bibitem[MILINKOVICH(2008)MILINKOVICH]{eclipsefoundation} MILINKOVICH, M\@.
   \textbf{About the Eclipse Foundation}. Disponível em:

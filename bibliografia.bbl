@@ -59,3 +59,9 @@ publisher={Manning}
   year={2006}
 }
 
+@misc{log,
+	author = {Tiago Matos},
+	title = {Você sabe o que é log?},
+	note = {Disponível em: <http://www.tiagomatos.com/blog/voce-sabe-o-que-e-log>. Acesso em: 03 Dezembro. 2014},
+	year = {2014}
+}

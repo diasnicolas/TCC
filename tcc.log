@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  2 DEC 2014 19:13
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  3 DEC 2014 08:10
 entering extended mode
  %&-line parsing enabled.
 **tcc.tex
@@ -552,22 +552,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--67
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--68
- []  
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--69
- []  
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 70--70
+Underfull \hbox (badness 10000) in paragraph at lines 71--71
  []  
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 72--72
+ []  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--73
+ []  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--75
  []  
  []
 
@@ -823,7 +823,7 @@ png>]
 [50 <./figuras/implementacao/exemplo_proceed.png> <./figuras/implementacao/proc
 eed.png>] [51
 
-] (./tcc.bbl [52
+] [52] (./tcc.bbl [53
 
 ]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
@@ -835,41 +835,53 @@ n/12 . Dis-po-ní-vel em:
  []
 
 
-Underfull \hbox (badness 5189) in paragraph at lines 46--50
+Underfull \hbox (badness 5189) in paragraph at lines 51--55
 []\T1/ptm/m/n/12 JAVA-SOURCE. \T1/ptm/b/n/12 Open Source By-te-Code Li-bra-ries
  in Java\T1/ptm/m/n/12 . Dis-po-ní-vel em:
  []
 
+[54
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--66
+]
+Underfull \hbox (badness 10000) in paragraph at lines 68--71
+[]\T1/ptm/m/n/12 MATOS, T. \T1/ptm/b/n/12 Você sabe o que é log? \T1/ptm/m/n/12
+ Dis-po-ní-vel em:
+ []
+
+
+Underfull \hbox (badness 2393) in paragraph at lines 68--71
+\T1/ptm/m/n/12 <http://www.tiagomatos.com/blog/voce-sabe-o-que-e-log>. Acesso e
+m: 03 De-zem-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--75
 []\T1/ptm/m/n/12 MILINKOVICH, M. \T1/ptm/b/n/12 About the Eclipse Foun-da-tion\
 T1/ptm/m/n/12 . Dis-po-ní-vel em:
  []
 
-[53
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 71--75
+Underfull \hbox (badness 10000) in paragraph at lines 80--84
 []\T1/ptm/m/n/12 SRINIVASAN, K. \T1/ptm/b/n/12 In-tro-duc-tion to Java Agents\T
 1/ptm/m/n/12 . Dis-po-ní-vel em:
  []
 
 
-Underfull \hbox (badness 8189) in paragraph at lines 71--75
+Underfull \hbox (badness 8189) in paragraph at lines 80--84
 \T1/ptm/m/n/12 <http://www.javabeat.net/introduction-to-java-agents/>. Acesso e
 m: 19 Ou-tu-bro.
  []
 
-) [54] [55
+) [55] [56
 
-] AED: lastpage setting LastPage [56
+] AED: lastpage setting LastPage [57
 
 ] (./tcc.aux) ) 
 Here is how much of TeX's memory you used:
- 4301 strings out of 495041
- 58263 string characters out of 1181897
- 115817 words of memory out of 3000000
- 7356 multiletter control sequences out of 15000+50000
+ 4307 strings out of 495041
+ 58395 string characters out of 1181897
+ 115879 words of memory out of 3000000
+ 7362 multiletter control sequences out of 15000+50000
  55928 words of font info for 58 fonts, out of 3000000 for 9000
  33 hyphenation exceptions out of 8191
  39i,8n,32p,1223b,285s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -880,9 +892,9 @@ rw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvro
 8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/t
 exmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/t
 ype1/urw/times/utmri8a.pfb>
-Output written on tcc.pdf (56 pages, 1234931 bytes).
+Output written on tcc.pdf (57 pages, 1238275 bytes).
 PDF statistics:
- 263 PDF objects out of 1000 (max. 8388607)
+ 266 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  136 words of extra memory for PDF output out of 10000 (max. 10000000)
 
