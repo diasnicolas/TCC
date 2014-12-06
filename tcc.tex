@@ -44,10 +44,10 @@
 \maketitle
 
 \begin{folhadeaprovacao}
-Monografia sob o título \textit{"Framework AOP utilizando técnicas de Bytecode Engineering"}, defendida por Nicolas Dias Bento e aprovada em ?? de ?? de ???, em Rio Grande, estado do Rio Grande do Sul, pela banca examinadora constituída pelos professores:
+Monografia sob o título \textit{"Framework AOP utilizando técnicas de Bytecode Engineering"}, defendida por Nicolas Dias Bento e aprovada em \_\_\_ de \_\_\_\_\_\_\_\_\_\_\_ de \_\_\_\_\_, em Rio Grande, estado do Rio Grande do Sul, pela banca examinadora constituída pelos professores:
  \assinatura{Prof. Márcio Torres\\ Orientador}
- \assinatura{Prof. NOME\\ IFRS - Campus Rio Grande }
- \assinatura{Prof. NOME\\ IFRS - Campus Rio Grande } 
+ \assinatura{Prof. Dr. Eduardo Wenzel Brião\\ IFRS - Campus Rio Grande }
+ \assinatura{Prof. Msc. Igor Avila Pereira\\ IFRS - Campus Rio Grande } 
 \end{folhadeaprovacao}
 
 \clearpage
@@ -800,7 +800,7 @@ As classes referentes ao \textit{framework} presentes no diagrama da figura \ref
 
 \item [Main] Esta classe é a responsável por iniciar o sistema e suas configurações.
 \item [Sistema] Esta classe representa o sistema hipoteticamente. Esta classe possui os módulos do estudo.
-\item [IModule] Interface que deve ser implementada por todos os módulos. Esta interface obriga a implementação.
+\item [IModulo] Interface que deve ser implementada por todos os módulos. Esta interface obriga a implementação.
 \item [Estoque, Caixa, Financeiro] Classes hipotéticas que representam os módulos do sistema.
 \item [LoggerTiming] Este é o aspecto que irá encapsular a lógica responsável por calcular o tempo de execução dos métodos, e também a lógica que ativa o armazenamento das informações obtidas através de instrumentação em um arquivo de \textit{log}.
 \item [EnableLogInFile] Esta anotação é responsável por marcar o método que irá ativar o armazenamento em \textit{log} antes de sua execução.
@@ -813,16 +813,97 @@ Para demonstrar as funcionalidades do \textit{framework} procurou-se desenvolver
 
 \subsection{Criação de um aspecto}
 
-Para criação de um aspecto utilizando o \textit{framework} deve-se implementar a interface \texttt{IAspect} presente no pacote \texttt{framework.aop} detalhado no diagrama de classes da figura \ref{fig:diagramaClassesAOP}. A implementação do aspecto \texttt{LoggerTiming} está representada na figura \ref{fig:loggeraspect}.
+Para criação de um aspecto utilizando o \textit{framework} deve-se implementar a interface \texttt{IAspect} presente no pacote \texttt{framework.aop} detalhado no diagrama de classes da figura \ref{fig:diagramaClassesAOP}. A implementação do aspecto \texttt{LoggerTiming} está representada nas figuras \ref{fig:loggeraspectaround} e \ref{fig:loggeraspectbefore}.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.5]{figuras/implementacao/estudo/loggertiming.png}
-	\caption{Implementação do aspecto \texttt{LoggerTiming}.}
-	\label{fig:loggeraspect}
+	\includegraphics[scale=0.6]{figuras/estudo/loggertimingaround.png}
+	\caption{Implementação do \textit{advice} \texttt{around} do aspecto \texttt{LoggerTiming}.}
+	\label{fig:loggeraspectaround}
+\end{figure}
+O \textit{advice} \texttt{around} do aspecto \texttt{LoggerTiming} possui a função de calcular o tempo de execução de um método, de forma que todo o código necessário para execução desta função está encapsulado neste \textit{advice}. Pode-se notar que na linha \texttt{21} é onde ocorre a execução do método interceptado.
+
+Caso o método executado tenha sua execução realizada em um tempo maior que 5 segundos, é mostrado no \textit{log} um aviso, caso contrário é mostrado um \textit{log} de informação com o tempo de execução.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.6]{figuras/estudo/loggertimingbefore.png}
+	\caption{Implementação do \textit{advice} \texttt{before} do aspecto \texttt{LoggerTiming}.}
+	\label{fig:loggeraspectbefore}
 \end{figure}
 
+Já o \textit{advice} \texttt{before} possui a função de ativar o armazenamento das informações de \textit{log} em um arquivo, para realização de futuras análises. O arquivo de \textit{log} será criado na pasta raiz do projeto com o nome de \texttt{logTiming.log}.
 
+\subsection{Criação das anotações de extensão}
+
+Para realizar a comunicação entre o aspecto e as classes é necessário utilizar as anotações nativas, ou criar anotações de extensão. Neste estudo de caso optou-se por criar anotações de extensão por ser uma forma mais descritiva e de melhor entendimento, que facilita a leitura do código fonte.
+
+Na figura \ref{fig:extensionenablelog} e \ref{fig:extensionlogtiming} é demonstrada a criação das anotações \texttt{EnableLogInFile} e \texttt{LogTiming}, respectivamente.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.6]{figuras/estudo/extensionenablelog.png}
+	\caption{Criação da anotação de extensão \texttt{EnableLogInFile}.}
+	\label{fig:extensionenablelog}
+\end{figure}
+
+A anotação de extensão \texttt{EnableLogInFile} será utilizada para realizar a comunicação entre o \textit{advice} \texttt{before} do aspecto \texttt{LoggerTiming} e o método \texttt{init} da classe \texttt{Sistema}, com o intuito de ativar o armazenamento das informações de \textit{log} em um arquivo.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.6]{figuras/estudo/extensionlogtiming.png}
+	\caption{Criação da anotação de extensão \texttt{LogTiming}.}
+	\label{fig:extensionlogtiming}
+\end{figure}
+
+Por outro lado a anotação de extensão \texttt{LogTiming} irá ser utilizada nos métodos que terão o tempo calculado, ou seja, os métodos responsáveis pelo carregamento dos módulos.
+
+\subsection{Utilizando anotações de extensão}
+
+As anotações de extensão serão utilizadas para realizar a comunicação do aspecto com o método interceptado. Na figura \ref{fig:usingenablelog} é mostrado a utilização da anotação \texttt{EnableLogInFile}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.7]{figuras/estudo/initSistema.png}
+	\caption{Utilizando a anotação de extensão \texttt{EnableLogInFile}.}
+	\label{fig:usingenablelog}
+\end{figure}
+
+Neste estudo de caso foi utilizado a anotação \texttt{EnableLogInFile} no método \texttt{init} da classe \texttt{Sistema}, para indicar que antes da inicialização do sistema deve-se ativar o armazenamento em arquivo de \textit{log}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.7]{figuras/estudo/modulo.png}
+	\caption{Utilização da anotação \texttt{LogTiming} no método \texttt{carrega}.}
+	\label{fig:usinglogtiming}
+\end{figure}
+
+Foi utilizada a anotação \texttt{LogTiming} no método \texttt{carrega} de todos os módulos (\texttt{Estoque, Caixa e Financeiro}) do sistema. O método \texttt{carrega} foi implementado de forma hipotética em todos os módulos, para isso utilizou-se um \textit{loop} para simular o tempo em que o método ficar executando.
+
+\section{Execução do sistema}
+
+Após realizar a comunicação entre o(s) aspecto(s) e as classes, já é possível executar o sistema. Para isso deve-se compilar o projeto, acessar a pasta \texttt{bin} e executar o seguinte comando para iniciar o sistema utilizando o \textit{framework} para realização da combinação:
+
+\begin{center}
+\texttt{java -javaagent:../dist/agent.jar System.Main -classpath ../lib/javassist.jar}
+\end{center}
+
+O arquivo \textit{.jar} que representa o \textit{framework} deve estar localizado na pasta \texttt{dist} e a biblioteca Javassist utilizada pelo \textit{framework} deve estar na pasta \texttt{lib}, ambas dentro do projeto, pois são dependências necessárias para a realização da combinação durante o carregamento das classes.
+
+Após a execução do estudo de caso é criado o arquivo de \textit{log} dentro da pasta do projeto, caso ele ainda não exista. A figura \ref{fig:saidaarquivolog} mostra uma das saídas do arquivo de \textit{log} obtidas durante o carregamento dos módulos do sistema.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.5]{figuras/estudo/saidaarquivolog.png}
+	\caption{Saída do arquivo de \textit{log} após o carregamento dos módulos.}
+	\label{fig:saidaarquivolog}
+\end{figure}
+
+Pode-se perceber que o módulo que demorou mais a carregar foi módulo de \texttt{Estoque} que levou 7.457 segundos em seu carregamento, sendo que o tempo total de carregamento dos módulos do sistema foi de 13.337 segundos.
+
+\section{Considerações finais}
+
+Este capítulo focou no projeto e implementação de um estudo de caso, que utilizou um sistema hipotético para demonstrar a criação e utilização de aspectos no encapsulamento de interesses transversais de um sistema, visando comprovar a eficiência do \textit{framework} desenvolvido na resolução deste problema. Também foi abordado neste capítulo a forma como é feita a comunicação entre aspectos e classes de forma simples com a utilização do \textit{framework}.
 
 \chapter{Conclusão}
 
