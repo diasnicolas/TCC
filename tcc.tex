@@ -393,11 +393,47 @@ A escolha da biblioteca Javassist para auxiliar na aplicação das técnicas de 
 Este capítulo apresentou de forma objetiva as principais ferramentas e tecnologias que serão utilizadas no desenvolvimento deste trabalho. Foi justificado de forma clara os motivos que contribuíram para a escolha destas ferramentas e tecnologias com o intuito de resolver o problema apresentado.
 
 \chapter{Soluções Existentes}
-Neste capítulo será abordado as características, vantagens e desvantagens dos projetos relacionados, e o que o conhecimento das estruturas das soluções existentes irão agregar no estudo e execução deste trabalho.
+Neste capítulo será abordado as características dos principais projetos relacionados existentes, e um exemplo prático de cada um deles.
 
 \section{PostSharp}
 
+Postsharp é um \textit{framework} para a plataforma .NET da Microsoft, responsável por encapsular os interesses transversais de sistemas.
+
+O Postsharp possui internamente uma biblioteca de aspectos já implementados para que o desenvolvedor possa incorporar aos seus projetos  \cite{groves2013aop}.
+
+O principal foco do Postsharp é a automação padrão dos produtos (por isso a biblioteca interna de aspectos), mas mesmo assim possui uma mega estrutura que dá suporte a criação de diversos outros tipos de aspectos \cite{groves2013aop}.
+
+A figura \ref{fig:aspectpostsharp} mostra a implementação de um aspecto atráves do \textit{framework} Postsharp.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.5]{figuras/ferramentas/aspectpostsharp.png}
+	\caption{Exemplo de aspecto no Postsharp.}
+	\label{fig:aspectpostsharp}
+\end{figure}
+
+Para criação de um aspecto através do Postsharp deve-se implementar a interface \texttt{OnMethodBoundaryAspect}, que obrigará a implementar os métodos \texttt{OnEntry} e \texttt{OnSucess}, que representam os \textit{advices before} e \textit{after}, respectivamente. 
+
 \section{AspectJ}
+
+O AspectJ é uma linguagem de extensão da linguagem Java, pois possui suas próprias características e palavras chaves reservadas provenientes de uma linguagem de programação. Se o AspectJ é uma extensão de Java, então todo programa que seja válido em Java, também será validado com o AspectJ \cite{laddad2003aspectj}.
+
+Diferentemente do Postsharp o AspectJ é considerado uma linguagem de programação, pois possui sua própria sintaxe e também possui um compilador próprio que gera arquivos de \textit{bytecodes} compatíveis com a JVM \cite{laddad2003aspectj}.
+
+A figura \ref{fig:aspectj} mostra a criação de um aspecto utilizando o modelo de anotações  do AspectJ.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.5]{figuras/ferramentas/aspectj.png}
+	\caption{Exemplo de aspecto na forma de anotações no AspectJ.}
+	\label{fig:aspectj}
+\end{figure}
+
+O AspectJ faz uso de uma sintaxe própria, mas também dá suporte ao uso de anotações para criação de aspectos (como mostrado na figura \ref{fig:aspectj}). A anotação responsável por informar que se trata de um aspecto é a \texttt{@Aspect}, e para informar que os métodos são \textit{advices} utilizasse das anotações \texttt{@Before, @After} e \texttt{@Around}, cuja nomenclatura representa o tipo de \textit{advice}.
+
+\section{Considerações finais}
+
+Este capítulo abordou as características básicas do \textit{framework} Postsharp e da linguagem AspectJ. Foi demonstrado também um exemplo prático de criação de aspectos em cada um dos projetos relacionados.
 
 \chapter{O Framework}
 \label{cap7}
@@ -907,7 +943,8 @@ Este capítulo focou no projeto e implementação de um estudo de caso, que util
 
 \chapter{Conclusão}
 
-Conclusões ...
+\section{Trabalhos futuros}
+
 
 \singlespacing
 

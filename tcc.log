@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  6 DEC 2014 15:19
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  6 DEC 2014 17:28
 entering extended mode
  %&-line parsing enabled.
 **tcc.tex
@@ -537,17 +537,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--46
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--49
+Underfull \hbox (badness 10000) in paragraph at lines 50--50
  []  
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--67
- []  
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 79--79
+Underfull \hbox (badness 10000) in paragraph at lines 68--68
  []  
  []
 
@@ -557,7 +552,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--80
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--81
+Underfull \hbox (badness 10000) in paragraph at lines 82--82
  []  
  []
 
@@ -566,28 +561,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--83
  []  
  []
 
-[7])
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 85--85
+ []  
+ []
+
+)
 \tf@toc=\write3
 \openout3 = `tcc.toc'.
 
  [8] [9
 
 ] (./tcc.lof
-Overfull \hbox (0.94562pt too wide) in paragraph at lines 20--20
+Overfull \hbox (0.94562pt too wide) in paragraph at lines 22--22
  [][] []\T1/ptm/m/n/12 Fluxograma de pro-ces-sos da JVM na exe-cu-ção de um \T1
 /ptm/m/it/12 Agent \T1/ptm/m/n/12 (STÄRK; 
  []
 
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 23.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 25.
 (/usr/share/texmf-texlive/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-))
+) [10
+
+])
 \tf@lof=\write4
 \openout4 = `tcc.lof'.
 
- [10
-
-] [11] (./tcc.lot)
+ [11] (./tcc.lot)
 \tf@lot=\write5
 \openout5 = `tcc.lot'.
 
@@ -663,86 +663,97 @@ Underfull \vbox (badness 5519) has occurred while \output is active []
 
  [29 <./figuras/lendoAnnotation.jpg>] [30] [31
 
-] [32] [33
+] [32]
+<figuras/ferramentas/aspectpostsharp.png, id=114, 569.12625pt x 411.5375pt>
+File: figuras/ferramentas/aspectpostsharp.png Graphic file (type png)
 
-]
+<use figuras/ferramentas/aspectpostsharp.png> [33
+
+ <./figuras/ferramentas/aspectpostsharp.png>]
+<figuras/ferramentas/aspectj.png, id=120, 471.7625pt x 393.47pt>
+File: figuras/ferramentas/aspectj.png Graphic file (type png)
+
+<use figuras/ferramentas/aspectj.png>
+Underfull \vbox (badness 2913) has occurred while \output is active []
+
+ [34 <./figuras/ferramentas/aspectj.png>] [35]
 Underfull \vbox (badness 2707) has occurred while \output is active []
 
- [34
+ [36
 
 ]
-<diagramas/fluxograma_Agent.png, id=120, 501.875pt x 702.625pt>
+<diagramas/fluxograma_Agent.png, id=131, 501.875pt x 702.625pt>
 File: diagramas/fluxograma_Agent.png Graphic file (type png)
 
-<use diagramas/fluxograma_Agent.png> [35]
-<diagramas/Framework_AOP.png, id=125, 850.67813pt x 1038.88126pt>
+<use diagramas/fluxograma_Agent.png> [37]
+<diagramas/Framework_AOP.png, id=136, 850.67813pt x 1038.88126pt>
 File: diagramas/Framework_AOP.png Graphic file (type png)
 
-<use diagramas/Framework_AOP.png> [36 <./diagramas/fluxograma_Agent.png>]
-[37 <./diagramas/Framework_AOP.png>] [38]
-<diagramas/diagramaSequencia_Combinando.png, id=138, 1072.75781pt x 490.83376pt
+<use diagramas/Framework_AOP.png> [38 <./diagramas/fluxograma_Agent.png>]
+[39 <./diagramas/Framework_AOP.png>] [40]
+<diagramas/diagramaSequencia_Combinando.png, id=148, 1072.75781pt x 490.83376pt
 >
 File: diagramas/diagramaSequencia_Combinando.png Graphic file (type png)
  <use diagramas/diagramaSequencia_Combinando.png>
-Overfull \hbox (2.30417pt too wide) in paragraph at lines 476--477
+Overfull \hbox (2.30417pt too wide) in paragraph at lines 512--513
  [][] 
  []
 
 
-Overfull \hbox (2.04976pt too wide) in paragraph at lines 481--482
+Overfull \hbox (2.04976pt too wide) in paragraph at lines 517--518
 \T1/ptm/m/n/12 criar e adi-ci-o-nar o trans-for-ma-dor de clas-ses, neste caso 
 \T1/pcr/m/n/12 AOPClassFileTransformer\T1/ptm/m/n/12 ,
  []
 
-[39 <./diagramas/diagramaSequencia_Combinando.png>] [40]
-<figuras/implementacao/premain.png, id=146, 652.4375pt x 140.525pt>
+[41 <./diagramas/diagramaSequencia_Combinando.png>] [42]
+<figuras/implementacao/premain.png, id=156, 652.4375pt x 140.525pt>
 File: figuras/implementacao/premain.png Graphic file (type png)
 
 <use figuras/implementacao/premain.png>
-<figuras/implementacao/manifesto.png, id=147, 341.275pt x 55.20625pt>
+<figuras/implementacao/manifesto.png, id=157, 341.275pt x 55.20625pt>
 File: figuras/implementacao/manifesto.png Graphic file (type png)
 
-<use figuras/implementacao/manifesto.png> [41 <./figuras/implementacao/premain.
+<use figuras/implementacao/manifesto.png> [43 <./figuras/implementacao/premain.
 png> <./figuras/implementacao/manifesto.png>]
-<figuras/implementacao/transform.png, id=153, 662.475pt x 224.84pt>
+<figuras/implementacao/transform.png, id=164, 662.475pt x 224.84pt>
 File: figuras/implementacao/transform.png Graphic file (type png)
 
 <use figuras/implementacao/transform.png>
-<figuras/implementacao/processClass.png, id=154, 692.5875pt x 361.35pt>
+<figuras/implementacao/processClass.png, id=165, 692.5875pt x 361.35pt>
 File: figuras/implementacao/processClass.png Graphic file (type png)
 
 <use figuras/implementacao/processClass.png>
-Overfull \hbox (21.06673pt too wide) in paragraph at lines 551--552
+Overfull \hbox (21.06673pt too wide) in paragraph at lines 587--588
 []\T1/ptm/m/n/12 Através do \T1/ptm/m/it/12 by-te-code \T1/ptm/m/n/12 da classe
  que foi re-ce-bido por pa-râ-me-tro, o mé-todo \T1/pcr/m/n/12 processClass\T1/
 ptm/m/n/12 ,
  []
 
-[42 <./figuras/implementacao/transform.png> <./figuras/implementacao/processCla
+[44 <./figuras/implementacao/transform.png> <./figuras/implementacao/processCla
 ss.png>]
-<figuras/implementacao/addadviceifannotated.png, id=160, 737.75626pt x 315.1775
+<figuras/implementacao/addadviceifannotated.png, id=171, 737.75626pt x 315.1775
 pt>
 File: figuras/implementacao/addadviceifannotated.png Graphic file (type png)
  <use figuras/implementacao/addadviceifannotated.png>
-Overfull \hbox (15.86581pt too wide) in paragraph at lines 555--556
+Overfull \hbox (15.86581pt too wide) in paragraph at lines 591--592
  [][] 
  []
 
 
-Overfull \hbox (0.81409pt too wide) in paragraph at lines 562--563
+Overfull \hbox (0.81409pt too wide) in paragraph at lines 598--599
 \T1/ptm/m/n/12 ela será uma ano-ta-ção de ex-ten-são, cujo mé-todo cha-mado ser
 á \T1/pcr/m/n/12 addExtensionAdvice\T1/ptm/m/n/12 .
  []
 
-<figuras/implementacao/addnativeadvice.png, id=161, 702.625pt x 316.18124pt>
+<figuras/implementacao/addnativeadvice.png, id=172, 702.625pt x 316.18124pt>
 File: figuras/implementacao/addnativeadvice.png Graphic file (type png)
 
 <use figuras/implementacao/addnativeadvice.png>
-<figuras/implementacao/addextensionadvice.png, id=162, 772.8875pt x 210.7875pt>
+<figuras/implementacao/addextensionadvice.png, id=173, 772.8875pt x 210.7875pt>
 File: figuras/implementacao/addextensionadvice.png Graphic file (type png)
-<use figuras/implementacao/addextensionadvice.png> [43 <./figuras/implementacao
+<use figuras/implementacao/addextensionadvice.png> [45 <./figuras/implementacao
 /addadviceifannotated.png> <./figuras/implementacao/addnativeadvice.png>]
-Overfull \hbox (2.59752pt too wide) in paragraph at lines 584--585
+Overfull \hbox (2.59752pt too wide) in paragraph at lines 620--621
 []\T1/ptm/m/n/12 As ano-ta-ções na-ti-vas são ano-ta-ções (\T1/ptm/m/it/12 an-n
 o-ta-ti-ons\T1/ptm/m/n/12 ) uti-li-za-das por pa-drão pelo \T1/ptm/m/it/12 fra-
 mework
@@ -751,121 +762,121 @@ mework
 
 Underfull \vbox (badness 1845) has occurred while \output is active []
 
- [44 <./figuras/implementacao/addextensionadvice.png>]
-<figuras/implementacao/weaver.png, id=173, 803.0pt x 265.99374pt>
+ [46 <./figuras/implementacao/addextensionadvice.png>]
+<figuras/implementacao/weaver.png, id=183, 803.0pt x 265.99374pt>
 File: figuras/implementacao/weaver.png Graphic file (type png)
 
-<use figuras/implementacao/weaver.png> [45 <./figuras/implementacao/weaver.png>
-] <figuras/implementacao/combine.png, id=178, 381.425pt x 143.53625pt>
+<use figuras/implementacao/weaver.png> [47 <./figuras/implementacao/weaver.png>
+] <figuras/implementacao/combine.png, id=188, 381.425pt x 143.53625pt>
 File: figuras/implementacao/combine.png Graphic file (type png)
 
 <use figuras/implementacao/combine.png>
-<figuras/implementacao/addfields.png, id=179, 577.15625pt x 271.0125pt>
+<figuras/implementacao/addfields.png, id=189, 577.15625pt x 271.0125pt>
 File: figuras/implementacao/addfields.png Graphic file (type png)
 
-<use figuras/implementacao/addfields.png> [46 <./figuras/implementacao/combine.
-png>] <figuras/implementacao/addfield.png, id=184, 752.8125pt x 175.65625pt>
+<use figuras/implementacao/addfields.png> [48 <./figuras/implementacao/combine.
+png>] <figuras/implementacao/addfield.png, id=194, 752.8125pt x 175.65625pt>
 File: figuras/implementacao/addfield.png Graphic file (type png)
 
 <use figuras/implementacao/addfield.png>
-<figuras/implementacao/getinitialvaluefield.png, id=185, 642.4pt x 271.0125pt>
+<figuras/implementacao/getinitialvaluefield.png, id=195, 642.4pt x 271.0125pt>
 File: figuras/implementacao/getinitialvaluefield.png Graphic file (type png)
 
-<use figuras/implementacao/getinitialvaluefield.png> [47 <./figuras/implementac
+<use figuras/implementacao/getinitialvaluefield.png> [49 <./figuras/implementac
 ao/addfields.png> <./figuras/implementacao/addfield.png>]
-<figuras/implementacao/addadvicemethod.png, id=191, 529.98pt x 256.96pt>
+<figuras/implementacao/addadvicemethod.png, id=202, 529.98pt x 256.96pt>
 File: figuras/implementacao/addadvicemethod.png Graphic file (type png)
 
-<use figuras/implementacao/addadvicemethod.png> [48 <./figuras/implementacao/ge
+<use figuras/implementacao/addadvicemethod.png> [50 <./figuras/implementacao/ge
 tinitialvaluefield.png>]
-<figuras/implementacao/createmethod.png, id=196, 722.7pt x 366.36874pt>
+<figuras/implementacao/createmethod.png, id=207, 722.7pt x 366.36874pt>
 File: figuras/implementacao/createmethod.png Graphic file (type png)
 
 <use figuras/implementacao/createmethod.png>
-<figuras/implementacao/addbefore.png, id=197, 598.235pt x 206.7725pt>
+<figuras/implementacao/addbefore.png, id=208, 598.235pt x 206.7725pt>
 File: figuras/implementacao/addbefore.png Graphic file (type png)
 
-<use figuras/implementacao/addbefore.png> [49 <./figuras/implementacao/addadvic
+<use figuras/implementacao/addbefore.png> [51 <./figuras/implementacao/addadvic
 emethod.png> <./figuras/implementacao/createmethod.png>]
-<figuras/implementacao/createmethodinfo.png, id=204, 687.56876pt x 110.4125pt>
+<figuras/implementacao/createmethodinfo.png, id=214, 687.56876pt x 110.4125pt>
 File: figuras/implementacao/createmethodinfo.png Graphic file (type png)
 
 <use figuras/implementacao/createmethodinfo.png>
-<figuras/implementacao/addafter.png, id=205, 598.235pt x 206.7725pt>
+<figuras/implementacao/addafter.png, id=215, 598.235pt x 206.7725pt>
 File: figuras/implementacao/addafter.png Graphic file (type png)
 
-<use figuras/implementacao/addafter.png> [50 <./figuras/implementacao/addbefore
+<use figuras/implementacao/addafter.png> [52 <./figuras/implementacao/addbefore
 .png> <./figuras/implementacao/createmethodinfo.png>]
-<figuras/implementacao/addaround.png, id=211, 698.61pt x 276.03125pt>
+<figuras/implementacao/addaround.png, id=221, 698.61pt x 276.03125pt>
 File: figuras/implementacao/addaround.png Graphic file (type png)
 
 <use figuras/implementacao/addaround.png>
-Overfull \hbox (15.69336pt too wide) in paragraph at lines 732--733
+Overfull \hbox (15.69336pt too wide) in paragraph at lines 768--769
 \T1/ptm/m/n/12 sendo as-sim foi uti-li-zado o for-mato de \T1/ptm/m/it/12 Strin
 g \T1/ptm/m/n/12 para adi-ci-o-nar a va-riá-vel \T1/pcr/m/n/12 methodExecution\
 T1/ptm/m/n/12 .
  []
 
-<figuras/implementacao/exemplo_proceed.png, id=212, 552.0625pt x 200.75pt>
+<figuras/implementacao/exemplo_proceed.png, id=222, 552.0625pt x 200.75pt>
 File: figuras/implementacao/exemplo_proceed.png Graphic file (type png)
 
-<use figuras/implementacao/exemplo_proceed.png> [51 <./figuras/implementacao/ad
+<use figuras/implementacao/exemplo_proceed.png> [53 <./figuras/implementacao/ad
 dafter.png> <./figuras/implementacao/addaround.png>]
-<figuras/implementacao/proceed.png, id=218, 572.1375pt x 245.91875pt>
+<figuras/implementacao/proceed.png, id=228, 572.1375pt x 245.91875pt>
 File: figuras/implementacao/proceed.png Graphic file (type png)
 
-<use figuras/implementacao/proceed.png> [52 <./figuras/implementacao/exemplo_pr
-oceed.png> <./figuras/implementacao/proceed.png>] [53
+<use figuras/implementacao/proceed.png> [54 <./figuras/implementacao/exemplo_pr
+oceed.png> <./figuras/implementacao/proceed.png>] [55
 
 ]
-<diagramas/estudoCaso.png, id=227, 757.32938pt x 956.07187pt>
+<diagramas/estudoCaso.png, id=238, 757.32938pt x 956.07187pt>
 File: diagramas/estudoCaso.png Graphic file (type png)
 
-<use diagramas/estudoCaso.png> [54]
-Overfull \hbox (0.47092pt too wide) in paragraph at lines 804--805
+<use diagramas/estudoCaso.png> [56]
+Overfull \hbox (0.47092pt too wide) in paragraph at lines 840--841
 []\T1/ptm/m/n/12 Classes hi-po-té-ti-cas que re-pre-sen-tam os mó-du-los do sis
 -tema. 
  []
 
-[55 <./diagramas/estudoCaso.png>]
-<figuras/estudo/loggertimingaround.png, id=236, 637.38126pt x 386.44376pt>
+[57 <./diagramas/estudoCaso.png>]
+<figuras/estudo/loggertimingaround.png, id=246, 637.38126pt x 386.44376pt>
 File: figuras/estudo/loggertimingaround.png Graphic file (type png)
 
 <use figuras/estudo/loggertimingaround.png>
-<figuras/estudo/loggertimingbefore.png, id=237, 573.14125pt x 160.6pt>
+<figuras/estudo/loggertimingbefore.png, id=247, 573.14125pt x 160.6pt>
 File: figuras/estudo/loggertimingbefore.png Graphic file (type png)
 
-<use figuras/estudo/loggertimingbefore.png> [56 <./figuras/estudo/loggertiminga
+<use figuras/estudo/loggertimingbefore.png> [58 <./figuras/estudo/loggertiminga
 round.png>]
-<figuras/estudo/extensionenablelog.png, id=242, 356.33125pt x 90.3375pt>
+<figuras/estudo/extensionenablelog.png, id=252, 356.33125pt x 90.3375pt>
 File: figuras/estudo/extensionenablelog.png Graphic file (type png)
 
 <use figuras/estudo/extensionenablelog.png>
-<figuras/estudo/extensionlogtiming.png, id=243, 356.33125pt x 85.31876pt>
+<figuras/estudo/extensionlogtiming.png, id=253, 356.33125pt x 85.31876pt>
 File: figuras/estudo/extensionlogtiming.png Graphic file (type png)
 
-<use figuras/estudo/extensionlogtiming.png> [57 <./figuras/estudo/loggertimingb
+<use figuras/estudo/extensionlogtiming.png> [59 <./figuras/estudo/loggertimingb
 efore.png> <./figuras/estudo/extensionenablelog.png> <./figuras/estudo/extensio
 nlogtiming.png>]
-Overfull \hbox (30.02165pt too wide) in paragraph at lines 863--864
+Overfull \hbox (30.02165pt too wide) in paragraph at lines 899--900
 \T1/ptm/m/n/12 o mé-todo in-ter-cep-tado. Na fi-gura 8.6[] é mos-trado a uti-li
 -za-ção da ano-ta-ção \T1/pcr/m/n/12 EnableLogInFile\T1/ptm/m/n/12 . 
  []
 
-<figuras/estudo/initSistema.png, id=250, 311.1625pt x 85.31876pt>
+<figuras/estudo/initSistema.png, id=260, 311.1625pt x 85.31876pt>
 File: figuras/estudo/initSistema.png Graphic file (type png)
 
 <use figuras/estudo/initSistema.png>
-<figuras/estudo/modulo.png, id=251, 501.875pt x 170.6375pt>
+<figuras/estudo/modulo.png, id=261, 501.875pt x 170.6375pt>
 File: figuras/estudo/modulo.png Graphic file (type png)
 
-<use figuras/estudo/modulo.png> [58 <./figuras/estudo/initSistema.png> <./figur
+<use figuras/estudo/modulo.png> [60 <./figuras/estudo/initSistema.png> <./figur
 as/estudo/modulo.png>]
-<figuras/estudo/saidaarquivolog.png, id=257, 715.67375pt x 210.7875pt>
+<figuras/estudo/saidaarquivolog.png, id=267, 715.67375pt x 210.7875pt>
 File: figuras/estudo/saidaarquivolog.png Graphic file (type png)
 
-<use figuras/estudo/saidaarquivolog.png> [59 <./figuras/estudo/saidaarquivolog.
-png>] (./tcc.bbl [60
+<use figuras/estudo/saidaarquivolog.png> [61 <./figuras/estudo/saidaarquivolog.
+png>] (./tcc.bbl [62
 
 ]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
@@ -882,7 +893,7 @@ Underfull \hbox (badness 5189) in paragraph at lines 51--55
  in Java\T1/ptm/m/n/12 . Dis-po-ní-vel em:
  []
 
-[61
+[63
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 68--71
@@ -914,16 +925,16 @@ Underfull \hbox (badness 8189) in paragraph at lines 80--84
 m: 19 Ou-tu-bro.
  []
 
-) [62] [63
+) [64] [65
 
-] AED: lastpage setting LastPage [64
+] AED: lastpage setting LastPage [66
 
 ] (./tcc.aux) ) 
 Here is how much of TeX's memory you used:
- 4357 strings out of 495041
- 59935 string characters out of 1181897
- 117993 words of memory out of 3000000
- 7403 multiletter control sequences out of 15000+50000
+ 4370 strings out of 495041
+ 60337 string characters out of 1181897
+ 118015 words of memory out of 3000000
+ 7413 multiletter control sequences out of 15000+50000
  55928 words of font info for 58 fonts, out of 3000000 for 9000
  33 hyphenation exceptions out of 8191
  39i,8n,32p,1223b,285s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -934,9 +945,9 @@ rw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvro
 8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/t
 exmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/t
 ype1/urw/times/utmri8a.pfb>
-Output written on tcc.pdf (64 pages, 1586255 bytes).
+Output written on tcc.pdf (66 pages, 1657853 bytes).
 PDF statistics:
- 304 PDF objects out of 1000 (max. 8388607)
+ 314 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 176 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 186 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -45,39 +45,41 @@
 \contentsline {section}{\numberline {5.5}Considera\IeC {\c c}\IeC {\~o}es finais}{32}
 \contentsline {chapter}{\numberline {6}Solu\IeC {\c c}\IeC {\~o}es Existentes}{33}
 \contentsline {section}{\numberline {6.1}PostSharp}{33}
-\contentsline {section}{\numberline {6.2}AspectJ}{33}
-\contentsline {chapter}{\numberline {7}O Framework}{34}
-\contentsline {section}{\numberline {7.1}Introdu\IeC {\c c}\IeC {\~a}o}{34}
-\contentsline {section}{\numberline {7.2}An\IeC {\'a}lise e projeto}{35}
-\contentsline {subsection}{\numberline {7.2.1}Especifica\IeC {\c c}\IeC {\~o}es do projeto}{35}
-\contentsline {subsection}{\numberline {7.2.2}Fluxograma}{36}
-\contentsline {subsection}{\numberline {7.2.3}Diagrama de classes}{36}
-\contentsline {subsection}{\numberline {7.2.4}Diagrama de sequ\IeC {\^e}ncia}{39}
-\contentsline {section}{\numberline {7.3}Implementa\IeC {\c c}\IeC {\~a}o}{40}
-\contentsline {subsection}{\numberline {7.3.1}Primeiros passos}{40}
-\contentsline {subsection}{\numberline {7.3.2}Premain}{41}
-\contentsline {subsubsection}{\numberline {7.3.2.1}Manifesto}{41}
-\contentsline {subsection}{\numberline {7.3.3}Transform}{41}
-\contentsline {subsubsection}{\numberline {7.3.3.1}Anota\IeC {\c c}\IeC {\~o}es nativas}{44}
-\contentsline {subsubsection}{\numberline {7.3.3.2}Anota\IeC {\c c}\IeC {\~o}es de extens\IeC {\~a}o}{44}
-\contentsline {subsection}{\numberline {7.3.4}Combinador}{45}
-\contentsline {subsubsection}{\numberline {7.3.4.1}AddFields}{46}
-\contentsline {subsubsection}{\numberline {7.3.4.2}AddAdviceMethod}{48}
-\contentsline {section}{\numberline {7.4}Considera\IeC {\c c}\IeC {\~o}es finais}{52}
-\contentsline {chapter}{\numberline {8}Estudo de caso - Instrumenta\IeC {\c c}\IeC {\~a}o}{53}
-\contentsline {section}{\numberline {8.1}Introdu\IeC {\c c}\IeC {\~a}o}{53}
-\contentsline {section}{\numberline {8.2}O problema}{53}
-\contentsline {subsection}{\numberline {8.2.1}Instrumenta\IeC {\c c}\IeC {\~a}o}{54}
-\contentsline {subsection}{\numberline {8.2.2}Solu\IeC {\c c}\IeC {\~a}o}{54}
-\contentsline {section}{\numberline {8.3}An\IeC {\'a}lise}{54}
-\contentsline {section}{\numberline {8.4}Implementa\IeC {\c c}\IeC {\~a}o}{56}
-\contentsline {subsection}{\numberline {8.4.1}Cria\IeC {\c c}\IeC {\~a}o de um aspecto}{56}
-\contentsline {subsection}{\numberline {8.4.2}Cria\IeC {\c c}\IeC {\~a}o das anota\IeC {\c c}\IeC {\~o}es de extens\IeC {\~a}o}{57}
-\contentsline {subsection}{\numberline {8.4.3}Utilizando anota\IeC {\c c}\IeC {\~o}es de extens\IeC {\~a}o}{58}
-\contentsline {section}{\numberline {8.5}Execu\IeC {\c c}\IeC {\~a}o do sistema}{58}
-\contentsline {section}{\numberline {8.6}Considera\IeC {\c c}\IeC {\~o}es finais}{59}
-\contentsline {chapter}{\numberline {9}Conclus\IeC {\~a}o}{60}
-\contentsline {chapter}{Refer{\^e}ncias}{61}
-\contentsline {chapter}{Gloss\IeC {\'a}rio}{63}
+\contentsline {section}{\numberline {6.2}AspectJ}{34}
+\contentsline {section}{\numberline {6.3}Considera\IeC {\c c}\IeC {\~o}es finais}{35}
+\contentsline {chapter}{\numberline {7}O Framework}{36}
+\contentsline {section}{\numberline {7.1}Introdu\IeC {\c c}\IeC {\~a}o}{36}
+\contentsline {section}{\numberline {7.2}An\IeC {\'a}lise e projeto}{37}
+\contentsline {subsection}{\numberline {7.2.1}Especifica\IeC {\c c}\IeC {\~o}es do projeto}{37}
+\contentsline {subsection}{\numberline {7.2.2}Fluxograma}{38}
+\contentsline {subsection}{\numberline {7.2.3}Diagrama de classes}{38}
+\contentsline {subsection}{\numberline {7.2.4}Diagrama de sequ\IeC {\^e}ncia}{41}
+\contentsline {section}{\numberline {7.3}Implementa\IeC {\c c}\IeC {\~a}o}{42}
+\contentsline {subsection}{\numberline {7.3.1}Primeiros passos}{42}
+\contentsline {subsection}{\numberline {7.3.2}Premain}{43}
+\contentsline {subsubsection}{\numberline {7.3.2.1}Manifesto}{43}
+\contentsline {subsection}{\numberline {7.3.3}Transform}{43}
+\contentsline {subsubsection}{\numberline {7.3.3.1}Anota\IeC {\c c}\IeC {\~o}es nativas}{46}
+\contentsline {subsubsection}{\numberline {7.3.3.2}Anota\IeC {\c c}\IeC {\~o}es de extens\IeC {\~a}o}{46}
+\contentsline {subsection}{\numberline {7.3.4}Combinador}{47}
+\contentsline {subsubsection}{\numberline {7.3.4.1}AddFields}{48}
+\contentsline {subsubsection}{\numberline {7.3.4.2}AddAdviceMethod}{50}
+\contentsline {section}{\numberline {7.4}Considera\IeC {\c c}\IeC {\~o}es finais}{54}
+\contentsline {chapter}{\numberline {8}Estudo de caso - Instrumenta\IeC {\c c}\IeC {\~a}o}{55}
+\contentsline {section}{\numberline {8.1}Introdu\IeC {\c c}\IeC {\~a}o}{55}
+\contentsline {section}{\numberline {8.2}O problema}{55}
+\contentsline {subsection}{\numberline {8.2.1}Instrumenta\IeC {\c c}\IeC {\~a}o}{56}
+\contentsline {subsection}{\numberline {8.2.2}Solu\IeC {\c c}\IeC {\~a}o}{56}
+\contentsline {section}{\numberline {8.3}An\IeC {\'a}lise}{56}
+\contentsline {section}{\numberline {8.4}Implementa\IeC {\c c}\IeC {\~a}o}{58}
+\contentsline {subsection}{\numberline {8.4.1}Cria\IeC {\c c}\IeC {\~a}o de um aspecto}{58}
+\contentsline {subsection}{\numberline {8.4.2}Cria\IeC {\c c}\IeC {\~a}o das anota\IeC {\c c}\IeC {\~o}es de extens\IeC {\~a}o}{59}
+\contentsline {subsection}{\numberline {8.4.3}Utilizando anota\IeC {\c c}\IeC {\~o}es de extens\IeC {\~a}o}{60}
+\contentsline {section}{\numberline {8.5}Execu\IeC {\c c}\IeC {\~a}o do sistema}{60}
+\contentsline {section}{\numberline {8.6}Considera\IeC {\c c}\IeC {\~o}es finais}{61}
+\contentsline {chapter}{\numberline {9}Conclus\IeC {\~a}o}{62}
+\contentsline {section}{\numberline {9.1}Trabalhos futuros}{62}
+\contentsline {chapter}{Refer{\^e}ncias}{63}
+\contentsline {chapter}{Gloss\IeC {\'a}rio}{65}
 \setbox \@tempboxa \hbox {{{\sffamily \textbf {\MakeUppercase {Ap{\^e}ndice} }}}}\ii@chapnumindent \wd \@tempboxa \setbox \@tempboxa \box \voidb@x \advance \ii@chapnumindent 1.8em\relax 
-\contentsline {chapter}{\numberline {\MakeUppercase {Ap{\^e}ndice} A}Vers\IeC {\~a}o completa dos diagramas}{64}
+\contentsline {chapter}{\numberline {\MakeUppercase {Ap{\^e}ndice} A}Vers\IeC {\~a}o completa dos diagramas}{66}
