@@ -400,6 +400,7 @@ Neste capítulo será abordado as características, vantagens e desvantagens dos
 \section{AspectJ}
 
 \chapter{O Framework}
+\label{cap7}
 
 Este capítulo aborda em detalhes o \textit{framework} desenvolvido, desde a parte de análise  e projeto até a parte de implementação, explicando de forma clara os caminhos percorridos durante a evolução do trabalho.
 
@@ -407,7 +408,7 @@ Este capítulo aborda em detalhes o \textit{framework} desenvolvido, desde a par
 
 Para a realização da análise e desenvolvimento do \textit{framework} fez-se necessário o estudo de diversos conceitos e tecnologias,  cujo embasamento teórico se encontra nos capítulos anteriores. O trabalho apresentado se concentra em torno dos seguintes conceitos: Programação Orientada à Aspectos, \textit{Bytecode Enginnering}, Meta programação (metadados e reflexão).
 
-Para o desenvolvimento do \textit{framework} foi utilizado o Kit de Desenvolvimento Java versão 7 (\textit{Java Development Kit} - JDK), cuja versão é estável, proporcionando uma alta utilização e aceitação no mercado, fez-se uso também do Eclipse como ambiente de desenvolvimento de \textit{software}, pois possui diversas ferramentas integradas que facilitam e agilizam a programação. Foi utilizado também a biblioteca Javassist, responsável por abstraír a forma como é criado, manipulado e modificado \textit{bytecode} de classes Java em tempo de carregamento. 
+Para o desenvolvimento do \textit{framework} foi utilizado o Kit de Desenvolvimento Java versão 7 (\textit{Java Development Kit} - JDK), cuja versão é estável, proporcionando uma alta utilização e aceitação no mercado, fez-se uso também do Eclipse como ambiente de desenvolvimento de \textit{software}, pois possui diversas ferramentas integradas que facilitam e agilizam a programação. Foi utilizado também a biblioteca Javassist, responsável por abstrair a forma como é criado, manipulado e modificado \textit{bytecode} de classes Java em tempo de carregamento. 
 
 Este projeto tem por intenção estudar os principais conceitos de AOP,  criando uma ferramenta para abstrair estes conceitos, de forma que facilite a aprendizagem, a aplicação prática e também sirva de base para outros estudos e pesquisas. A ferramenta projetada e desenvolvida será em forma de \textit{framework}, que terá como metodologia de uso a utilização de anotações, com o intuito de facilitar a utilização por parte do desenvolvedor e também visando um código mais limpo, concentrando as informações principais do módulo em forma de código, e as informações adicionais (conceitos de AOP) sobre as classes, métodos e atributos serão informadas em forma de metadados (anotações).
 \section{Análise e projeto}
@@ -439,12 +440,12 @@ A figura \ref{fig:fluxogramaAgent} mostra todos os processos realizados pela JVM
 
 \subsection{Diagrama de classes}
 
-Na figura \ref{fig:diagramaClassesAOP} é apresentado o diagrama de classes "reduzido" utilizado como base para a implementação do \textit{framework}. Este diagrama serve para visualização do modelo de classes do sistema e seus relacionamentos, e foi construído com a ajuda da ferramenta \textit{Astah Community 6.9.0}. O diagrama de classes completo está no Apêndice \ref{apend:A}.
+Na figura \ref{fig:diagramaClassesAOP} é apresentado o diagrama de classes de implementação na sua forma "reduzida" utilizado como base para a implementação do \textit{framework}. Este diagrama serve para visualização do modelo de classes do sistema e seus relacionamentos, e foi construído com a ajuda da ferramenta \textit{Astah Community 6.9.0}. O diagrama de classes de implementação completo está no Apêndice \ref{apend:A}.
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.4]{diagramas/Framework_AOP.png}
-	\caption{Diagrama de classes.}
+	\caption{Diagrama de classes de implementação.}
 	\label{fig:diagramaClassesAOP}
 \end{figure}
 
@@ -748,7 +749,7 @@ O método \texttt{proceed} faz o uso de reflexão para invocar uma chamada à co
 	\label{fig:proceed}
 \end{figure}
 
-\subsection{Considerações finais}
+\section{Considerações finais}
 
 Este capítulo abordou as características do projeto e todos os seus detalhes de implementação, com o intuito de oferecer uma base teórica e prática para estudos sobre AOP. No próximo capítulo será utilizado os conhecimentos aqui adquiridos para o desenvolvimento de um estudo de caso.
 
@@ -765,13 +766,62 @@ Pensando nisso são desenvolvidos casos de testes e/ou estudos de casos para dem
 
 \section{O problema}
 
-Um sistema hipotético, é formado por diversos módulos, sendo que cada módulo tem uma responsabilidade específica. Levando em conta que o carregamento destes módulos se dá durante a inicialização do sistema, desenvolver um aspecto que seja responsável por calcular o tempo de carregamento de cada módulo, e também o tempo total de carregamento do sistema, armazenando estas informações em um arquivo de \textit{log}\footnote{Para saber mais sobre \textit{log} consulte o Glossário ao final deste texto.}, sem que haja entrelaçamento e/ou espalhamento de código, fazendo com que o sistema e seus módulos sejam totalmente independentes em relação ao gerenciamento de tempo de cada módulo.
+Um sistema hipotético, é formado por diversos módulos, sendo que cada módulo tem uma responsabilidade específica. Levando em conta que o carregamento destes módulos se dá durante a inicialização do sistema, deve-se calcular o tempo de carregamento de cada módulo, e também o tempo total de carregamento do sistema, armazenando estas informações em um arquivo de \textit{log}\footnote{Para saber mais sobre \textit{log} consulte o Glossário ao final deste texto.}. A solução deste problema deve se dar de forma que código referente ao cálculo do tempo de execução não esteja entrelaçado e/ou espalhado pelos módulos do sistema, fazendo com que o sistema e seus módulos sejam totalmente independentes em relação ao gerenciamento de tempo de cada módulo.
 
 \subsection{Instrumentação}
 
 Instrumentação é o nome dado à inserção de código adicional ao sistema, visando analisar e avaliar diversas medidas de desempenho durante a execução de um programa \cite{cabral2005instrumentaccao} . 
 
 A medida de desempenho aqui utilizada será o cálculo do tempo de execução de um método, com o intuito de avaliar o tempo de carregamento do sistema, realizando uma análise nos métodos envolvidos nesta tarefa.
+
+\subsection{Solução}
+
+Para resolução do problema vai ser utilizado o \textit{framework} desenvolvido para criação dos aspectos, que também será responsável pela integração entre as classes referentes ao sistema e o aspecto referente ao cálculo de execução dos métodos.
+
+A única forma de comunicação entre a classe e o aspecto será uma anotação (nativa ou de extensão), cuja principal finalidade é marcar quais métodos devem ser interceptados, de que forma, e o que deve ser executado durante esta interceptação.
+
+\section{Análise}
+
+Para descrever a parte de análise do estudo de caso foi desenvolvido um diagrama de classes de implementação, que mostra toda a estrutura e o relacionamento entre as partes envolvidas no projeto.
+
+A figura \ref{fig:estudodiagrama} mostra o diagrama de classes do estudo de caso, que serviu de base para a implementação.
+
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.4]{diagramas/estudoCaso.png}
+	\caption{Diagrama de classes do estudo de caso.}
+	\label{fig:estudodiagrama}
+\end{figure}
+
+As classes referentes ao \textit{framework} presentes no diagrama da figura \ref{fig:estudodiagrama} não serão descritas neste capítulo porque já foram descritas no capítulo \ref{cap7}. Abaixo está a descrição das outras classes presentes no diagrama.
+
+\begin{description}
+
+\item [Main] Esta classe é a responsável por iniciar o sistema e suas configurações.
+\item [Sistema] Esta classe representa o sistema hipoteticamente. Esta classe possui os módulos do estudo.
+\item [IModule] Interface que deve ser implementada por todos os módulos. Esta interface obriga a implementação.
+\item [Estoque, Caixa, Financeiro] Classes hipotéticas que representam os módulos do sistema.
+\item [LoggerTiming] Este é o aspecto que irá encapsular a lógica responsável por calcular o tempo de execução dos métodos, e também a lógica que ativa o armazenamento das informações obtidas através de instrumentação em um arquivo de \textit{log}.
+\item [EnableLogInFile] Esta anotação é responsável por marcar o método que irá ativar o armazenamento em \textit{log} antes de sua execução.
+\item[LogTiming] Esta anotação é utilizada para informar que o método anotado terá o seu tempo de execução calculado.
+\end{description}
+
+\section{Implementação}
+
+Para demonstrar as funcionalidades do \textit{framework} procurou-se desenvolver um estudo de caso simples, mas que cumprisse o esperado. Pensando desta forma, decidiu-se focar a parte implementação não no sistema que representa os interesses centrais, mas sim nos aspectos que representam os interesses transversais de um sistema. Sendo assim, não foi implementando um sistema funcional, mas sim uma estrutura que representasse este sistema.
+
+\subsection{Criação de um aspecto}
+
+Para criação de um aspecto utilizando o \textit{framework} deve-se implementar a interface \texttt{IAspect} presente no pacote \texttt{framework.aop} detalhado no diagrama de classes da figura \ref{fig:diagramaClassesAOP}. A implementação do aspecto \texttt{LoggerTiming} está representada na figura \ref{fig:loggeraspect}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.5]{figuras/implementacao/estudo/loggertiming.png}
+	\caption{Implementação do aspecto \texttt{LoggerTiming}.}
+	\label{fig:loggeraspect}
+\end{figure}
+
 
 
 \chapter{Conclusão}
@@ -794,7 +844,6 @@ Conclusões ...
 \end{description}
 
 \appendix
-
 
 \chapter{Versão completa dos diagramas}
 \label{apend:A}
