@@ -17,7 +17,8 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {Figura\nobreakspace 6.1:}{\ignorespaces Exemplo de aspecto no Postsharp.}}{33}
-\contentsline {figure}{\numberline {Figura\nobreakspace 6.2:}{\ignorespaces Exemplo de aspecto na forma de anota\IeC {\c c}\IeC {\~o}es no AspectJ.}}{34}
+\contentsline {figure}{\numberline {Figura\nobreakspace 6.2:}{\ignorespaces Exemplo de aspecto com a sintaxe padr\IeC {\~a}o do AspectJ.}}{34}
+\contentsline {figure}{\numberline {Figura\nobreakspace 6.3:}{\ignorespaces Exemplo de aspecto na forma de anota\IeC {\c c}\IeC {\~o}es no AspectJ.}}{35}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {Figura\nobreakspace 7.1:}{\ignorespaces Fluxograma de processos da JVM na execu\IeC {\c c}\IeC {\~a}o de um \textit {Agent} \citep {stark2001java}.}}{38}
 \contentsline {figure}{\numberline {Figura\nobreakspace 7.2:}{\ignorespaces Diagrama de classes de implementa\IeC {\c c}\IeC {\~a}o.}}{39}
