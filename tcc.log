@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  7 DEC 2014 00:41
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  7 DEC 2014 15:01
 entering extended mode
  %&-line parsing enabled.
 **tcc.tex
@@ -598,26 +598,26 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 99.
+(Font)              <7> on input line 106.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 99.
+(Font)              <5> on input line 106.
  [14
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 111.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 118.
 
  (/usr/share/texmf-texlive/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 111.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 118.
  [15]
-Overfull \hbox (5.30746pt too wide) in paragraph at lines 130--131
+Overfull \hbox (5.30746pt too wide) in paragraph at lines 137--138
 []\T1/ptm/m/n/12 este ca-pí-tulo fala de
  []
 
 
-Overfull \hbox (4.54004pt too wide) in paragraph at lines 133--134
+Overfull \hbox (4.54004pt too wide) in paragraph at lines 140--141
 []\T1/ptm/m/n/12 neste ca-pí-tulo será de-sen-vol-
  []
 
@@ -636,7 +636,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [23] [24] [25
 
 ]
-Overfull \hbox (10.89195pt too wide) in paragraph at lines 276--277
+Overfull \hbox (10.89195pt too wide) in paragraph at lines 283--284
 \T1/ptm/m/n/12 modo a criar uma ins-tân-cia do com-po-nente es-pe-cí-fico (DA-M
 A’E-VIƒIUS; ’TUIKYS,
  []
@@ -649,7 +649,7 @@ File: figuras/criandoAnnotation.jpg Graphic file (type jpg)
 File: figuras/usandoAnnotation.jpg Graphic file (type jpg)
 
 <use figuras/usandoAnnotation.jpg>
-Overfull \hbox (17.57492pt too wide) in paragraph at lines 338--339
+Overfull \hbox (17.57492pt too wide) in paragraph at lines 345--346
 []\T1/ptm/m/n/12 Na lin-gua-gem Java pode-se uti-li-zar re-fle-xão por meio do 
 pa-cote \T1/pcr/m/n/12 java.lang.reflect\T1/ptm/m/n/12 ,
  []
@@ -674,7 +674,7 @@ File: figuras/ferramentas/aspectpostsharp.png Graphic file (type png)
 File: figuras/aspecJ-aspecto.png Graphic file (type png)
 
 <use figuras/aspecJ-aspecto.png>
-Overfull \hbox (9.9294pt too wide) in paragraph at lines 433--434
+Overfull \hbox (9.9294pt too wide) in paragraph at lines 440--441
 []\T1/ptm/m/n/12 A lin-gua-gem As-pectJ pos-sui pa-la-vras re-ser-va-das como \
 T1/pcr/m/n/12 before, after, around,
  []
@@ -694,7 +694,7 @@ File: diagramas/fluxograma_Agent.png Graphic file (type png)
 
 <use diagramas/fluxograma_Agent.png> [37]
 
-LaTeX Warning: Reference `apend:A' on page 38 undefined on input line 491.
+LaTeX Warning: Reference `apend:A' on page 38 undefined on input line 498.
 
 <diagramas/Framework_AOP.png, id=138, 850.67813pt x 1038.88126pt>
 File: diagramas/Framework_AOP.png Graphic file (type png)
@@ -705,12 +705,12 @@ File: diagramas/Framework_AOP.png Graphic file (type png)
 >
 File: diagramas/diagramaSequencia_Combinando.png Graphic file (type png)
  <use diagramas/diagramaSequencia_Combinando.png>
-Overfull \hbox (2.30417pt too wide) in paragraph at lines 524--525
+Overfull \hbox (2.30417pt too wide) in paragraph at lines 531--532
  [][] 
  []
 
 
-Overfull \hbox (2.04976pt too wide) in paragraph at lines 529--530
+Overfull \hbox (2.04976pt too wide) in paragraph at lines 536--537
 \T1/ptm/m/n/12 criar e adi-ci-o-nar o trans-for-ma-dor de clas-ses, neste caso 
 \T1/pcr/m/n/12 AOPClassFileTransformer\T1/ptm/m/n/12 ,
  []
@@ -733,7 +733,7 @@ File: figuras/implementacao/transform.png Graphic file (type png)
 File: figuras/implementacao/processClass.png Graphic file (type png)
 
 <use figuras/implementacao/processClass.png>
-Overfull \hbox (21.06673pt too wide) in paragraph at lines 599--600
+Overfull \hbox (21.06673pt too wide) in paragraph at lines 606--607
 []\T1/ptm/m/n/12 Através do \T1/ptm/m/it/12 by-te-code \T1/ptm/m/n/12 da classe
  que foi re-ce-bido por pa-râ-me-tro, o mé-todo \T1/pcr/m/n/12 processClass\T1/
 ptm/m/n/12 ,
@@ -745,12 +745,12 @@ ss.png>]
 pt>
 File: figuras/implementacao/addadviceifannotated.png Graphic file (type png)
  <use figuras/implementacao/addadviceifannotated.png>
-Overfull \hbox (15.86581pt too wide) in paragraph at lines 603--604
+Overfull \hbox (15.86581pt too wide) in paragraph at lines 610--611
  [][] 
  []
 
 
-Overfull \hbox (0.81409pt too wide) in paragraph at lines 610--611
+Overfull \hbox (0.81409pt too wide) in paragraph at lines 617--618
 \T1/ptm/m/n/12 ela será uma ano-ta-ção de ex-ten-são, cujo mé-todo cha-mado ser
 á \T1/pcr/m/n/12 addExtensionAdvice\T1/ptm/m/n/12 .
  []
@@ -763,7 +763,7 @@ File: figuras/implementacao/addnativeadvice.png Graphic file (type png)
 File: figuras/implementacao/addextensionadvice.png Graphic file (type png)
 <use figuras/implementacao/addextensionadvice.png> [45 <./figuras/implementacao
 /addadviceifannotated.png> <./figuras/implementacao/addnativeadvice.png>]
-Overfull \hbox (2.59752pt too wide) in paragraph at lines 632--633
+Overfull \hbox (2.59752pt too wide) in paragraph at lines 639--640
 []\T1/ptm/m/n/12 As ano-ta-ções na-ti-vas são ano-ta-ções (\T1/ptm/m/it/12 an-n
 o-ta-ti-ons\T1/ptm/m/n/12 ) uti-li-za-das por pa-drão pelo \T1/ptm/m/it/12 fra-
 mework
@@ -821,7 +821,7 @@ File: figuras/implementacao/addafter.png Graphic file (type png)
 File: figuras/implementacao/addaround.png Graphic file (type png)
 
 <use figuras/implementacao/addaround.png>
-Overfull \hbox (15.69336pt too wide) in paragraph at lines 780--781
+Overfull \hbox (15.69336pt too wide) in paragraph at lines 787--788
 \T1/ptm/m/n/12 sendo as-sim foi uti-li-zado o for-mato de \T1/ptm/m/it/12 Strin
 g \T1/ptm/m/n/12 para adi-ci-o-nar a va-riá-vel \T1/pcr/m/n/12 methodExecution\
 T1/ptm/m/n/12 .
@@ -843,7 +843,7 @@ oceed.png> <./figuras/implementacao/proceed.png>] [55
 File: diagramas/estudoCaso.png Graphic file (type png)
 
 <use diagramas/estudoCaso.png> [56]
-Overfull \hbox (0.47092pt too wide) in paragraph at lines 852--853
+Overfull \hbox (0.47092pt too wide) in paragraph at lines 859--860
 []\T1/ptm/m/n/12 Classes hi-po-té-ti-cas que re-pre-sen-tam os mó-du-los do sis
 -tema. 
  []
@@ -868,7 +868,7 @@ File: figuras/estudo/extensionlogtiming.png Graphic file (type png)
 <use figuras/estudo/extensionlogtiming.png> [59 <./figuras/estudo/loggertimingb
 efore.png> <./figuras/estudo/extensionenablelog.png> <./figuras/estudo/extensio
 nlogtiming.png>]
-Overfull \hbox (30.02165pt too wide) in paragraph at lines 911--912
+Overfull \hbox (30.02165pt too wide) in paragraph at lines 918--919
 \T1/ptm/m/n/12 o mé-todo in-ter-cep-tado. Na fi-gura 8.6[] é mos-trado a uti-li
 -za-ção da ano-ta-ção \T1/pcr/m/n/12 EnableLogInFile\T1/ptm/m/n/12 . 
  []
@@ -964,7 +964,7 @@ hvb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/
 share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/
 fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/time
 s/utmri8a.pfb>
-Output written on tcc.pdf (67 pages, 2003313 bytes).
+Output written on tcc.pdf (67 pages, 2006505 bytes).
 PDF statistics:
  322 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
