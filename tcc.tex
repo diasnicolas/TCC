@@ -24,7 +24,7 @@
 
 \author{Bento}{Nicolas Dias}
 
-\advisor[Prof.]{Torres}{Márcio}
+\advisor[Prof. Esp.]{Torres}{Márcio}
 
 \date{fevereiro}{2014}
 
@@ -34,7 +34,7 @@
         UNIVERSIDADE FEDERAL DO RIO GRANDE\\
         Reitor: Prof. Dr. Cleuza Maria Sobral Dias\\
         Pró-Reitor de Graduação: Prof. Dr. Denise Maria Varella Martinez\\
-        Coordenador do curso: Prof. Rafael Betito\\
+        Coordenador do curso: Prof. Eng. Rafael Betito\\
 }
 
 \keyword{AOP, Bytecode Engineering, Meta programação, Framework, SoC}
@@ -361,6 +361,7 @@ Na figura \ref{fig:lendoAnotacao} é mostrado como ler anotações presentes em 
 Este capítulo apresentou os principais conceitos de Meta programação, Reflexão e Metadados. Também foi abordado neste capítulo a utilização superficial da API de reflexão e metadados da linguagem Java. 
 
 \chapter{Tecnologias e ferramentas utilizadas}
+\label{cap5}
 Este capítulo apresenta  de forma clara e objetiva as tecnologias e ferramentas que serão utilizadas para o desenvolvimento deste trabalho, apresentando os motivos que fizeram com que estas ferramentas e tecnologias fossem as escolhidas para este estudo.
 
 \section{Eclipse}
@@ -954,8 +955,26 @@ Este capítulo focou no projeto e implementação de um estudo de caso, que util
 
 \chapter{Conclusão}
 
+Durante todo o processo de pesquisa e desenvolvimento deste trabalho, foram abordados diversos conceitos, que giraram em torno da resolução de um único problema, encapsular os interesses transversais  de um sistema Java. A solução proposta envolveu conceitos de Programação Orientada a Aspectos, aplicação de técnicas de \textit{Bytecode Engineering} e utilização de Meta Programação (anotações e reflexão).
+
+A abordagem escolhida para resolução do problema foi o desenvolvimento de um \textit{framework} que fosse extensível de forma a servir de base para outras ferramentas específicas. O trabalho foi desenvolvido em 4 etapas que foram executadas paralelamente com duração total de 9 meses, sendo elas em ordem de finalização: pesquisa, análise, implementação e monografia.
+
+Durante a etapa de pesquisa foi feito o estudo dos conceitos envolvidos no trabalho, e o levantamento das referências utilizadas. A etapa de análise envolveu a parte de modelagem do \textit{framework} e do estudo de caso, representada em forma de diagramas, visando facilitar a etapa de implementação. Já a etapa de implementação envolveu a codificação do \textit{framework} utilizando as tecnologias e ferramentas citadas no capítulo \ref{cap5}, e posteriormente foi realizada a implementação do estudo de caso, que demonstrou de forma clara a eficiência do \textit{framework} no encapsulamento dos interesses transversais, e na integração das classes com os aspectos. E por último a etapa que envolveu a escrita desta monografia, que foi executada paralelamente com as etapas anteriores, sendo a última a ser finalizada.
+
+Os resultados obtidos foram satisfatórios, devido a cumprimento dos objetivos propostos, e também pela facilidade de uso do \textit{framework} desenvolvido, comprovados após a etapa de implementação. O \textit{framework} também poderá servir de base para estudos e pesquisas relacionadas à técnicas de \textit{Bytecode Engineering} e Programação Orientada a Aspectos mais especificamente.
+
 \section{Trabalhos futuros}
 
+Para não prolongar o escopo do projeto, algumas funcionalidades não foram implementadas, deixando-as então para implementações futuras. Dentre os principais trabalhos futuros a serem realizados estão:
+
+\begin{itemize}
+\item Implementar o conceito de \textit{pointcut} no \textit{framework}. A implementação de \textit{pointcut} é considerada uma melhoria e não um requisito para o \textit{framework}.
+
+\item Adicionar outros tipos de \textit{advices} ao \textit{framework}. Por exemplo existem outros 2 tipos de \textit{advice after}: \textit{after returning} e \textit{after throwing}, que são executados após o retorno de um 
+ método e após o lançamento de uma exceção, respectivamente.
+ 
+ \item Criar um compilador para realizar as combinações em tempo de compilação. Uma vantagem em ter esta funcionalidade, é que conseguiria-se desenvolver por exemplo aspectos de tratamento de exceção totalmente modularizados para exceções checadas, o que não é possível com o \textit{framework} atual, devido as restrições do compilador padrão.
+\end{itemize}
 
 \singlespacing
 

@@ -78,8 +78,8 @@
 \contentsline {section}{\numberline {8.5}Execu\IeC {\c c}\IeC {\~a}o do sistema}{60}
 \contentsline {section}{\numberline {8.6}Considera\IeC {\c c}\IeC {\~o}es finais}{61}
 \contentsline {chapter}{\numberline {9}Conclus\IeC {\~a}o}{62}
-\contentsline {section}{\numberline {9.1}Trabalhos futuros}{62}
-\contentsline {chapter}{Refer{\^e}ncias}{63}
-\contentsline {chapter}{Gloss\IeC {\'a}rio}{65}
+\contentsline {section}{\numberline {9.1}Trabalhos futuros}{63}
+\contentsline {chapter}{Refer{\^e}ncias}{64}
+\contentsline {chapter}{Gloss\IeC {\'a}rio}{66}
 \setbox \@tempboxa \hbox {{{\sffamily \textbf {\MakeUppercase {Ap{\^e}ndice} }}}}\ii@chapnumindent \wd \@tempboxa \setbox \@tempboxa \box \voidb@x \advance \ii@chapnumindent 1.8em\relax 
-\contentsline {chapter}{\numberline {\MakeUppercase {Ap{\^e}ndice} A}Vers\IeC {\~a}o completa dos diagramas}{66}
+\contentsline {chapter}{\numberline {\MakeUppercase {Ap{\^e}ndice} A}Vers\IeC {\~a}o completa dos diagramas}{67}
