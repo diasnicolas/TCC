@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  7 DEC 2014 00:02
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.21)  7 DEC 2014 00:41
 entering extended mode
  %&-line parsing enabled.
 **tcc.tex
@@ -693,6 +693,9 @@ Underfull \vbox (badness 2707) has occurred while \output is active []
 File: diagramas/fluxograma_Agent.png Graphic file (type png)
 
 <use diagramas/fluxograma_Agent.png> [37]
+
+LaTeX Warning: Reference `apend:A' on page 38 undefined on input line 491.
+
 <diagramas/Framework_AOP.png, id=138, 850.67813pt x 1038.88126pt>
 File: diagramas/Framework_AOP.png Graphic file (type png)
 
@@ -934,27 +937,36 @@ m: 19 Ou-tu-bro.
 
 ) [65] [66
 
-] AED: lastpage setting LastPage [67
+]
+<diagramas/Framework_AOP-completo.png, id=290, 1279.78125pt x 1020.81375pt>
+File: diagramas/Framework_AOP-completo.png Graphic file (type png)
 
-] (./tcc.aux) ) 
+<use diagramas/Framework_AOP-completo.png> AED: lastpage setting LastPage
+[67
+
+ <./diagramas/Framework_AOP-completo.png>] (./tcc.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4377 strings out of 495041
- 60503 string characters out of 1181897
- 118045 words of memory out of 3000000
- 7419 multiletter control sequences out of 15000+50000
+ 4382 strings out of 495041
+ 60692 string characters out of 1181897
+ 118036 words of memory out of 3000000
+ 7423 multiletter control sequences out of 15000+50000
  55928 words of font info for 58 fonts, out of 3000000 for 9000
  33 hyphenation exceptions out of 8191
  39i,8n,32p,1223b,285s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/shar
-e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-tex
-live/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-texlive/fonts/type1/u
-rw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvro
-8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/t
-exmf-texlive/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/t
-ype1/urw/times/utmri8a.pfb>
-Output written on tcc.pdf (67 pages, 1689973 bytes).
+{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
+ve/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/ty
+pe1/urw/courier/ucrr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/u
+hvb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/
+share/texmf-texlive/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-texlive/
+fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/time
+s/utmri8a.pfb>
+Output written on tcc.pdf (67 pages, 2003313 bytes).
 PDF statistics:
- 320 PDF objects out of 1000 (max. 8388607)
+ 322 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 191 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 196 words of extra memory for PDF output out of 10000 (max. 10000000)
 
