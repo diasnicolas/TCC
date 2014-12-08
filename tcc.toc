@@ -3,83 +3,90 @@
 \contentsline {chapter}{Lista de Figuras}{10}
 \contentsline {chapter}{Lista de Tabelas}{12}
 \contentsline {chapter}{Resumo}{13}
-\contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{14}
-\contentsline {section}{\numberline {1.1}Objetivo}{15}
-\contentsline {section}{\numberline {1.2}Motiva\IeC {\c c}\IeC {\~a}o}{15}
-\contentsline {section}{\numberline {1.3}Resumo dos cap\IeC {\'\i }tulos}{16}
-\contentsline {chapter}{\numberline {2}Aspect Oriented Programming}{17}
-\contentsline {section}{\numberline {2.1}Defini\IeC {\c c}\IeC {\~a}o}{17}
-\contentsline {section}{\numberline {2.2}Hist\IeC {\'o}ria}{17}
-\contentsline {section}{\numberline {2.3}Principais conceitos}{18}
-\contentsline {subsection}{\numberline {2.3.1}Tipos de combina\IeC {\c c}\IeC {\~a}o}{19}
-\contentsline {section}{\numberline {2.4}Benef\IeC {\'\i }cios}{20}
-\contentsline {section}{\numberline {2.5}Considera\IeC {\c c}\IeC {\~o}es finais}{21}
-\contentsline {chapter}{\numberline {3}Bytecode Engineering}{22}
-\contentsline {section}{\numberline {3.1}Fundamentos de bytecode}{22}
-\contentsline {section}{\numberline {3.2}Defini\IeC {\c c}\IeC {\~a}o}{22}
-\contentsline {section}{\numberline {3.3}Vantagens}{23}
-\contentsline {section}{\numberline {3.4}Ferramentas}{23}
-\contentsline {subsection}{\numberline {3.4.1}Javassist}{23}
-\contentsline {subsection}{\numberline {3.4.2}BCEL}{24}
-\contentsline {subsection}{\numberline {3.4.3}ASM}{24}
-\contentsline {section}{\numberline {3.5}Considera\IeC {\c c}\IeC {\~o}es finais}{24}
-\contentsline {chapter}{\numberline {4}Meta programa\IeC {\c c}\IeC {\~a}o}{25}
-\contentsline {section}{\numberline {4.1}Defini\IeC {\c c}\IeC {\~a}o}{25}
-\contentsline {section}{\numberline {4.2}Benef\IeC {\'\i }cios}{25}
-\contentsline {section}{\numberline {4.3}Principais conceitos}{26}
-\contentsline {section}{\numberline {4.4}Anota\IeC {\c c}\IeC {\~o}es em Java}{26}
-\contentsline {subsection}{\numberline {4.4.1}Defini\IeC {\c c}\IeC {\~a}o}{26}
-\contentsline {subsection}{\numberline {4.4.2}Conceitos}{27}
-\contentsline {subsection}{\numberline {4.4.3}Utilidades}{27}
-\contentsline {subsection}{\numberline {4.4.4}Exemplo}{28}
-\contentsline {section}{\numberline {4.5}Reflex\IeC {\~a}o em Java}{28}
-\contentsline {subsection}{\numberline {4.5.1}Aplica\IeC {\c c}\IeC {\~o}es}{29}
-\contentsline {subsection}{\numberline {4.5.2}Funcionamento}{29}
-\contentsline {subsection}{\numberline {4.5.3}Lendo anota\IeC {\c c}\IeC {\~o}es}{29}
-\contentsline {section}{\numberline {4.6}Considera\IeC {\c c}\IeC {\~o}es finais}{30}
-\contentsline {chapter}{\numberline {5}Tecnologias e ferramentas utilizadas}{31}
-\contentsline {section}{\numberline {5.1}Eclipse}{31}
-\contentsline {section}{\numberline {5.2}Java 7}{31}
-\contentsline {section}{\numberline {5.3}JavaAgent}{32}
-\contentsline {section}{\numberline {5.4}Javassist}{32}
-\contentsline {section}{\numberline {5.5}Considera\IeC {\c c}\IeC {\~o}es finais}{32}
-\contentsline {chapter}{\numberline {6}Solu\IeC {\c c}\IeC {\~o}es Existentes}{33}
-\contentsline {section}{\numberline {6.1}PostSharp}{33}
-\contentsline {section}{\numberline {6.2}AspectJ}{34}
-\contentsline {section}{\numberline {6.3}Considera\IeC {\c c}\IeC {\~o}es finais}{35}
-\contentsline {chapter}{\numberline {7}O Framework}{36}
-\contentsline {section}{\numberline {7.1}Introdu\IeC {\c c}\IeC {\~a}o}{36}
-\contentsline {section}{\numberline {7.2}An\IeC {\'a}lise e projeto}{37}
-\contentsline {subsection}{\numberline {7.2.1}Especifica\IeC {\c c}\IeC {\~o}es do projeto}{37}
-\contentsline {subsection}{\numberline {7.2.2}Fluxograma}{38}
-\contentsline {subsection}{\numberline {7.2.3}Diagrama de classes}{38}
-\contentsline {subsection}{\numberline {7.2.4}Diagrama de sequ\IeC {\^e}ncia}{41}
-\contentsline {section}{\numberline {7.3}Implementa\IeC {\c c}\IeC {\~a}o}{42}
-\contentsline {subsection}{\numberline {7.3.1}Primeiros passos}{42}
-\contentsline {subsection}{\numberline {7.3.2}Premain}{43}
-\contentsline {subsubsection}{\numberline {7.3.2.1}Manifesto}{43}
-\contentsline {subsection}{\numberline {7.3.3}Transform}{43}
-\contentsline {subsubsection}{\numberline {7.3.3.1}Anota\IeC {\c c}\IeC {\~o}es nativas}{46}
-\contentsline {subsubsection}{\numberline {7.3.3.2}Anota\IeC {\c c}\IeC {\~o}es de extens\IeC {\~a}o}{46}
-\contentsline {subsection}{\numberline {7.3.4}Combinador}{47}
-\contentsline {subsubsection}{\numberline {7.3.4.1}AddFields}{48}
-\contentsline {subsubsection}{\numberline {7.3.4.2}AddAdviceMethod}{50}
-\contentsline {section}{\numberline {7.4}Considera\IeC {\c c}\IeC {\~o}es finais}{54}
-\contentsline {chapter}{\numberline {8}Estudo de caso - Instrumenta\IeC {\c c}\IeC {\~a}o}{55}
-\contentsline {section}{\numberline {8.1}Introdu\IeC {\c c}\IeC {\~a}o}{55}
-\contentsline {section}{\numberline {8.2}O problema}{55}
-\contentsline {subsection}{\numberline {8.2.1}Instrumenta\IeC {\c c}\IeC {\~a}o}{56}
-\contentsline {subsection}{\numberline {8.2.2}Solu\IeC {\c c}\IeC {\~a}o}{56}
-\contentsline {section}{\numberline {8.3}An\IeC {\'a}lise}{56}
-\contentsline {section}{\numberline {8.4}Implementa\IeC {\c c}\IeC {\~a}o}{58}
-\contentsline {subsection}{\numberline {8.4.1}Cria\IeC {\c c}\IeC {\~a}o de um aspecto}{58}
-\contentsline {subsection}{\numberline {8.4.2}Cria\IeC {\c c}\IeC {\~a}o das anota\IeC {\c c}\IeC {\~o}es de extens\IeC {\~a}o}{59}
-\contentsline {subsection}{\numberline {8.4.3}Utilizando anota\IeC {\c c}\IeC {\~o}es de extens\IeC {\~a}o}{60}
-\contentsline {section}{\numberline {8.5}Execu\IeC {\c c}\IeC {\~a}o do sistema}{60}
-\contentsline {section}{\numberline {8.6}Considera\IeC {\c c}\IeC {\~o}es finais}{61}
-\contentsline {chapter}{\numberline {9}Conclus\IeC {\~a}o}{62}
-\contentsline {section}{\numberline {9.1}Trabalhos futuros}{63}
-\contentsline {chapter}{Refer{\^e}ncias}{64}
-\contentsline {chapter}{Gloss\IeC {\'a}rio}{66}
+\select@language {english}
+\contentsline {chapter}{Abstract}{14}
+\select@language {brazilian}
+\contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{15}
+\contentsline {section}{\numberline {1.1}Objetivo}{16}
+\contentsline {section}{\numberline {1.2}Motiva\IeC {\c c}\IeC {\~a}o}{16}
+\contentsline {section}{\numberline {1.3}Resumo dos cap\IeC {\'\i }tulos}{17}
+\contentsline {chapter}{\numberline {2}Aspect Oriented Programming}{18}
+\contentsline {section}{\numberline {2.1}Defini\IeC {\c c}\IeC {\~a}o}{18}
+\contentsline {section}{\numberline {2.2}Hist\IeC {\'o}ria}{18}
+\contentsline {section}{\numberline {2.3}Principais conceitos}{19}
+\contentsline {subsection}{\numberline {2.3.1}Tipos de combina\IeC {\c c}\IeC {\~a}o}{20}
+\contentsline {section}{\numberline {2.4}Benef\IeC {\'\i }cios}{21}
+\contentsline {section}{\numberline {2.5}Considera\IeC {\c c}\IeC {\~o}es finais}{22}
+\contentsline {chapter}{\numberline {3}Bytecode Engineering}{23}
+\contentsline {section}{\numberline {3.1}Fundamentos de bytecode}{23}
+\contentsline {section}{\numberline {3.2}Defini\IeC {\c c}\IeC {\~a}o}{23}
+\contentsline {section}{\numberline {3.3}Vantagens}{24}
+\contentsline {section}{\numberline {3.4}Ferramentas}{24}
+\contentsline {subsection}{\numberline {3.4.1}Javassist}{24}
+\contentsline {subsection}{\numberline {3.4.2}BCEL}{25}
+\contentsline {subsection}{\numberline {3.4.3}ASM}{25}
+\contentsline {section}{\numberline {3.5}Considera\IeC {\c c}\IeC {\~o}es finais}{25}
+\contentsline {chapter}{\numberline {4}Meta programa\IeC {\c c}\IeC {\~a}o}{26}
+\contentsline {section}{\numberline {4.1}Defini\IeC {\c c}\IeC {\~a}o}{26}
+\contentsline {section}{\numberline {4.2}Benef\IeC {\'\i }cios}{26}
+\contentsline {section}{\numberline {4.3}Principais conceitos}{27}
+\contentsline {section}{\numberline {4.4}Anota\IeC {\c c}\IeC {\~o}es em Java}{27}
+\contentsline {subsection}{\numberline {4.4.1}Defini\IeC {\c c}\IeC {\~a}o}{27}
+\contentsline {subsection}{\numberline {4.4.2}Conceitos}{28}
+\contentsline {subsection}{\numberline {4.4.3}Utilidades}{28}
+\contentsline {subsection}{\numberline {4.4.4}Exemplo}{29}
+\contentsline {section}{\numberline {4.5}Reflex\IeC {\~a}o em Java}{29}
+\contentsline {subsection}{\numberline {4.5.1}Aplica\IeC {\c c}\IeC {\~o}es}{30}
+\contentsline {subsection}{\numberline {4.5.2}Funcionamento}{30}
+\contentsline {subsection}{\numberline {4.5.3}Lendo anota\IeC {\c c}\IeC {\~o}es}{30}
+\contentsline {section}{\numberline {4.6}Considera\IeC {\c c}\IeC {\~o}es finais}{31}
+\contentsline {chapter}{\numberline {5}Tecnologias e ferramentas utilizadas}{32}
+\contentsline {section}{\numberline {5.1}Eclipse}{32}
+\contentsline {section}{\numberline {5.2}Java 7}{32}
+\contentsline {section}{\numberline {5.3}JavaAgent}{33}
+\contentsline {section}{\numberline {5.4}Javassist}{33}
+\contentsline {section}{\numberline {5.5}Considera\IeC {\c c}\IeC {\~o}es finais}{33}
+\contentsline {chapter}{\numberline {6}Solu\IeC {\c c}\IeC {\~o}es Existentes}{34}
+\contentsline {section}{\numberline {6.1}PostSharp}{34}
+\contentsline {section}{\numberline {6.2}AspectJ}{35}
+\contentsline {section}{\numberline {6.3}Considera\IeC {\c c}\IeC {\~o}es finais}{36}
+\contentsline {chapter}{\numberline {7}AopJ: O Framework}{37}
+\contentsline {section}{\numberline {7.1}Introdu\IeC {\c c}\IeC {\~a}o}{37}
+\contentsline {section}{\numberline {7.2}An\IeC {\'a}lise e projeto}{38}
+\contentsline {subsection}{\numberline {7.2.1}Especifica\IeC {\c c}\IeC {\~o}es do projeto}{38}
+\contentsline {subsection}{\numberline {7.2.2}Fluxograma}{39}
+\contentsline {subsection}{\numberline {7.2.3}Diagrama de classes}{39}
+\contentsline {subsection}{\numberline {7.2.4}Diagrama de sequ\IeC {\^e}ncia}{42}
+\contentsline {section}{\numberline {7.3}Implementa\IeC {\c c}\IeC {\~a}o}{43}
+\contentsline {subsection}{\numberline {7.3.1}Primeiros passos}{43}
+\contentsline {subsection}{\numberline {7.3.2}Premain}{44}
+\contentsline {subsubsection}{\numberline {7.3.2.1}Manifesto}{44}
+\contentsline {subsection}{\numberline {7.3.3}Transform}{44}
+\contentsline {subsubsection}{\numberline {7.3.3.1}Anota\IeC {\c c}\IeC {\~o}es nativas}{47}
+\contentsline {subsubsection}{\numberline {7.3.3.2}Anota\IeC {\c c}\IeC {\~o}es de extens\IeC {\~a}o}{47}
+\contentsline {subsection}{\numberline {7.3.4}Combinador}{48}
+\contentsline {subsubsection}{\numberline {7.3.4.1}AddFields}{49}
+\contentsline {subsubsection}{\numberline {7.3.4.2}AddAdviceMethod}{51}
+\contentsline {subsection}{\numberline {7.3.5}Resultados}{55}
+\contentsline {subsubsection}{\numberline {7.3.5.1}Antes da combina\IeC {\c c}\IeC {\~a}o}{55}
+\contentsline {subsubsection}{\numberline {7.3.5.2}Ap\IeC {\'o}s a combina\IeC {\c c}\IeC {\~a}o}{56}
+\contentsline {section}{\numberline {7.4}Considera\IeC {\c c}\IeC {\~o}es finais}{57}
+\contentsline {chapter}{\numberline {8}Estudo de caso - Instrumenta\IeC {\c c}\IeC {\~a}o}{58}
+\contentsline {section}{\numberline {8.1}Introdu\IeC {\c c}\IeC {\~a}o}{58}
+\contentsline {section}{\numberline {8.2}O problema}{58}
+\contentsline {subsection}{\numberline {8.2.1}Instrumenta\IeC {\c c}\IeC {\~a}o}{59}
+\contentsline {subsection}{\numberline {8.2.2}Solu\IeC {\c c}\IeC {\~a}o}{59}
+\contentsline {section}{\numberline {8.3}An\IeC {\'a}lise}{59}
+\contentsline {section}{\numberline {8.4}Implementa\IeC {\c c}\IeC {\~a}o}{61}
+\contentsline {subsection}{\numberline {8.4.1}Cria\IeC {\c c}\IeC {\~a}o de um aspecto}{61}
+\contentsline {subsection}{\numberline {8.4.2}Cria\IeC {\c c}\IeC {\~a}o das anota\IeC {\c c}\IeC {\~o}es de extens\IeC {\~a}o}{62}
+\contentsline {subsection}{\numberline {8.4.3}Utilizando anota\IeC {\c c}\IeC {\~o}es de extens\IeC {\~a}o}{63}
+\contentsline {section}{\numberline {8.5}Execu\IeC {\c c}\IeC {\~a}o do sistema}{63}
+\contentsline {section}{\numberline {8.6}Considera\IeC {\c c}\IeC {\~o}es finais}{64}
+\contentsline {chapter}{\numberline {9}Conclus\IeC {\~a}o}{65}
+\contentsline {section}{\numberline {9.1}Trabalhos futuros}{66}
+\contentsline {chapter}{Refer{\^e}ncias}{67}
+\contentsline {chapter}{Gloss\IeC {\'a}rio}{69}
 \setbox \@tempboxa \hbox {{{\sffamily \textbf {\MakeUppercase {Ap{\^e}ndice} }}}}\ii@chapnumindent \wd \@tempboxa \setbox \@tempboxa \box \voidb@x \advance \ii@chapnumindent 1.8em\relax 
-\contentsline {chapter}{\numberline {\MakeUppercase {Ap{\^e}ndice} A}Vers\IeC {\~a}o completa do diagrama de classes do framework}{67}
+\contentsline {chapter}{\numberline {\MakeUppercase {Ap{\^e}ndice} A}Vers\IeC {\~a}o completa do diagrama de classes do framework}{70}
+\contentsline {chapter}{\numberline {\MakeUppercase {Ap{\^e}ndice} B}Processo de build: Ant}{71}

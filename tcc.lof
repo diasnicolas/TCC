@@ -6,52 +6,58 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\select@language {english}
+\addvspace {10\p@ }
+\select@language {brazilian}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {Figura\nobreakspace 2.1:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o de um sistema com e sem a utiliza\IeC {\c c}\IeC {\~a}o de aspectos.}}{18}
+\contentsline {figure}{\numberline {Figura\nobreakspace 2.1:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o de um sistema com e sem a utiliza\IeC {\c c}\IeC {\~a}o de aspectos.}}{19}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {Figura\nobreakspace 4.1:}{\ignorespaces Criando uma anota\IeC {\c c}\IeC {\~a}o.}}{28}
-\contentsline {figure}{\numberline {Figura\nobreakspace 4.2:}{\ignorespaces Utilizando uma anota\IeC {\c c}\IeC {\~a}o.}}{28}
-\contentsline {figure}{\numberline {Figura\nobreakspace 4.3:}{\ignorespaces Lendo uma anota\IeC {\c c}\IeC {\~a}o.}}{29}
+\contentsline {figure}{\numberline {Figura\nobreakspace 4.1:}{\ignorespaces Criando uma anota\IeC {\c c}\IeC {\~a}o.}}{29}
+\contentsline {figure}{\numberline {Figura\nobreakspace 4.2:}{\ignorespaces Utilizando uma anota\IeC {\c c}\IeC {\~a}o.}}{29}
+\contentsline {figure}{\numberline {Figura\nobreakspace 4.3:}{\ignorespaces Lendo uma anota\IeC {\c c}\IeC {\~a}o.}}{30}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {Figura\nobreakspace 6.1:}{\ignorespaces Exemplo de aspecto no Postsharp.}}{33}
-\contentsline {figure}{\numberline {Figura\nobreakspace 6.2:}{\ignorespaces Exemplo de aspecto com a sintaxe padr\IeC {\~a}o do AspectJ.}}{34}
-\contentsline {figure}{\numberline {Figura\nobreakspace 6.3:}{\ignorespaces Exemplo de aspecto na forma de anota\IeC {\c c}\IeC {\~o}es no AspectJ.}}{35}
+\contentsline {figure}{\numberline {Figura\nobreakspace 6.1:}{\ignorespaces Exemplo de aspecto no Postsharp.}}{34}
+\contentsline {figure}{\numberline {Figura\nobreakspace 6.2:}{\ignorespaces Exemplo de aspecto com a sintaxe padr\IeC {\~a}o do AspectJ.}}{35}
+\contentsline {figure}{\numberline {Figura\nobreakspace 6.3:}{\ignorespaces Exemplo de aspecto na forma de anota\IeC {\c c}\IeC {\~o}es no AspectJ.}}{36}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {Figura\nobreakspace 7.1:}{\ignorespaces Fluxograma de processos da JVM na execu\IeC {\c c}\IeC {\~a}o de um \textit {Agent} \citep {stark2001java}.}}{38}
-\contentsline {figure}{\numberline {Figura\nobreakspace 7.2:}{\ignorespaces Diagrama de classes de implementa\IeC {\c c}\IeC {\~a}o.}}{39}
-\contentsline {figure}{\numberline {Figura\nobreakspace 7.3:}{\ignorespaces Diagrama de sequ\IeC {\^e}ncia.}}{41}
-\contentsline {figure}{\numberline {Figura\nobreakspace 7.4:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {premain}.}}{43}
-\contentsline {figure}{\numberline {Figura\nobreakspace 7.5:}{\ignorespaces Conte\IeC {\'u}do do arquivo de manifesto.}}{43}
-\contentsline {figure}{\numberline {Figura\nobreakspace 7.6:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {transform}.}}{44}
-\contentsline {figure}{\numberline {Figura\nobreakspace 7.7:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {processClass}.}}{44}
-\contentsline {figure}{\numberline {Figura\nobreakspace 7.8:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addAdviceIfAnnotated}.}}{45}
-\contentsline {figure}{\numberline {Figura\nobreakspace 7.9:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addNativeAdvice}.}}{45}
-\contentsline {figure}{\numberline {Figura\nobreakspace 7.10:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addExtensionAdvice}.}}{46}
-\contentsline {figure}{\numberline {Figura\nobreakspace 7.11:}{\ignorespaces Atributos e construtor da classe \texttt {Weaver}.}}{47}
-\contentsline {figure}{\numberline {Figura\nobreakspace 7.12:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {combine}.}}{48}
-\contentsline {figure}{\numberline {Figura\nobreakspace 7.13:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addFields}.}}{49}
-\contentsline {figure}{\numberline {Figura\nobreakspace 7.14:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addField}.}}{49}
-\contentsline {figure}{\numberline {Figura\nobreakspace 7.15:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {getInitialValueField}.}}{50}
-\contentsline {figure}{\numberline {Figura\nobreakspace 7.16:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addAdviceMethod}.}}{51}
-\contentsline {figure}{\numberline {Figura\nobreakspace 7.17:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {createMethod}.}}{51}
-\contentsline {figure}{\numberline {Figura\nobreakspace 7.18:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addBefore}.}}{52}
-\contentsline {figure}{\numberline {Figura\nobreakspace 7.19:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {createMethodInfo}.}}{52}
-\contentsline {figure}{\numberline {Figura\nobreakspace 7.20:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addAfter}.}}{53}
-\contentsline {figure}{\numberline {Figura\nobreakspace 7.21:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addAround}.}}{53}
-\contentsline {figure}{\numberline {Figura\nobreakspace 7.22:}{\ignorespaces Exemplo de implementa\IeC {\c c}\IeC {\~a}o do \textit {advice around}.}}{54}
-\contentsline {figure}{\numberline {Figura\nobreakspace 7.23:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {proceed}.}}{54}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.1:}{\ignorespaces Fluxograma de processos da JVM na execu\IeC {\c c}\IeC {\~a}o de um \textit {Agent} \citep {stark2001java}.}}{39}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.2:}{\ignorespaces Diagrama de classes de implementa\IeC {\c c}\IeC {\~a}o.}}{40}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.3:}{\ignorespaces Diagrama de sequ\IeC {\^e}ncia.}}{42}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.4:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {premain}.}}{44}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.5:}{\ignorespaces Conte\IeC {\'u}do do arquivo de manifesto.}}{44}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.6:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {transform}.}}{45}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.7:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {processClass}.}}{45}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.8:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addAdviceIfAnnotated}.}}{46}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.9:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addNativeAdvice}.}}{46}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.10:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addExtensionAdvice}.}}{47}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.11:}{\ignorespaces Atributos e construtor da classe \texttt {Weaver}.}}{48}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.12:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {combine}.}}{49}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.13:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addFields}.}}{50}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.14:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addField}.}}{50}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.15:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {getInitialValueField}.}}{51}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.16:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addAdviceMethod}.}}{52}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.17:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {createMethod}.}}{52}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.18:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addBefore}.}}{53}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.19:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {createMethodInfo}.}}{53}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.20:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addAfter}.}}{54}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.21:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {addAround}.}}{54}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.22:}{\ignorespaces Exemplo de implementa\IeC {\c c}\IeC {\~a}o do \textit {advice around}.}}{55}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.23:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do m\IeC {\'e}todo \texttt {proceed}.}}{55}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.24:}{\ignorespaces Comunica\IeC {\c c}\IeC {\~a}o entre classe e aspecto.}}{56}
+\contentsline {figure}{\numberline {Figura\nobreakspace 7.25:}{\ignorespaces C\IeC {\'o}digo fonte equivalente ao \textit {bytecode} da classe ap\IeC {\'o}s combina\IeC {\c c}\IeC {\~a}o.}}{56}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {Figura\nobreakspace 8.1:}{\ignorespaces Diagrama de classes do estudo de caso.}}{57}
-\contentsline {figure}{\numberline {Figura\nobreakspace 8.2:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do \textit {advice} \texttt {around} do aspecto \texttt {LoggerTiming}.}}{58}
-\contentsline {figure}{\numberline {Figura\nobreakspace 8.3:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do \textit {advice} \texttt {before} do aspecto \texttt {LoggerTiming}.}}{59}
-\contentsline {figure}{\numberline {Figura\nobreakspace 8.4:}{\ignorespaces Cria\IeC {\c c}\IeC {\~a}o da anota\IeC {\c c}\IeC {\~a}o de extens\IeC {\~a}o \texttt {EnableLogInFile}.}}{59}
-\contentsline {figure}{\numberline {Figura\nobreakspace 8.5:}{\ignorespaces Cria\IeC {\c c}\IeC {\~a}o da anota\IeC {\c c}\IeC {\~a}o de extens\IeC {\~a}o \texttt {LogTiming}.}}{59}
-\contentsline {figure}{\numberline {Figura\nobreakspace 8.6:}{\ignorespaces Utilizando a anota\IeC {\c c}\IeC {\~a}o de extens\IeC {\~a}o \texttt {EnableLogInFile}.}}{60}
-\contentsline {figure}{\numberline {Figura\nobreakspace 8.7:}{\ignorespaces Utiliza\IeC {\c c}\IeC {\~a}o da anota\IeC {\c c}\IeC {\~a}o \texttt {LogTiming} no m\IeC {\'e}todo \texttt {carrega}.}}{60}
-\contentsline {figure}{\numberline {Figura\nobreakspace 8.8:}{\ignorespaces Sa\IeC {\'\i }da do arquivo de \textit {log} ap\IeC {\'o}s o carregamento dos m\IeC {\'o}dulos.}}{61}
+\contentsline {figure}{\numberline {Figura\nobreakspace 8.1:}{\ignorespaces Diagrama de classes do estudo de caso.}}{60}
+\contentsline {figure}{\numberline {Figura\nobreakspace 8.2:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do \textit {advice} \texttt {around} do aspecto \texttt {LoggerTiming}.}}{61}
+\contentsline {figure}{\numberline {Figura\nobreakspace 8.3:}{\ignorespaces Implementa\IeC {\c c}\IeC {\~a}o do \textit {advice} \texttt {before} do aspecto \texttt {LoggerTiming}.}}{62}
+\contentsline {figure}{\numberline {Figura\nobreakspace 8.4:}{\ignorespaces Cria\IeC {\c c}\IeC {\~a}o da anota\IeC {\c c}\IeC {\~a}o de extens\IeC {\~a}o \texttt {EnableLogInFile}.}}{62}
+\contentsline {figure}{\numberline {Figura\nobreakspace 8.5:}{\ignorespaces Cria\IeC {\c c}\IeC {\~a}o da anota\IeC {\c c}\IeC {\~a}o de extens\IeC {\~a}o \texttt {LogTiming}.}}{62}
+\contentsline {figure}{\numberline {Figura\nobreakspace 8.6:}{\ignorespaces Utilizando a anota\IeC {\c c}\IeC {\~a}o de extens\IeC {\~a}o \texttt {EnableLogInFile}.}}{63}
+\contentsline {figure}{\numberline {Figura\nobreakspace 8.7:}{\ignorespaces Utiliza\IeC {\c c}\IeC {\~a}o da anota\IeC {\c c}\IeC {\~a}o \texttt {LogTiming} no m\IeC {\'e}todo \texttt {carrega}.}}{63}
+\contentsline {figure}{\numberline {Figura\nobreakspace 8.8:}{\ignorespaces Sa\IeC {\'\i }da do arquivo de \textit {log} ap\IeC {\'o}s o carregamento dos m\IeC {\'o}dulos.}}{64}
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

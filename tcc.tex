@@ -20,13 +20,13 @@
 
 \hyphenation{en-si-na-men-tos a-gra-de-ci-men-to de-se-nha-dos}
 
-\title{Framework AOP utilizando técnicas de Bytecode Engineering}
+\title{AopJ: Framework AOP utilizando técnicas de Bytecode Engineering}
 
 \author{Bento}{Nicolas Dias}
 
 \advisor[Prof. Esp.]{Torres}{Márcio}
 
-\date{fevereiro}{2014}
+\date{dezembro}{2014}
 
 \location{Rio Grande}{RS}
 
@@ -37,14 +37,14 @@
         Coordenador do curso: Prof. Eng. Rafael Betito\\
 }
 
-\keyword{AOP, Bytecode Engineering, Meta programação, Framework, SoC}
+\keyword{AOP, Bytecode Engineering, Meta Programming, Framework, SoC}
 
 \begin{document}
 
 \maketitle
 
 \begin{folhadeaprovacao}
-Monografia sob o título \textit{"Framework AOP utilizando técnicas de Bytecode Engineering"}, defendida por Nicolas Dias Bento e aprovada em \_\_\_ de \_\_\_\_\_\_\_\_\_\_\_ de \_\_\_\_\_, em Rio Grande, estado do Rio Grande do Sul, pela banca examinadora constituída pelos professores:
+Monografia sob o título \textit{"AopJ: Framework AOP utilizando técnicas de Bytecode Engineering"}, defendida por Nicolas Dias Bento e aprovada em \_\_\_ de \_\_\_\_\_\_\_\_\_\_\_ de \_\_\_\_\_, em Rio Grande, estado do Rio Grande do Sul, pela banca examinadora constituída pelos professores:
  \assinatura{Prof. Esp. Márcio Josué Ramos Torres\\ Orientador}
  \assinatura{Prof. Dr. Eduardo Wenzel Brião\\ IFRS - Campus Rio Grande }
  \assinatura{Prof. Msc. Igor Ávila Pereira\\ IFRS - Campus Rio Grande } 
@@ -58,7 +58,7 @@ Monografia sob o título \textit{"Framework AOP utilizando técnicas de Bytecode
 "A mente que se abre a uma nova ideia jamais volta ao seu tamanho original."\\}
 --- \textsc{Albert Einstein}
 \end{flushright}
-
+\setstretch{1.5}
 \chapter*{Agradecimentos}
 
 À minha família, especialmente minha mãe Cristiana Botelho Dias que sempre me incentivou nos estudos, e que me ajudou a trilhar este longo caminho.
@@ -68,6 +68,9 @@ Um enorme agradecimento à minha esposa Ariane Castro, que estava do meu lado no
 Ao meu amigo e orientador Márcio Torres, que sempre esteve disponível, independente do momento para discutir o andamento deste trabalho, sendo de grande valia os conhecimentos com ele adquiridos.
 
 Aos demais amigos, colegas e professores um enorme agradecimento, pela experiência e conhecimentos adquiridos durante estes anos.
+
+
+\singlespacing
 \tableofcontents
 
 \begin{listofabbrv}{SPMD}
@@ -81,21 +84,25 @@ Aos demais amigos, colegas e professores um enorme agradecimento, pela experiên
 	\item[Javassist] \textit{Java Programming Assistant} (Assistente de Programação Java)
 	\item[BCEL] \textit{Byte Code Engineering Library}
 	\item[API] \textit{Application Programming Interface} (Interface de Programação de Aplicativos)
+	\item[XML] \textit{eXtensible Markup Language} (Linguagem de marcação extensível)
 \end{listofabbrv}
 
 \listoffigures
 
 \listoftables
-
+\setstretch{1.5}
 \begin{abstract}
 
-O setor de desenvolvimento de \textit{software} é um dos setores que mais cresceu durante os últimos anos. Devido a essa grande demanda, é necessário utilizar técnicas e metodologias que favoreçam a manutenção, modularização e o maior reaproveitamento de código possível. O paradigma de Programação Orientada a Aspectos (\textit{Aspect Oriented Programming} - AOP) é utilizado em conjunto com a Programação Orientada a Objetos (\textit{Object Oriented Programming} - OOP), com o intuito de obter um sistema 100\% modularizado, separando os interesses transversais (\textit{logging}, tratamento de exceções, validação, etc) dos interesses centrais (lógica de negócio).  Desta forma concentram-se os interesses transversais em “aspectos” utilizando AOP, e os interesses centrais em “classes” utilizando OOP.
-
-Este trabalho tem por objetivo desenvolver um \textit{framework}, capaz de implementar por meio de técnicas de \textit{Bytecode Engineering} os principais conceitos de AOP, visando utilizá-lo  juntamente com OOP para resolver os problemas de modularização encontrados atualmente, visando o encapsulamento dos interesses transversais. Também é desenvolvido um estudo de caso de instrumentação, com o objetivo de demonstrar a eficiência e a facilidade no uso do \textit{framework} para criação e integração de aspectos e classes. Ao final deste trabalho é apresentado um \textit{framework} de código fonte aberto, que servirá de base para outros estudos voltados para AOP e \textit{Bytecode Engineering}.
+O setor de desenvolvimento de \textit{software} é um dos setores que mais cresceu durante os últimos anos. Devido a essa grande demanda, é necessário utilizar técnicas e metodologias que favoreçam a manutenção, modularização e o maior reaproveitamento de código possível. O paradigma de Programação Orientada a Aspectos (\textit{Aspect Oriented Programming} - AOP) é utilizado em conjunto com a Programação Orientada a Objetos (\textit{Object Oriented Programming} - OOP), com o intuito de obter um sistema 100\% modularizado, separando os interesses transversais (\textit{logging}, tratamento de exceções, validação, etc) dos interesses centrais (lógica de negócio).  Desta forma concentram-se os interesses transversais em “aspectos” utilizando AOP, e os interesses centrais em “classes” utilizando OOP. Este trabalho tem por objetivo desenvolver um \textit{framework}, capaz de implementar por meio de técnicas de \textit{Bytecode Engineering} os principais conceitos de AOP, visando utilizá-lo  juntamente com OOP para resolver os problemas de modularização encontrados atualmente, visando o encapsulamento dos interesses transversais. Também é desenvolvido um estudo de caso de instrumentação, com o objetivo de demonstrar a eficiência e a facilidade no uso do \textit{framework} para criação e integração de aspectos e classes. Ao final deste trabalho é apresentado um \textit{framework} de código fonte aberto, que servirá de base para outros estudos voltados para AOP e \textit{Bytecode Engineering}.
 
 \end{abstract}
 
-\setstretch{1.5}
+{
+\selectlanguage{english}
+\begin{abstract}
+The software development industry is one of the sectors that has grown over the recent years. Because of this high demand, it is necessary to use techniques and methodologies that support the maintenance, modularization and the greater reuse of code possible. The Aspect Oriented Programming (AOP) paradigm is used in conjunction with the Object Oriented Programming (OOP) paradigm, in order to obtain a 100\% modularized system, separating crosscutting concerns (logging, exception handling, validation, etc.) of core interests (business logic). Thus the cross concentrated interests capitals in "aspects" using AOP, and the core interests in "classes" using OOP. This work aims to develop a framework, able to implement by techniques of Bytecode Engineering the main concepts of AOP, order use it with OOP to solve the problems found modularization currently targeting the encapsulation of crosscutting concerns. It is also developing a case study of instrumentation, in order to demonstrate the efficiency and ease of use of the framework for the development and integration of aspects and classes. On completion of this work is presented an open source framework that will serve as a basis for other studies focused on AOP and Bytecode Engineering.
+\end{abstract}
+}
 
 \chapter{Introdução}
 \label{cap1}
@@ -136,7 +143,7 @@ Este trabalho está dividido em 9 capítulos, abaixo uma pequena descrição de 
 \item [Capítulo 4 META PROGRAMAÇÃO:] este capítulo descreve os principais conceitos de meta programação, reflexão e metadados. Aborda de forma prática o uso de anotações (metadados) na linguagem Java.
 \item [Capítulo 5 TECNOLOGIAS E FERRAMENTAS UTILIZADAS:] este capítulo fala de forma superficial sobre as tecnologias e ferramentas utilizadas na realização deste trabalho.
 \item [Capítulo 6 SOLUÇÕES EXISTENTES:] este capítulo descreve de forma clara e objetiva as soluções já existentes, comentando as vantagens e desvantagens de cada solução.
-\item [Capítulo 7 O FRAMEWORK:] este capítulo descreve todas as características do projeto, desde a parte de análise até a implementação.
+\item [Capítulo 7 AOPJ: O FRAMEWORK:] este capítulo descreve todas as características do projeto, desde a parte de análise até a implementação.
 \item [Capítulo 8 ESTUDO DE CASO - INSTRUMENTAÇÃO:] neste capítulo será desenvolvido um estudo de caso para comprovar as funcionalidades do framework.
 \item [Capítulo 9 CONCLUSÃO:] este capítulo descreve as etapas do projeto, resultados obtidos, trabalhos futuros e outras conclusões sobre o trabalho realizado. 
 \end{description}
@@ -454,7 +461,7 @@ O AspectJ faz uso de uma sintaxe própria, mas também dá suporte ao uso de ano
 
 Este capítulo abordou as características básicas do \textit{framework} Postsharp e da linguagem AspectJ. Foi demonstrado também um exemplo prático de criação de aspectos em cada um dos projetos relacionados.
 
-\chapter{O Framework}
+\chapter{AopJ: O Framework}
 \label{cap7}
 
 Este capítulo aborda em detalhes o \textit{framework} desenvolvido, desde a parte de análise  e projeto até a parte de implementação, explicando de forma clara os caminhos percorridos durante a evolução do trabalho.
@@ -507,8 +514,8 @@ Na figura \ref{fig:diagramaClassesAOP} é apresentado o diagrama de classes de i
 Abaixo está a descrição de cada uma das classes apresentadas no diagrama da figura \ref{fig:diagramaClassesAOP}:
 
 \begin{description}
+\item [ClassFileTransformer (java.lang.instrument)] Esta é uma \texttt{interface} que deve ser implementada por classes que desejam ser responsáveis pela modificação de outras classes antes do carregamento para a máquina virtual.
 \item [Agent] Esta é a classe que possui o \texttt{premain}, sendo assim é a classe principal do agente que será utilizado para interceptação das classes durante o seu carregamento para a JVM.
-\item [ClassFileTransformer] Esta é uma \texttt{interface} que deve ser implementada por classes que desejam ser responsáveis pela modificação de outras classes antes do carregamento para a máquina virtual.
 \item [AOPClassFileTransformer] Esta é a classe responsável por realizar e retornar para o \textit{Class Loader} (carregador de classes do Java) as classes já modificadas. Esta classe implementa a \textit{interface} ClassFileTransformer. É ela que faz a análise de quais classes vão ser combinadas, e quais as regras de combinação que devem ser consideradas para cada método. 
 \item [Weaver] Esta classe representa o combinador de aspectos, ou seja, é nesta classe que são feitas as combinações de módulos OOP com módulos AOP. As informações necessárias para combinação são recebidas de \texttt{AOPClassFileTransformer}.
 \item [AdviceType] É um enumerado que representa o tipo de \textit{advice}, pode ser \textit{Before} (antes), \textit{After} (depois) ou \textit{Around} (em volta). Utilizado para representar o tipo de \textit{advice} que está sendo combinado.
@@ -524,7 +531,7 @@ Abaixo está a descrição de cada uma das classes apresentadas no diagrama da f
 
 \subsection{Diagrama de sequência}
 
-O diagrama de sequência foi utilizado para demonstrar a forma como se dá a chamada dos métodos durante o processo inicialização do \textit{Agent} até a parte de modificação (combinação de classes e aspectos) de \textit{bytecode} das classes interceptadas. Este diagrama pode ser visto na figura \ref{fig:sequenciaCombinador}.
+O diagrama de sequência foi utilizado para demonstrar a forma como se dá a chamada dos métodos durante o processo inicialização do \textit{Agent} até a parte de modificação (combinação de classes e aspectos) do \textit{bytecode} das classes interceptadas. Este diagrama pode ser visto na figura \ref{fig:sequenciaCombinador}.
 
 \begin{figure}[ht]
 	\centering
@@ -799,10 +806,38 @@ O método \texttt{proceed} faz o uso de reflexão para invocar uma chamada à co
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.5]{figuras/implementacao/proceed.png}
+	\includegraphics[scale=0.6]{figuras/implementacao/proceed.png}
 	\caption{Implementação do método \texttt{proceed}.}
 	\label{fig:proceed}
 \end{figure}
+
+\subsection{Resultados}
+
+Para demonstrar os resultados obtidos após a combinação entre um aspecto e uma classe, será utilizado uma simulação de como estaria o código fonte da classe alvo após a combinação.
+
+\subsubsection{Antes da combinação}
+
+A figura \ref{fig:classaspecto} mostra o aspecto \texttt{TratamentoErro} e a classe \texttt{Cliente} antes da combinação, de forma que a regra de combinação foi a chamada ao método \texttt{salvar}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.4]{figuras/implementacao/utilizandoaspecto.png}
+	\caption{Comunicação entre classe e aspecto.}
+	\label{fig:classaspecto}
+\end{figure}
+
+\subsubsection{Após a combinação}
+
+O código fonte que equivale ao \textit{bytecode} da classe \texttt{Cliente} após o processo de combinação entre classe e aspecto utilizando o tipo de \textit{advice around} pode ser vista na figura \ref{fig:combinacaoAroundfonte}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.4]{figuras/implementacao/combinacaoAround.png}
+	\caption{Código fonte equivalente ao \textit{bytecode} da classe após combinação.}
+	\label{fig:combinacaoAroundfonte}
+\end{figure}
+
+Pode-se perceber claramente na figura \ref{fig:combinacaoAroundfonte} que o método \texttt{around} presente no aspecto é copiado para a classe alvo, que neste caso é a classe \texttt{Cliente}. Também é realizado uma cópia do método alvo, que neste caso é o método \texttt{salvar}. Nota-se que a implementação do método \texttt{salvar} é alterada, visando a preparação dos parâmetros necessários para realizar a chamada ao método \texttt{tratamentoerro\_around}.
 
 \section{Considerações finais}
 
@@ -987,6 +1022,7 @@ Para não prolongar o escopo do projeto, algumas funcionalidades não foram impl
 
 \bibliography{bibliografia}
 
+\setstretch{1.5}
 \chapter*{Glossário}
 
 \begin{description}
@@ -996,19 +1032,44 @@ Para não prolongar o escopo do projeto, algumas funcionalidades não foram impl
 \item [Decorator] é um padrão de projeto estrutural, cujo principal objetivo é adicionar funcionalidades a um objeto dinamicamente.
 \item [Proxy] é um padrão de projeto estrutural, cujo principal objetivo é controlar as chamadas a um objeto através de outro objeto de mesma interface.
 \item [Log] é o arquivo onde é registrado informações relevantes sobre o comportamento do sistema \cite{log}.
+\item [Build] é o processo de compilação de um \textit{software}.
 \end{description}
+
 
 \appendix
 
 \chapter{Versão completa do diagrama de classes do framework}
+\label{apend:A}
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=475px,height=425px,angle=90]{diagramas/Framework_AOP-completo.png}
+	\includegraphics[width=455px,height=425px,angle=90]{diagramas/Framework_AOP-completo.png}
 	\caption{Diagrama de classes completo do framework.}
 \end{figure}
 
-\label{apend:A}
+
+\chapter{Processo de build: Ant}
+
+Ant é uma das ferramentas de \textit{build} mais famosas utilizadas em IDE's para Java. Através do Ant é possível invocar tarefas utilizando \textit{tags} XML (\textit{eXtensible Markup Language}). Estas \textit{tags} são descritas em um arquivo cujo nome é \textit{build.xml}, que deve estar localizado dentro do projeto \cite{ant} .
+
+O arquivo \textit{build.xml}, cujo conteúdo está presente na figura \ref{fig:buildframework}, é responsável pela compilação e geração do arquivo \textit{.jar} do \textit{framework}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.8]{figuras/implementacao/build-framework.png}
+	\caption{Arquivo de build do \textit{framework}.}
+	\label{fig:buildframework}
+\end{figure}
+
+
+O arquivo \textit{build.xml}, cujo conteúdo está presente na figura \ref{fig:buildestudocaso}, é responsável pela compilação e execução do estudo de caso utilizado o \textit{framework}, para combinação entre aspectos e classes.
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[scale=0.7]{figuras/implementacao/build-estudocaso.png}
+	\caption{Arquivo de build do \textit{estudo de caso}.}
+	\label{fig:buildestudocaso}
+\end{figure}
 
 \end{document}
 

@@ -21,6 +21,11 @@
   Tese (Doutorado em Ci{\^e}ncia da Computa{\c{c}}{\~a}o) --- Universidade de
   Coimbra.
 
+\bibitem[CAELUM(2013)CAELUM]{ant} CAELUM. \textbf{Apêndice}: o processo de
+  build: ant e maven. Disponível em:
+  <www.caelum.com.br/apostila-java-testes-xml-design-patterns/apendice-o-proce%
+sso-de-build-ant-e-maven/>. Acesso em: 7 Dezembro. 2014.
+
 \bibitem[CHIBA(2013)CHIBA]{javassist} CHIBA, S\@. \textbf{Javassist}.
   Disponível em: <http://www.csg.ci.i.u-tokyo.ac.jp/~chiba/javassist/>. Acesso
   em: 16 Junho. 2014.
